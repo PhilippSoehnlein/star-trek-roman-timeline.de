@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Philipp Söhnlein @PhilSoehnlein
+
+# Github
+
+    https://github.com/PhilippSoehnlein/star-trek-roman-timeline.de
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    HTML5 Boilerplate
+    Normalize.css
+    grunt
