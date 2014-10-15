@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         //pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            files: ['src/index.html'],
+            files: ['src/index.html', 'src/scss/**/*.scss'],
             tasks: ['build']
         },
 
@@ -20,6 +20,14 @@ module.exports = function(grunt) {
             },
             dev: {
                 // a dummy target we can reference from the dev task
+            }
+        },
+
+        sass: {
+            build: {
+                files: {
+                    'build/main.css': 'src/main.scss'
+                }
             }
         },
 
@@ -45,6 +53,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-sass');
 
     grunt.registerTask('dev', [
         'connect:dev',
@@ -54,5 +63,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'clean:beforeBuild',
         'copy:build'
+        'copy:build',
+        'sass'
     ]);
 }
