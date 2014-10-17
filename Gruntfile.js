@@ -1,7 +1,7 @@
 /**
  * Available tasks:
  *     - build: Builds the site and puts it into the build/ folder.
- *     - dev:   Starts a local DEV server at localhost:8000 and runs the watch task.
+ *     - dev:   Makes a build, starts a local DEV server at localhost:8000 and runs the watch task.
  */
 module.exports = function(grunt) {
     grunt.initConfig({
@@ -59,6 +59,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
 
     grunt.registerTask('dev', [
+        'build',
         'connect:dev',
         'watch',
     ]);
