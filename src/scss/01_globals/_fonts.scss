@@ -1,0 +1,13 @@
+/*
+    - Avenir Next is available on iOS >= 6 and Mac OS >= 10.8 (see http://fontfamily.io/avenir_next)
+    - Helvetica Neue is the fallback font for Mac OS < 10.8 and iOS < 6 (see http://fontfamily.io/Helvetica_Neue and http://iosfonts.com/)
+    - Roboto is the fallback font for everyone browser that supports webfonts.
+    - Arial is the fallback font for browser that don't support webfonts.
+*/
+$default-font-stack: "Avenir Next", "Helvetica Neue", Roboto, Arial, sans-serif;
+
+/*
+TODOs:
+- Consider Titillium Web for headlines.
+- Consider Exo 2 for everything to replace Avenir / Helvetica / Roboto chain (needs testing on iOS and Windows)
+*/
