@@ -3,4 +3,7 @@ html {
     background-color: $default-background-color;
     font-family: $default-font-stack;
     padding: 0;
+
+    // "Disable" automatic text-size-adjust (see http://blog.55minutes.com/2012/04/iphone-text-resizing/ and http://stackoverflow.com/questions/2710764/preserve-html-font-size-when-iphone-orientation-changes-from-portrait-to-landsca)
+    -webkit-text-size-adjust: 100%;
 }
