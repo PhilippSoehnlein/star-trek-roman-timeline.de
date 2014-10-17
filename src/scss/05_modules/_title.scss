@@ -1,0 +1,17 @@
+// Using vw for font-size here to give the bigger viewports more visual withespace at the top of the page.
+
+.title {
+    font-weight: 100;
+    text-align: center;
+    text-shadow: 1px 1px black;
+
+    font-size: 11vw; // for small devices make the font size quite big to have it readable
+}
+
+@media screen and (min-width: 480px) {
+    .title {
+        font-size: 7vw; // for bigger devices we can shrink the font size, because of the vw unit they are big enough.
+    }
+}
+
+// TODO: We should probably add another breakpoint for really wide viewport were we go down to 5vw font size or so.

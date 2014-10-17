@@ -1,0 +1,24 @@
+.l-mainframe {
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.l-mainframe--header {
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
+.l-mainframe--title {
+    padding: 1.8rem 0;
+    display: table-cell;
+}
+
+.l-mainframe--tagline {
+    display: table-caption; /* change visual order of tagline (put over .l-mainframe--title) */
+    margin: 0;
+}
+
+.l-mainframe--main {
+    
+}
