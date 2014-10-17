@@ -34,12 +34,14 @@ module.exports = function(grunt) {
         copy: {
             build: {
                 files: [
-                    { src: 'src/index.html',                        dest: 'build/index.html' },
-                    { src: 'src/favicon.ico',                       dest: 'build/favicon.ico' },
-                    { src: 'src/apple-touch-icon-precomposed.png',  dest: 'build/apple-touch-icon-precomposed.png' },
-                    { src: 'src/robots.txt',                        dest: 'build/robots.txt' },
-                    { src: 'src/humans.txt',                        dest: 'build/humans.txt' },
-                    { src: 'src/.htaccess',                         dest: 'build/.htaccess' },
+                    { src: 'src/favicon.ico',                      dest: 'build/favicon.ico' },
+                    { src: 'src/apple-touch-icon-precomposed.png', dest: 'build/apple-touch-icon-precomposed.png' },
+                    { src: 'src/robots.txt',                       dest: 'build/robots.txt' },
+                    { src: 'src/humans.txt',                       dest: 'build/humans.txt' },
+                    { src: 'src/.htaccess',                        dest: 'build/.htaccess' },
+                    { src: 'src/img/kaemira-nebula640.jpg',        dest: 'build/img/kaemira-nebula640.jpg' },
+                    { src: 'src/img/kaemira-nebula1280.jpg',       dest: 'build/img/kaemira-nebula1280.jpg' },
+                    { src: 'src/img/kaemira-nebula1920.jpg',       dest: 'build/img/kaemira-nebula1920.jpg' }
                 ]
             }
         },
@@ -49,6 +51,7 @@ module.exports = function(grunt) {
         },
     });
 
+    grunt.loadNpmTasks('grunt-ejs-render');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -62,8 +65,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'clean:beforeBuild',
-        'copy:build'
         'copy:build',
+        'render',
         'sass'
     ]);
 }
