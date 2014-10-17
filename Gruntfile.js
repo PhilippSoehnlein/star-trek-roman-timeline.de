@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         //pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            files: ['src/index.html', 'src/scss/**/*.scss'],
+            files: ['src/index.html', 'src/main.scss', 'src/scss/**/*.scss'],
             tasks: ['build']
         },
 
