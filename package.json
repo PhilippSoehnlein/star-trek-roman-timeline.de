@@ -2,6 +2,7 @@
   "author": "Philipp Söhnlein <me@philipp-soehnlein.de>",
   "private": true,
   "devDependencies": {
+    "grunt-autoprefixer": "^1.0.1",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-connect": "^0.8.0",
     "grunt-contrib-copy": "^0.7.0",

@@ -31,6 +31,16 @@ module.exports = function(grunt) {
             }
         },
 
+        autoprefixer: {
+            options: {
+                opbrowsers: ['last 2 version']
+            },
+            single_file: {
+                src: 'build/main.css',
+                dest: 'build/main.css'
+            },
+        },
+
         copy: {
             build: {
                 files: [
@@ -57,6 +67,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
     grunt.registerTask('dev', [
         'build',
@@ -68,6 +79,7 @@ module.exports = function(grunt) {
         'clean:beforeBuild',
         'copy:build',
         'render',
-        'sass'
+        'sass',
+        'autoprefixer'
     ]);
 }
