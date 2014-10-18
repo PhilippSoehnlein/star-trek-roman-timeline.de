@@ -1,0 +1,30 @@
+.button {
+    display: inline-block;
+    padding: 0.3472em 0.694em;
+    border: 2px solid rgba( darken($light-grey, 27%), 0.5 );
+    border-radius: 0.694em;
+
+    margin: 0 0.3472em 0.3472em 0.3472em;
+
+    background-color: $light-grey;
+
+    font-size: 0.9rem;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
+    background-color: darken($light-grey, 8%);
+}
+
+.button:focus {
+    outline: 2px solid rgba(255,255,255,0.6);
+    outline-offset: 3px;
+}
+
+.button:active {
+    background-color: darken($light-grey, 16%);
+}
