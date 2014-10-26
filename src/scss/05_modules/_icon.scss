@@ -1,0 +1,11 @@
+$icon-default-width: 24px;
+$icon-default-height: $icon-default-width;
+
+.icon {
+    display: inline-block;
+    text-indent: -10000px;
+    width: $icon-default-width;
+    height: $icon-default-height;
+    background-size: $icon-default-width $icon-default-height; // TODO: Remove when the icons are downloaded and resized correctly
+    background-repeat: no-repeat;
+}

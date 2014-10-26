@@ -1,0 +1,7 @@
+.icon_amazon {
+    @extend .icon;
+
+    // TODO: Get better image and save it locally.
+    // TODO: Make media queries for higher pixel densities.
+    background-image: url(http://www.gffband.com/images/logo/amazon.png);
+}

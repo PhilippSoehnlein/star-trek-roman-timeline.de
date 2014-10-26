@@ -1,0 +1,92 @@
+$book-box-padding: 15px;
+$book-box-connector-width: 6px;
+
+.book-box {
+    margin: 20px; // TODO: Temporary!
+
+    background-color: rgba( darken($light-grey, 27%), 0.8 );
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+}
+
+.book-box--data {
+    display: table;
+    width: 100%;
+}
+
+.book-box--header-bar {
+    display: table-caption;
+    background-color: rgba( $light-grey, 0.7 );
+    font-size: 0.8rem;
+    padding: $book-box-padding / 2;
+    padding-left: $book-box-padding; // vertical (left) align with the content in $book-box--main
+
+    @include clearfix;
+}
+
+.book-box--main,
+.book-box--image-wrapper {
+    display: table-cell;
+    vertical-align: top;
+    padding: $book-box-padding;
+}
+
+.book-box--image-wrapper,
+.book-box--cover {
+    width: 60px; // TODO: This should be more responsive in the future.
+}
+
+.book-box--series {
+    float: left;
+}
+
+.book-box--date {
+    float: right;
+}
+
+.book-box--title {
+    margin: 0 0 0.9rem 0;
+    font-size: 1rem;
+}
+
+.book-box--description {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.book-box--links {
+    display: table;
+    padding: $book-box-padding / 2 0;
+    width: calc(100% - 2 * #{$book-box-padding});
+    border-top: 1px solid $light-grey;
+    margin: 0 $book-box-padding;
+}
+
+.book-box--link-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.has-book-box-right-connector,
+.has-book-box-left-connector {
+    position: relative;
+}
+
+.has-book-box-left-connector:after,
+.has-book-box-right-connector:after {
+    position: absolute;
+    top: calc(50% - (#{$book-box-connector-width} / 2)); // TODO I probably should put it on top again. Let's see when the timeline layout is ready
+    content: '';
+    border: $book-box-connector-width solid transparent;
+}
+
+.has-book-box-left-connector:after {
+    left: -(2 * $book-box-connector-width);
+    border-right-color: $light-grey;
+}
+
+.has-book-box-right-connector:after {
+    right: -(2 * $book-box-connector-width);
+    border-left-color: $light-grey;
+}

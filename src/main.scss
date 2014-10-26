@@ -1,8 +1,16 @@
 @import 'scss/01_globals/_colors.scss';
 @import 'scss/01_globals/_fonts.scss';
+@import 'scss/01_globals/mixins/_clearfix.scss';
 @import 'scss/03_base/_base.scss';
 @import 'scss/04_layout/_mainframe.scss';
+@import 'scss/05_modules/_book-box.scss';
 @import 'scss/05_modules/_button.scss';
+@import 'scss/05_modules/_icon.scss';
+@import 'scss/05_modules/icon/_amazon.scss';
+@import 'scss/05_modules/icon/_audible.scss';
+@import 'scss/05_modules/icon/_crosscult.scss';
+@import 'scss/05_modules/icon/_goodreads.scss';
 @import 'scss/05_modules/_fullscreen-background-image.scss';
+@import 'scss/05_modules/_tag.scss';
 @import 'scss/05_modules/_tagline.scss';
 @import 'scss/05_modules/_title.scss';
