@@ -1,0 +1,51 @@
+$timeline-line-width: 4px;
+$timeline-item-margin: 30px;
+$timeline-two-column-media-query: "min-width: 600px";
+
+.l-timeline {
+    list-style: none;
+    padding: 0 0 0 $timeline-item-margin;
+
+    background: linear-gradient(
+        to right,
+        $main-color 0px,
+        $main-color $timeline-line-width,
+        transparent $timeline-line-width + 1
+    );
+    background-repeat: repeat-y;
+}
+
+.l-timeline--item:not(:first-child) {
+    padding-top: $timeline-item-margin;
+}
+
+@media screen and(#{$timeline-two-column-media-query}) {
+    .l-timeline {
+        padding: 0;
+        background: linear-gradient(
+            to right,
+            transparent 0,
+            transparent calc(50% - (#{$timeline-line-width} / 2) - 1px ),
+            $main-color calc(50% - (#{$timeline-line-width} / 2)       ),
+            $main-color calc(50% + (#{$timeline-line-width} / 2)       ),
+            transparent calc(50% + (#{$timeline-line-width} / 2) + 1px )
+        );
+
+        @include clearfix;
+    }
+
+    .l-timeline--item {
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    .l-timeline--item:nth-child(odd) {
+        float: left;
+        padding-right: $timeline-item-margin;
+    }
+
+    .l-timeline--item:nth-child(even) {
+        float: right;
+        padding-left: $timeline-item-margin;
+    }
+}

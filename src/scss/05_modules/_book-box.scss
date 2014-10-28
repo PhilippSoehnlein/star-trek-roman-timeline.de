@@ -1,11 +1,15 @@
 $book-box-padding: 15px;
-$book-box-connector-width: 6px;
+$book-box-border-width: 1px;
+$book-box-arrow-connector-height: 16px;
+$book-box-arrow-connector-width: $book-box-arrow-connector-height / 2;
+
+$book-box-circle-connector-width: 6px;
+$book-box-circle-connector-height: $book-box-circle-connector-width;
+$book-box-circle-connector-border-width: 2px;
 
 .book-box {
-    margin: 20px; // TODO: Temporary!
-
     background-color: rgba( darken($light-grey, 27%), 0.8 );
-    border: 1px solid $light-grey;
+    border: $book-box-border-width solid $light-grey;
     border-radius: 4px;
 }
 
@@ -68,25 +72,77 @@ $book-box-connector-width: 6px;
     text-align: center;
 }
 
-.has-book-box-right-connector,
-.has-book-box-left-connector {
+.l-timeline--item .book-box {
     position: relative;
 }
 
-.has-book-box-left-connector:after,
-.has-book-box-right-connector:after {
+//:before = blue circle
+.l-timeline--item .book-box:before {
     position: absolute;
-    top: calc(50% - (#{$book-box-connector-width} / 2)); // TODO I probably should put it on top again. Let's see when the timeline layout is ready
+    top: calc( 50% - #{
+        ($book-box-arrow-connector-height / 2)
+        - (
+            (
+                  $book-box-arrow-connector-height
+                - ($book-box-circle-connector-height + $book-box-circle-connector-border-width * 2)
+            ) / 2
+        )
+    } ); // TODO I probably should put it on top again. Let's see when the timeline layout is ready
+    width: $book-box-circle-connector-width;
+    height: $book-box-circle-connector-height;
+    border: $book-box-circle-connector-border-width solid white;
+    border-radius: 100%;
+    background-color: $main-color;
     content: '';
-    border: $book-box-connector-width solid transparent;
+
+    left: -(
+        $timeline-item-margin
+        - ($timeline-line-width / 2)
+        + ( ( $book-box-circle-connector-width + 2 * $book-box-circle-connector-border-width ) / 2)
+        + $book-box-border-width
+    );
 }
 
-.has-book-box-left-connector:after {
-    left: -(2 * $book-box-connector-width);
+@media screen and(#{$timeline-two-column-media-query}) {
+    .l-timeline--item:nth-child(odd) .book-box:before {
+        left: auto;
+        right: -(
+            $timeline-item-margin
+            + ( ( $book-box-circle-connector-width + 2 * $book-box-circle-connector-border-width ) / 2)
+            + $book-box-border-width
+        );
+    }
+
+    .l-timeline--item:nth-child(even) .book-box:before {
+        left: -(
+            $timeline-item-margin
+            + ( ( $book-box-circle-connector-width + 2 * $book-box-circle-connector-border-width ) / 2)
+            + $book-box-border-width
+        );
+    }
+}
+
+//:after = arrow
+.l-timeline--item .book-box:after {
+    position: absolute;
+    top: calc( 50% - #{$book-box-arrow-connector-height / 2} ); // TODO I probably should put it on top again. Let's see when the timeline layout is ready
+    border: $book-box-arrow-connector-width solid transparent;
+    content: '';
+
+    left: -#{$book-box-arrow-connector-width * 2};
     border-right-color: $light-grey;
 }
 
-.has-book-box-right-connector:after {
-    right: -(2 * $book-box-connector-width);
-    border-left-color: $light-grey;
+@media screen and(#{$timeline-two-column-media-query}) {
+    .l-timeline--item:nth-child(odd) .book-box:after {
+        left: auto;
+        right: -#{$book-box-arrow-connector-width * 2};
+        border-left-color: $light-grey;
+        border-right-color: transparent;
+    }
+
+    .l-timeline--item:nth-child(even) .book-box:after {
+        left: -#{$book-box-arrow-connector-width * 2};
+        border-right-color: $light-grey;
+    }
 }
