@@ -1,3 +1,5 @@
+$button-font-color: white;
+
 .button {
     display: inline-block;
     padding: 0.3472em 0.694em;
@@ -9,7 +11,7 @@
     background-color: $light-grey;
 
     font-size: 0.9rem;
-    color: white;
+    color: $button-font-color;
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
@@ -27,4 +29,8 @@
 
 .button:active {
     background-color: darken($light-grey, 16%);
+}
+
+.button:visited { // in case .button is an <a>-tag
+    color: $button-font-color;
 }
