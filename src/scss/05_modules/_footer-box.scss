@@ -1,0 +1,17 @@
+$footer-box-font-size: 0.8rem;
+
+.footer-box {
+    padding: 0 3vw; // TODO Magic number!
+    text-align: center;
+    font-size: $footer-box-font-size;
+    color: darken($default-font-color, 40%);
+}
+
+.footer-box--headline {
+    font-size: $footer-box-font-size;
+    color: darken($default-font-color, 20%);
+}
+
+.footer-box--list {
+    list-style-type: none;
+}

@@ -1,0 +1,14 @@
+.footer-box_black {
+    @extend .footer-box;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba($default-background-color, 0.4);
+}
+
+.footer-box_black--headline {
+    @extend .footer-box--headline;
+}
+
+.footer-box_black--list {
+    @extend .footer-box--list;
+}

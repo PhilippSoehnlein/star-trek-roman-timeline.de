@@ -1,6 +1,7 @@
+$mainframe-footer-margin: 1.5rem;
+
 .l-mainframe {
     margin: 0;
-    padding-bottom: 30px;
 }
 
 .l-mainframe--header {
@@ -25,4 +26,12 @@
 
 .l-mainframe--main {
     margin: 0 3vw; /* TODO: 3vw should probably be $timeline-item-margin */
+}
+
+.l-mainframe--footer {
+    margin-top: $mainframe-footer-margin * 2; 
+}
+
+.l-mainframe--footer-box {
+    margin-bottom: $mainframe-footer-margin;
 }
