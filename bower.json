@@ -4,7 +4,7 @@
     "Philipp Söhnlein <me@philipp-soehnlein.de>"
   ],
   "description": "A website presenting an overview of german Star Trek novels.",
-  "main": "index.html",
+  "main": "src/index.html",
   "homepage": "http://www.star-trek-roman-timeline.de",
   "private": true,
   "ignore": [
@@ -13,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "modularized-normalize-scss": "~3.0.2"
+  }
 }
