@@ -1,0 +1,22 @@
+# top-most EditorConfig file
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[package.json]
+# grunt-init genereates a package.json with 2 spaces indentation. It makes no sense to change the indentation, because
+# every time you use "npm install somePackage --save-dev" the package.json will be rewritten again.
+indent_size = 2
+indent_style = space
+
+[bower.json]
+# "bower init" generates a bower.json with 2 spaces indentation. It makes no sense to change the indentation, because
+# every time you use "bower install somePackage --save-dev" the bower.json will be rewritten again.
+indent_size = 2
+indent_style = space
