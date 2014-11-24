@@ -24,6 +24,8 @@ $mainframe-footer-margin: 1.5rem;
     text-align: center;
 }
 
+// TODO: Define margin between .l-mainframe--filter-bar and .l-mainframe--main: It isn't yet and the margin is only their by coincedence (because the <ol> of the timeline has a margin-top)
+
 .l-mainframe--main {
     margin: 0 3vw; /* TODO: 3vw should probably be $timeline-item-margin */
 }
