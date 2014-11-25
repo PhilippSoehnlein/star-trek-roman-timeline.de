@@ -1,0 +1,45 @@
+$checkbox-wrapper-horizontal-padding: 0.625em;
+$checkbox-wrapper-vertical-padding: 0.2em;
+$checkbox-box-width: 2em;
+$checkbox-wrapper-active-border-color: desaturate($main-color, 42%);
+
+.checkbox {
+    position: relative;
+    text-align: left;
+    color: darken($default-font-color, 40%);
+
+    &--checkbox {
+        position: absolute;
+        top: 50%;
+        left: $checkbox-box-width / 2;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    &--label {
+        display: block;
+        border: 1px solid darken($light-grey, 15%);
+
+        padding-top: $checkbox-wrapper-vertical-padding;
+        padding-right: $checkbox-wrapper-horizontal-padding;
+        padding-bottom: $checkbox-wrapper-vertical-padding;
+        padding-left: calc(#{$checkbox-wrapper-horizontal-padding} + #{$checkbox-box-width});
+
+        background: linear-gradient(to right, rgba($light-grey, 0.4) calc(#{$checkbox-box-width} - 1px), rgba(darken($light-grey, 27%), 0.8) $checkbox-box-width);
+    }
+
+    &--checkbox:focus + &--label,
+    &--checkbox:hover + &--label {
+        background-color: $light-grey;
+        color: darken($default-font-color, 20%);
+    }
+
+    &--checkbox:active + &--label {
+        border-color: $checkbox-wrapper-active-border-color;
+    }
+
+    &--checkbox:checked + &--label {
+        background-color: $main-color;
+        border-color: $checkbox-wrapper-active-border-color;
+        color: darken($default-font-color, 15%);
+    }
+}
