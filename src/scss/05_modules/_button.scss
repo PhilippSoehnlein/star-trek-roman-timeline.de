@@ -1,4 +1,7 @@
 $button-font-color: white;
+$button-hover-background-color-darken-value: 8%;
+$button-active-background-color-darken-value: 2 * $button-hover-background-color-darken-value;
+$button-focus-outline-opacity: 0.6;
 
 .button {
     display: inline-block;
@@ -19,18 +22,18 @@ $button-font-color: white;
 
 .button:hover,
 .button:focus {
-    background-color: darken($light-grey, 8%);
+    background-color: darken($light-grey, $button-hover-background-color-darken-value);
 }
 
 .button:focus {
-    outline: 2px solid rgba(255,255,255,0.6);
+    outline: 2px solid rgba(white, $button-focus-outline-opacity);
     outline-offset: 3px;
 }
 
 .button:active {
-    background-color: darken($light-grey, 16%);
+    background-color: darken($light-grey, $button-hover-background-color-darken-value);
 }
 
-.button:visited { // in case .button is an <a>-tag
+.button:visited { // in case .button is an <a>-tag and we defined a :visited style before
     color: $button-font-color;
 }

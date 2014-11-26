@@ -1,0 +1,18 @@
+.button_primary {
+    @extend .button;
+
+    background-color: $main-color;
+}
+
+.button_primary:hover,
+.button_primary:focus {
+    background-color: darken($main-color, $button-hover-background-color-darken-value);
+}
+
+.button_primary:focus {
+    outline-color: rgba($main-color, $button-focus-outline-opacity);
+}
+
+.button_primary:active {
+    background-color: darken($main-color, $button-active-background-color-darken-value);
+}
