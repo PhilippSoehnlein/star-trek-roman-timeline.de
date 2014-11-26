@@ -1,10 +1,13 @@
 $timeline-line-width: 4px;
-$timeline-item-margin: 30px;
+$timeline-item-margin: $visual-horizontal-body-padding;
 $timeline-two-column-media-query: "min-width: 600px";
 
 .l-timeline {
     list-style: none;
     padding: 0 0 0 $timeline-item-margin;
+
+    margin-left: $timeline-item-margin;
+    margin-right: $timeline-item-margin;
 
     background: linear-gradient(
         to right,
