@@ -10,9 +10,9 @@ html {
 
 a {
     color: $main-color;
-}
 
-a:visited {
-    color: $light-grey;
-    text-decoration-color: $main-color;
+    &:visited {
+        color: desaturate($main-color, 40%);
+        text-decoration-color: $main-color;
+    }
 }
