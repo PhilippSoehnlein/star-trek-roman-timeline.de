@@ -4,6 +4,7 @@
 @import 'scss/01_globals/mixins/_clearfix.scss';
 @import '../bower_components/modularized-normalize-scss/_normalize.scss';
 @import 'scss/03_base/_base.scss';
+@import 'scss/04_layout/_filter-box.scss';
 @import 'scss/04_layout/_mainframe.scss';
 @import 'scss/04_layout/_timeline.scss';
 @import 'scss/05_modules/_book-box.scss';
@@ -18,6 +19,7 @@
 @import 'scss/05_modules/_footer-box.scss';
 @import 'scss/05_modules/footer-box/_black.scss';
 @import 'scss/05_modules/_fullscreen-background-image.scss';
+@import 'scss/05_modules/_series-filter.scss';
 @import 'scss/05_modules/_tag.scss';
 @import 'scss/05_modules/_tagline.scss';
 @import 'scss/05_modules/_title.scss';

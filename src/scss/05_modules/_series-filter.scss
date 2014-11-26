@@ -1,0 +1,52 @@
+@keyframes show-series-filter {
+    0% {
+        width: 0;
+        max-height: 0;
+    }
+
+    30%  {
+        width: 100%;
+        max-height: 0;
+    }
+
+    100% {
+        width: 100%;
+        max-height: 750px; // meh, this must be adjusted when we get more book serieses and the series list will be shown in one column
+    }
+}
+
+.series-filter {
+    text-align: center;
+
+    border-top: 1px solid rgba($light-grey, 0.7);
+    border-bottom: 1px solid rgba($light-grey, 0.7);
+    background-color: rgba($default-background-color, 0.4);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: none;
+    overflow: hidden;
+}
+
+:target > .series-filter {
+    display: block;
+    animation-name: show-series-filter;
+    animation-duration: 1.25s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-delay: 0.2s;
+    animation-direction: normal;
+}
+
+.series-filter--inner {
+    padding-top: $visual-horizontal-body-padding;
+    padding-right: $visual-horizontal-body-padding;
+    padding-bottom: $visual-horizontal-body-padding / 2;
+    padding-left: $visual-horizontal-body-padding;
+}
+
+.series-filter--footer {
+    margin-top: $visual-horizontal-body-padding / 2 - $filter-box-checkbox-group-margin;
+}

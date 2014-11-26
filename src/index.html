@@ -21,8 +21,110 @@
             <h2 class="l-mainframe--tagline tagline">Übersicht des deutschsprachigen <span lang="en">Star Trek</span> Roman Kontinuums. Chronologisch geordnet.</h2>
         </header>
 
-        <div class="l-mainframe--filter-bar">
-            <a href="#TODO" class="button">Nach Serien filtern</a>
+        <div class="l-mainframe--filter l-filter-box">
+            <div class="l-filter-box--header"><a href="#serienauswahl" class="button">Nach Serien filtern</a></div>
+            <div class="l-filter-box--content" id="serienauswahl">
+                <form class="series-filter">
+                    <div class="series-filter--inner">
+                        <div class="l-filter-box--checkbox-group">
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="comic" class="checkbox--checkbox" id="series-checkbox-comic">
+                                <label class="checkbox--label" for="series-checkbox-comic">Comic</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="corpsofengineers" class="checkbox--checkbox" id="series-checkbox-corpsofengineers" checked>
+                                <label class="checkbox--label" for="series-checkbox-corpsofengineers">Corps of Engineers</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="ds9" class="checkbox--checkbox" id="series-checkbox-ds9" checked>
+                                <label class="checkbox--label" for="series-checkbox-ds9">Deep Space 9</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="destiny" class="checkbox--checkbox" id="series-checkbox-destiny">
+                                <label class="checkbox--label" for="series-checkbox-destiny">Destiny</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="dieweltenvondeepspacenine" class="checkbox--checkbox" id="series-checkbox-dieweltenvondeepspacenine">
+                                <label class="checkbox--label" for="series-checkbox-dieweltenvondeepspacenine">Die Welten von Deep Space Nine</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="einzelschicksale" class="checkbox--checkbox" id="series-checkbox-einzelschicksale">
+                                <label class="checkbox--label" for="series-checkbox-einzelschicksale">Einzelschicksale</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="enterprise" class="checkbox--checkbox" id="series-checkbox-enterprise">
+                                <label class="checkbox--label" for="series-checkbox-enterprise">Enterprise</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-eugenische-kriege">
+                                <label class="checkbox--label" for="series-checkbox-eugenische-kriege">Eugenische Kriege</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-filmroman">
+                                <label class="checkbox--label" for="series-checkbox-filmroman">Filmroman</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-gesetze-der-foederation">
+                                <label class="checkbox--label" for="series-checkbox-gesetze-der-foederation">Gesetze der Föderation</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-new-frontier">
+                                <label class="checkbox--label" for="series-checkbox-new-frontier">New Frontier</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-next-generation">
+                                <label class="checkbox--label" for="series-checkbox-next-generation">Next Generation</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-starfleet-academy">
+                                <label class="checkbox--label" for="series-checkbox-starfleet-academy">Starfleet Academy</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-tng-doppelhelix">
+                                <label class="checkbox--label" for="series-checkbox-tng-doppelhelix">TNG Doppelhelix</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-the-original-series">
+                                <label class="checkbox--label" for="series-checkbox-the-original-series">The Original Series</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-typhon-pact">
+                                <label class="checkbox--label" for="series-checkbox-typhon-pact">Typhon Pact</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-vanguard">
+                                <label class="checkbox--label" for="series-checkbox-vanguard">Vanguard</label>
+                            </div>
+
+                            <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-voyager">
+                                <label class="checkbox--label" for="series-checkbox-voyager">Voyager</label>
+                            </div>
+                        </div>
+
+                        <div class="series-filter--footer">
+                            <!-- <span lang="en">Timeline</span> für <em>9</em> Bücher wird unten angezeigt. -->
+                            <button type="submit" class=" button_primary">Filtern</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
 
         <main class="l-mainframe--main">
