@@ -22,113 +22,204 @@
         </header>
 
         <div class="l-mainframe--filter l-filter-box">
-            <div class="l-filter-box--header"><a href="#serienauswahl" class="button">Nach Serien filtern</a></div>
-            <div class="l-filter-box--content" id="serienauswahl">
-                <form class="series-filter">
-                    <div class="series-filter--inner">
-                        <div class="l-filter-box--checkbox-group">
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="comic" class="checkbox--checkbox" id="series-checkbox-comic">
-                                <label class="checkbox--label" for="series-checkbox-comic">Comic</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="corpsofengineers" class="checkbox--checkbox" id="series-checkbox-corpsofengineers" checked>
-                                <label class="checkbox--label" for="series-checkbox-corpsofengineers">Corps of Engineers</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="ds9" class="checkbox--checkbox" id="series-checkbox-ds9" checked>
-                                <label class="checkbox--label" for="series-checkbox-ds9">Deep Space 9</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="destiny" class="checkbox--checkbox" id="series-checkbox-destiny">
-                                <label class="checkbox--label" for="series-checkbox-destiny">Destiny</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="dieweltenvondeepspacenine" class="checkbox--checkbox" id="series-checkbox-dieweltenvondeepspacenine">
-                                <label class="checkbox--label" for="series-checkbox-dieweltenvondeepspacenine">Die Welten von Deep Space Nine</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="einzelschicksale" class="checkbox--checkbox" id="series-checkbox-einzelschicksale">
-                                <label class="checkbox--label" for="series-checkbox-einzelschicksale">Einzelschicksale</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="enterprise" class="checkbox--checkbox" id="series-checkbox-enterprise">
-                                <label class="checkbox--label" for="series-checkbox-enterprise">Enterprise</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-eugenische-kriege">
-                                <label class="checkbox--label" for="series-checkbox-eugenische-kriege">Eugenische Kriege</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-filmroman">
-                                <label class="checkbox--label" for="series-checkbox-filmroman">Filmroman</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-gesetze-der-foederation">
-                                <label class="checkbox--label" for="series-checkbox-gesetze-der-foederation">Gesetze der Föderation</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-new-frontier">
-                                <label class="checkbox--label" for="series-checkbox-new-frontier">New Frontier</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-next-generation">
-                                <label class="checkbox--label" for="series-checkbox-next-generation">Next Generation</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-starfleet-academy">
-                                <label class="checkbox--label" for="series-checkbox-starfleet-academy">Starfleet Academy</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-tng-doppelhelix">
-                                <label class="checkbox--label" for="series-checkbox-tng-doppelhelix">TNG Doppelhelix</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-the-original-series">
-                                <label class="checkbox--label" for="series-checkbox-the-original-series">The Original Series</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-typhon-pact">
-                                <label class="checkbox--label" for="series-checkbox-typhon-pact">Typhon Pact</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-vanguard">
-                                <label class="checkbox--label" for="series-checkbox-vanguard">Vanguard</label>
-                            </div>
-
-                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-voyager">
-                                <label class="checkbox--label" for="series-checkbox-voyager">Voyager</label>
-                            </div>
+            <div class="l-filter-box--trigger"><a href="#serienauswahl" class="button">Nach Serien filtern</a></div>
+            <form class="l-filter-box--dialog series-filter" id="serienauswahl">
+                <div class="l-filter-box--dialog-header"></div>
+                <div class="l-filter-box--dialog-content">
+                    <div class="l-filter-box--checkbox-group">
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="comic" class="checkbox--checkbox" id="series-checkbox-comic">
+                            <label class="checkbox--label" for="series-checkbox-comic">Comic</label>
                         </div>
 
-                        <div class="series-filter--footer">
-                            <!-- <span lang="en">Timeline</span> für <em>9</em> Bücher wird unten angezeigt. -->
-                            <button type="submit" class=" button_primary">Filtern</button>
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="corpsofengineers" class="checkbox--checkbox" id="series-checkbox-corpsofengineers" checked>
+                            <label class="checkbox--label" for="series-checkbox-corpsofengineers">Corps of Engineers</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="ds9" class="checkbox--checkbox" id="series-checkbox-ds9" checked>
+                            <label class="checkbox--label" for="series-checkbox-ds9">Deep Space 9</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="destiny" class="checkbox--checkbox" id="series-checkbox-destiny">
+                            <label class="checkbox--label" for="series-checkbox-destiny">Destiny</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="dieweltenvondeepspacenine" class="checkbox--checkbox" id="series-checkbox-dieweltenvondeepspacenine">
+                            <label class="checkbox--label" for="series-checkbox-dieweltenvondeepspacenine">Die Welten von Deep Space Nine</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="einzelschicksale" class="checkbox--checkbox" id="series-checkbox-einzelschicksale">
+                            <label class="checkbox--label" for="series-checkbox-einzelschicksale">Einzelschicksale</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="enterprise" class="checkbox--checkbox" id="series-checkbox-enterprise">
+                            <label class="checkbox--label" for="series-checkbox-enterprise">Enterprise</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-eugenische-kriege">
+                            <label class="checkbox--label" for="series-checkbox-eugenische-kriege">Eugenische Kriege</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-filmroman">
+                            <label class="checkbox--label" for="series-checkbox-filmroman">Filmroman</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-gesetze-der-foederation">
+                            <label class="checkbox--label" for="series-checkbox-gesetze-der-foederation">Gesetze der Föderation</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-new-frontier">
+                            <label class="checkbox--label" for="series-checkbox-new-frontier">New Frontier</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-next-generation">
+                            <label class="checkbox--label" for="series-checkbox-next-generation">Next Generation</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-starfleet-academy">
+                            <label class="checkbox--label" for="series-checkbox-starfleet-academy">Starfleet Academy</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-tng-doppelhelix">
+                            <label class="checkbox--label" for="series-checkbox-tng-doppelhelix">TNG Doppelhelix</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-the-original-series">
+                            <label class="checkbox--label" for="series-checkbox-the-original-series">The Original Series</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-typhon-pact">
+                            <label class="checkbox--label" for="series-checkbox-typhon-pact">Typhon Pact</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-vanguard">
+                            <label class="checkbox--label" for="series-checkbox-vanguard">Vanguard</label>
+                        </div>
+
+                        <div class="l-filter-box--checkbox checkbox">
+                            <input type="checkbox" value="" class="checkbox--checkbox" id="series-checkbox-voyager">
+                            <label class="checkbox--label" for="series-checkbox-voyager">Voyager</label>
                         </div>
                     </div>
-                </form>
-            </div>
+                </div>
+                <div class="l-filter-box--dialog-footer">
+                     <!-- <span lang="en">Timeline</span> für <em>9</em> Bücher wird unten angezeigt. -->
+                    <button type="submit" class=" button_primary">Filtern</button>
+                </div>
+            </form>
         </div>
 
         <main class="l-mainframe--main">
             <ol class="l-timeline">
+                <li class="l-timeline--item">
+                    <article class="book-box">
+                        <div class="book-box--data">
+                            <div class="book-box--main">
+                                <h3 class="book-box--title">Infektion</h3>
+                                <p class="book-box--description">John Gregory Betancourt</p>
+                            </div>
+
+                            <div class="book-box--image-wrapper">
+                                <img src="http://www.cross-cult.de/system/html/ST_DS9_810_cover-65fded03.jpg" class="book-box--cover" />
+                            </div>
+
+                            <div class="book-box--header-bar">
+                                <div class="book-box--series">TNG Doppelhelix #1</div>
+                                <time class="book-box--date tag">2364</time>
+                            </div>
+                        </div>
+
+                        <ul class="book-box--links">
+                            <li class="book-box--link-wrapper">
+                                <a href="#TODO" class="book-box--link icon_crosscult" lang="en">Cross Cult</a>
+                            </li>
+                            <li class="book-box--link-wrapper">
+                                <a href="#TODO" class="book-box--link icon_amazon" lang="en">Amazon</a>
+                            </li>
+                            <li class="book-box--link-wrapper">
+                                <a href="#TODO" class="book-box--link icon_goodreads" lang="en" hreflang="en">Goodreads</a>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="l-timeline--item">
+                    <article class="book-box">
+                        <div class="book-box--data">
+                            <div class="book-box--main">
+                                <h3 class="book-box--title">Infektion</h3>
+                                <p class="book-box--description">John Gregory Betancourt</p>
+                            </div>
+
+                            <div class="book-box--image-wrapper">
+                                <img src="http://www.cross-cult.de/system/html/ST_DS9_810_cover-65fded03.jpg" class="book-box--cover" />
+                            </div>
+
+                            <div class="book-box--header-bar">
+                                <div class="book-box--series">TNG Doppelhelix #1</div>
+                                <time class="book-box--date tag">2364</time>
+                            </div>
+                        </div>
+
+                        <ul class="book-box--links">
+                            <li class="book-box--link-wrapper">
+                                <a href="#TODO" class="book-box--link icon_crosscult" lang="en">Cross Cult</a>
+                            </li>
+                            <li class="book-box--link-wrapper">
+                                <a href="#TODO" class="book-box--link icon_amazon" lang="en">Amazon</a>
+                            </li>
+                            <li class="book-box--link-wrapper">
+                                <a href="#TODO" class="book-box--link icon_goodreads" lang="en" hreflang="en">Goodreads</a>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="l-timeline--item">
+                    <article class="book-box">
+                        <div class="book-box--data">
+                            <div class="book-box--main">
+                                <h3 class="book-box--title">Infektion</h3>
+                                <p class="book-box--description">John Gregory Betancourt</p>
+                            </div>
+
+                            <div class="book-box--image-wrapper">
+                                <img src="http://www.cross-cult.de/system/html/ST_DS9_810_cover-65fded03.jpg" class="book-box--cover" />
+                            </div>
+
+                            <div class="book-box--header-bar">
+                                <div class="book-box--series">TNG Doppelhelix #1</div>
+                                <time class="book-box--date tag">2364</time>
+                            </div>
+                        </div>
+
+                        <ul class="book-box--links">
+                            <li class="book-box--link-wrapper">
+                                <a href="#TODO" class="book-box--link icon_crosscult" lang="en">Cross Cult</a>
+                            </li>
+                            <li class="book-box--link-wrapper">
+                                <a href="#TODO" class="book-box--link icon_amazon" lang="en">Amazon</a>
+                            </li>
+                            <li class="book-box--link-wrapper">
+                                <a href="#TODO" class="book-box--link icon_goodreads" lang="en" hreflang="en">Goodreads</a>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
                 <li class="l-timeline--item">
                     <article class="book-box">
                         <div class="book-box--data">
@@ -166,22 +257,22 @@
         <footer class="l-mainframe--footer">
             <div class="l-mainframe--footer-box footer-box_black">
                 <h2 class="footer-box_black--headline">Danke / <span lang="en">Credits</span>:</h2>
-                
+
                 <p>Erstellt mit Omega-Molekülen, Solitenpulsen und der Hilfe von folgenden netten Erdlingen:</p>
-                
+
                 <ul class="footer-box_black--list">
                     <li>Markus Rohde von <span lang="en">Cross Cult</span> (danke für die freundliche Unterstützung).</li>
                     <li><a href="http://www.glennclovis.com/" hreflang="en" lang="en">Glenn Clovis</a> gebührt Lobpreisung für <a href="https://glennclovis.deviantart.com/art/Kaemira-Nebula-98319079" hreflang="en" lang="en">Kaemira Nebula</a>.</li>
                 </ul>
             </div>
-            
+
             <div class="l-mainframe--footer-box footer-box">
                 <p>
                     Diese Seite ist inoffiziell und wird nicht von <span lang="en">Cross Cult</span>, <span lang="en">Paramount</span> oder <span lang="en">CBS</span> betrieben.
                     <br><a href="#TODO">Impressum</a>
                 </p>
             </div>
-            
+
             <!-- TODO: Decide if a Flattr button is really desired and if so generate a thing.
             <div class="l-mainframe--footer-box footer-box">
                 <p>

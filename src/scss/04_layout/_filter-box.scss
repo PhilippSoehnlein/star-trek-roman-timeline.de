@@ -1,9 +1,26 @@
 $filter-box-checkbox-group-margin: 4px;
 
+@keyframes show-series-filter {
+    0% {
+        width: 0;
+        max-height: 0;
+    }
+
+    30%  {
+        width: 100%;
+        max-height: 0;
+    }
+
+    100% {
+        width: 100%;
+        max-height: 750px; // meh, this must be adjusted when we get more book serieses and the series list will be shown in one column
+    }
+}
+
 .l-filter-box {
     position: relative;
 
-    &--header {
+    &--trigger {
         position: absolute;
         width: 100%;
         transform: translateY(-50%);
@@ -11,13 +28,44 @@ $filter-box-checkbox-group-margin: 4px;
         text-align: center;
     }
 
-    &--content {
-        $top-offset: 30px;
+    &--dialog {
+        box-sizing: border-box;
 
-        position: relative;
-        padding-top: $top-offset;
-        top: -$top-offset;
-        margin-bottom: -$top-offset;
+        // To make the animation start from middle:
+        margin-left: auto;
+        margin-right: auto;
+
+        display: none;
+        overflow: hidden;
+    }
+
+    &--dialog:target {
+        display: block;
+        animation-name: show-series-filter;
+        animation-duration: 1.25s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+        animation-delay: 0.2s;
+        animation-direction: normal;
+    }
+
+    &--dialog-content {
+        padding-top: $visual-horizontal-body-padding;
+    }
+
+    &--dialog-content,
+    &--dialog-footer {
+        padding-left: $visual-horizontal-body-padding;
+        padding-right: $visual-horizontal-body-padding;
+    }
+
+    &--dialog-footer {
+        padding-bottom: $visual-horizontal-body-padding / 2;
+
+        margin-top: $visual-horizontal-body-padding / 2 - $filter-box-checkbox-group-margin;
+
+        text-align: center;
     }
 
     &--checkbox-group {
