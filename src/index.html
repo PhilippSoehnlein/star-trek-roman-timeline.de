@@ -24,7 +24,9 @@
         <div class="l-mainframe--filter l-filter-box">
             <div class="l-filter-box--trigger"><a href="#serienauswahl" class="button">Nach Serien filtern</a></div>
             <form class="l-filter-box--dialog series-filter" id="serienauswahl">
-                <div class="l-filter-box--dialog-header"></div>
+                <div class="l-filter-box--dialog-header">
+                    Serien auswählen (2/18 gewählt):
+                </div>
                 <div class="l-filter-box--dialog-content">
                     <div class="l-filter-box--checkbox-group">
                         <div class="l-filter-box--checkbox checkbox">
@@ -119,8 +121,13 @@
                     </div>
                 </div>
                 <div class="l-filter-box--dialog-footer">
-                     <!-- <span lang="en">Timeline</span> für <em>9</em> Bücher wird unten angezeigt. -->
-                    <button type="submit" class=" button_primary">Filtern</button>
+                    <p class="l-filter-box--dialog-footer-status-box">
+                        <span lang="en">Timeline</span> enthält <em>9</em> Bücher. <!-- mobile with JS -->
+                        <!-- <span lang="en">Timeline</span> für <em>9</em> Bücher wird unten angezeigt. --> <!-- desktop with JS -->
+                    </p>
+                    <div class="l-filter-box--dialog-footer-button-box">
+                        <button type="submit" class="button_primary">Filtern</button> <!-- Desktop without JS || mobile with JS -->
+                    </div>
                 </div>
             </form>
         </div>

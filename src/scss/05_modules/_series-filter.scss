@@ -1,0 +1,14 @@
+.series-filter {
+    border: 1px solid $light-grey;
+    background-color: black;
+}
+
+@media screen and (min-width: $filter-box-layout-switch-media-query-value) {
+    .series-filter {
+        border-left: 0;
+        border-right: 0;
+        border-top: 1px solid rgba($light-grey, 0.7);
+        border-bottom: 1px solid rgba($light-grey, 0.7);
+        background-color: rgba($default-background-color, 0.4);
+    }
+}
