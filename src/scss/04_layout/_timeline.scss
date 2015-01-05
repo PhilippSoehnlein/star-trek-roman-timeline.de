@@ -17,7 +17,7 @@ $timeline-two-column-media-query: "min-width: 600px";
     list-style: none;
 }
 
-.l-timeline--item:not(:first-child) {
+.l-timeline--item:not(.is-l-timeline-item-first) {
     padding-top: $timeline-item-margin;
 }
 
@@ -41,12 +41,12 @@ $timeline-two-column-media-query: "min-width: 600px";
         box-sizing: border-box;
     }
 
-    .l-timeline--item:nth-child(odd) {
+    .is-l-timeline-item-odd {
         float: left;
         padding-right: $timeline-item-margin;
     }
 
-    .l-timeline--item:nth-child(even) {
+    .is-l-timeline-item-even {
         float: right;
         padding-left: $timeline-item-margin;
     }

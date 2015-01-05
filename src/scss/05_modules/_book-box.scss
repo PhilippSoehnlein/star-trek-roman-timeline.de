@@ -77,7 +77,8 @@ $book-box-circle-connector-border-width: 2px;
 }
 
 //:before = blue circle
-.l-timeline--item .book-box:before {
+.is-l-timeline-item-odd .book-box:before,
+.is-l-timeline-item-even .book-box:before {
     position: absolute;
     top: calc( 50% - #{
         ($book-box-arrow-connector-height / 2)
@@ -104,7 +105,7 @@ $book-box-circle-connector-border-width: 2px;
 }
 
 @media screen and(#{$timeline-two-column-media-query}) {
-    .l-timeline--item:nth-child(odd) .book-box:before {
+    .is-l-timeline-item-odd .book-box:before {
         left: auto;
         right: -(
             $timeline-item-margin
@@ -113,7 +114,7 @@ $book-box-circle-connector-border-width: 2px;
         );
     }
 
-    .l-timeline--item:nth-child(even) .book-box:before {
+    .is-l-timeline-item-even .book-box:before {
         left: -(
             $timeline-item-margin
             + ( ( $book-box-circle-connector-width + 2 * $book-box-circle-connector-border-width ) / 2)
@@ -123,7 +124,8 @@ $book-box-circle-connector-border-width: 2px;
 }
 
 //:after = arrow
-.l-timeline--item .book-box:after {
+.is-l-timeline-item-odd .book-box:after,
+.is-l-timeline-item-even .book-box:after {
     position: absolute;
     top: calc( 50% - #{$book-box-arrow-connector-height / 2} ); // TODO I probably should put it on top again. Let's see when the timeline layout is ready
     border: $book-box-arrow-connector-width solid transparent;
@@ -134,14 +136,14 @@ $book-box-circle-connector-border-width: 2px;
 }
 
 @media screen and(#{$timeline-two-column-media-query}) {
-    .l-timeline--item:nth-child(odd) .book-box:after {
+    .is-l-timeline-item-odd .book-box:after {
         left: auto;
         right: -#{$book-box-arrow-connector-width * 2};
         border-left-color: $light-grey;
         border-right-color: transparent;
     }
 
-    .l-timeline--item:nth-child(even) .book-box:after {
+    .is-l-timeline-item-even .book-box:after {
         left: -#{$book-box-arrow-connector-width * 2};
         border-right-color: $light-grey;
     }
