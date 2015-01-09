@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         //pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            files: ['src/index.html', 'src/main.scss', 'src/scss/**/*.scss'],
+            files: ['src/index.html', 'src/main.scss', 'src/scss/**/*.scss', 'src/js/**'],
             tasks: ['build']
         },
 
@@ -53,6 +53,18 @@ module.exports = function(grunt) {
             },
         },
 
+        uglify: {
+            main: {
+                options: {
+                    sourceMap: true,
+                    sourceMapName: 'build/main.map'
+                },
+                files: {
+                    'build/main.js': ['src/js/filter.js']
+                }
+            },
+        },
+
         copy: {
             build: {
                 files: [
@@ -78,7 +90,7 @@ module.exports = function(grunt) {
                 options: {
                     args: {
                         browser: 'chrome',
-                        specs: ['test/e2e/basic.js'],
+                        specs: ['test/e2e/filter.js'],
                     }
                 },
             },
@@ -87,7 +99,7 @@ module.exports = function(grunt) {
                 options: {
                     args: {
                         browser: 'firefox',
-                        specs: ['test/e2e/basic.js'],
+                        specs: ['test/e2e/filter.js'],
                     }
                 },
             },
@@ -96,7 +108,7 @@ module.exports = function(grunt) {
                 options: {
                     args: {
                         browser: 'safari',
-                        specs: ['test/e2e/basic.js'],
+                        specs: ['test/e2e/filter.js'],
                     }
                 },
             },
@@ -104,7 +116,7 @@ module.exports = function(grunt) {
                 configFile: 'test/e2e/etc/protractor-iphone.js',
                 options: {
                     args: {
-                        specs: ['test/e2e/basic.js'],
+                        specs: ['test/e2e/filter.js'],
                     }
                 }
             }
@@ -126,6 +138,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-protractor-runner');
 
     grunt.registerTask('dev', [
@@ -139,6 +152,7 @@ module.exports = function(grunt) {
         'copy:build',
         'render',
         'sass',
+        'uglify',
         'autoprefixer'
     ]);
 

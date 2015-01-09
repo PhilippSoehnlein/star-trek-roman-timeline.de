@@ -60,6 +60,7 @@ $filter-box-checkbox-group-margin: 4px;
             overflow: hidden;
         }
 
+        .is-l-filter-box-dialog-visible,
         &--dialog:target {
             transform: scale(1);
             top: $filter-box-dialog-margin;
@@ -130,6 +131,7 @@ $filter-box-checkbox-group-margin: 4px;
             overflow: hidden;
         }
 
+        .is-l-filter-box-dialog-visible,
         &--dialog:target {
             display: block;
             animation-name: show-series-filter;
@@ -137,7 +139,6 @@ $filter-box-checkbox-group-margin: 4px;
             animation-iteration-count: 1;
             animation-fill-mode: both;
             animation-timing-function: linear;
-            animation-delay: 0.2s;
             animation-direction: normal;
         }
 
