@@ -60,7 +60,10 @@ module.exports = function(grunt) {
                     sourceMapName: 'build/main.map'
                 },
                 files: {
-                    'build/main.js': ['src/js/filter.js']
+                    'build/main.js': [
+                        'bower_components/isotope/dist/isotope.pkgd.js', // not using minified version here, to have a proper sourceMap
+                        'src/js/filter.js'
+                    ]
                 }
             },
         },
@@ -156,7 +159,13 @@ module.exports = function(grunt) {
         'autoprefixer'
     ]);
 
+    grunt.registerTask('build:test', [
+        'build'
+        // TODO: Add test build here, too
+    ]);
+
     grunt.registerTask('test-e2e', [
+        'build:test',
         'connect:test-e2e',
         'protractor:firefox',
         'protractor:chrome',
@@ -165,18 +174,21 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('test-e2e:firefox', [
-         'connect:test-e2e',
-         'protractor:firefox',
+        'build:test',
+        'connect:test-e2e',
+        'protractor:firefox',
     ]);
 
     grunt.registerTask('test-e2e:chrome', [
-         'connect:test-e2e',
-         'protractor:chrome',
+        'build:test',
+        'connect:test-e2e',
+        'protractor:chrome',
     ]);
 
     grunt.registerTask('test-e2e:safari', [
-         'connect:test-e2e',
-         'protractor:safari',
+        'build:test',
+        'connect:test-e2e',
+        'protractor:safari',
     ]);
 
     grunt.registerTask('test-e2e:desktop-browser', [
@@ -187,6 +199,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('test-e2e:iphone', [
         // TODO: appium has to run for this to work (node_modules/appium/bin/appium.js). Check how we can automate this.
+        'build:test',
         'connect:test-e2e',
         'protractor:iphone',
     ]);

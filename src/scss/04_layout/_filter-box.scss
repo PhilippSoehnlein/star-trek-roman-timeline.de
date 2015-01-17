@@ -112,6 +112,10 @@ $filter-box-checkbox-group-margin: 4px;
             padding-right: $filter-box-dialog-padding;
         }
 
+        &--dialog-footer-status-text {
+            display: none;
+        }
+
         &--dialog-footer-button-box {
             text-align: right;
             padding-right: $filter-box-dialog-padding;
@@ -162,6 +166,10 @@ $filter-box-checkbox-group-margin: 4px;
             margin-top: $visual-horizontal-body-padding / 2 - $filter-box-checkbox-group-margin;
 
             text-align: center;
+        }
+
+        &--dialog-footer-status-text-dialog {
+            display: none;
         }
 
         &--checkbox-group {

@@ -14,7 +14,8 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "modularized-normalize-scss": "~3.0.2"
+  "dependencies": {
+    "modularized-normalize-scss": "~3.0.2",
+    "isotope": "~2.1.0"
   }
 }
