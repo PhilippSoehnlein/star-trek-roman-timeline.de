@@ -105,6 +105,23 @@ describe( 'Filter functionality', function() {
                     });
                 });
             }
+        },
+
+        {
+            title: 'Selecting series changes the series counter',
+            testFunction: function() {
+                filterFormTriggerButton.click();
+                browser.driver.sleep( 1500 ).then( function() { // wait for animation to finish
+                    var checkboxes  = element.all( by.css( '#' + filterId + ' input[type="checkbox"]' ) );
+                    var counterNode = element( by.className( '_is_filter_series_count' ) );
+
+                    expect( counterNode.getInnerHtml() ).toBe( '0' );
+                    checkboxes.get( 0 ).click();
+                    expect( counterNode.getInnerHtml() ).toBe( '1' );
+                    checkboxes.get( 1 ).click();
+                    expect( counterNode.getInnerHtml() ).toBe( '2' );
+                });
+            }
         }
     ];
 

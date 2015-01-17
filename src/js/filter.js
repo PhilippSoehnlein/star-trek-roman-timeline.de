@@ -9,12 +9,13 @@
             timelineItemClass:      'l-timeline--item',
         };
 
-        var triggerButtons       = [];
-        var filterForm           = null;
-        var filterSubmitButtons  = [];
-        var filterCheckboxes     = [];
-        var filterBookCountNodes = [];
-        var isotope              = null;
+        var triggerButtons         = [];
+        var filterForm             = null;
+        var filterSubmitButtons    = [];
+        var filterCheckboxes       = [];
+        var filterBookCountNodes   = [];
+        var filterSeriesCountNodes = [];
+        var isotope                = null;
 
         function init() {
             // fill triggerButtons
@@ -56,6 +57,10 @@
 
             [].forEach.call( document.getElementsByClassName( '_is_filter_book_count' ), function ( node ) {
                 filterBookCountNodes.push( node );
+            });
+
+            [].forEach.call( document.getElementsByClassName( '_is_filter_series_count' ), function ( node ) {
+                filterSeriesCountNodes.push( node );
             });
 
             if ( window.location.hash === '#' + config.filterFormId ) {
@@ -112,6 +117,10 @@
                 .filter( function(checkbox) { return checkbox.checked; } )
                 .map( function(checkbox) { return checkbox.getAttribute('value'); } )
             ;
+
+            filterSeriesCountNodes.forEach( function( node ) {
+                node.innerHTML = choosenSeries.length;
+            });
 
             // TODO: Only do this in desktop mode.
             isotope.arrange({
