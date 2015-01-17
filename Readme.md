@@ -10,7 +10,7 @@ A website presenting an overview of german Star Trek novels.
 - WebP version of background image including [modernizr test](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/img/webp.js).
 - After launch: Revisit H5BP's original .htaccess to check if there are topics I forgot along the way.
 - Maybe integrate [grunt-protactor-coverage](https://www.npmjs.com/package/grunt-protractor-coverage)?
-
+- Figure out what dependencies in package.json are real dependencies to make the app run and which are just devDependencies.
 
 ## Environment installation
 
