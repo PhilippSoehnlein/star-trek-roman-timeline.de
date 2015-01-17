@@ -7,14 +7,29 @@
  *     - test-e2e:chrome:          Executes end-to-end tests in Chrome.
  *     - test-e2e:firefox:         Executes end-to-end tests in Firefox.
  *     - test-e2e:iphone:          Executes end-to-end tests in a simulated iPhone.
+ *     - test-unit:                Executes unit tests.
  */
 module.exports = function(grunt) {
+    var ejsHelpers = require('./src/js/ejs-helpers.js');
+
     grunt.initConfig({
         //pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            files: ['src/index.html', 'src/main.scss', 'src/scss/**/*.scss', 'src/js/**'],
+            files: ['src/index.html', 'src/books.json', 'src/ejs-helper.js', 'src/main.scss', 'src/scss/**/*.scss', 'src/js/**'],
             tasks: ['build']
+        },
+
+        render: {
+            options: {
+                data: ['src/books.json'],
+                helpers: ejsHelpers,
+            },
+            html: {
+                files: {
+                    'build/index.html': ['src/index.html']
+                }
+            }
         },
 
         connect: {
@@ -125,6 +140,13 @@ module.exports = function(grunt) {
             }
         },
 
+        jasmine_node: {
+            options: {
+                matchall: true, // true = test file doesn't need to have "spec" in the filename.
+            },
+            all: ['test/spec/']
+        },
+
         forever: {
             appium: {
                 options: {
@@ -143,6 +165,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-protractor-runner');
+    grunt.loadNpmTasks('grunt-jasmine-node');
 
     grunt.registerTask('dev', [
         'build',
@@ -202,5 +225,9 @@ module.exports = function(grunt) {
         'build:test',
         'connect:test-e2e',
         'protractor:iphone',
+    ]);
+
+    grunt.registerTask('test:unit', [
+        'jasmine_node',
     ]);
 }
