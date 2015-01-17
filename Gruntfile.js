@@ -146,14 +146,6 @@ module.exports = function(grunt) {
             },
             all: ['test/spec/']
         },
-
-        forever: {
-            appium: {
-                options: {
-                    index: 'node_modules/appium/bin/appium.js',
-                }
-            },
-        }
     });
 
     grunt.loadNpmTasks('grunt-ejs-render');
