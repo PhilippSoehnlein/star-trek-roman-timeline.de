@@ -109,52 +109,16 @@ describe( 'Filter functionality', function() {
     ];
 
     tests.forEach( function( test ) {
-        // A test can state if it needs a certain viewport size. That means on some environments (like smartphones), we have to skip some tests, because the
-        // browser there doesn't have the required size and we can't change the viewport size.
         var aroundFn = function() {
             browser.driver.manage().window().getSize().then( function( size ) {
-                var doTest = false;
-                if ( canBrowserResizeWindow ) {
-                    // provide a certain default size if the test has needsBigScreen or needSmallScreen (if it has both, the test must take care of it itself
-                    if ( test.needsBigScreen ) {
-                        browser.driver.manage().window().setSize( 1024, 600 );
-                    }
-                    else if ( test.needsSmallScreen ) {
-                        browser.driver.manage().window().setSize( 320, 480 );
-                    }
-                    doTest = true;
-                }
-                else if ( typeof test.needsSmallScreen === 'undefined' && typeof test.needsBigScreen === 'undefined' ) {
-                    // we can't resize the browser window, but the test says the viewport size doesn't matter anyway.
-                    doTest = true;
-                }
-                else if ( test.needsSmallScreen && size.width < 700 ) {
-                    doTest = true;
-                }
-                else if ( test.needsBigScreen && size.width > 700 ) {
-                    doTest = true;
-                }
-
+                var doTest = prepareBrowserViewport( test );
                 if ( !doTest ) {
-                    expect(true).toBe(true);
+                    expect( true ).toBe( true );
                     console.info( 'Skipping test "' + test.title + '", because it needs a certain viewport size and we run in a browser in which we can\'t change it.' );
                 }
                 else {
-                    // Set special URL if a test demands it.
-                    var url = 'http://localhost:8001/';
-
-                    if ( test.page === 'directToOpenedFilter' ) {
-                        url += '#serienauswahl';
-                    }
-                    /*else if ( test.page === 'nojs' ) {
-                        url += 'index_nojs.html';
-                    }*/
-
-                    browser.get(url);
-
-                    filterForm              = element( by.id( 'serienauswahl' ) );
-                    filterFormTriggerButton = element( by.className( '_is_filter_trigger' ) );
-                    filterFormSubmitButton  = element( by.className( '_is_filter_submit_button' ) );
+                    callTestUrl( test );
+                    prepareTestVars();
 
                     test.testFunction();
                 }
@@ -163,4 +127,52 @@ describe( 'Filter functionality', function() {
 
         it( test.title, aroundFn );
     });
+
+    function prepareBrowserViewport( test ) {
+        // A test can state if it needs a certain viewport size. That means on some environments (like smartphones), we have to skip some tests, because the
+        // browser there doesn't have the required size and we can't change the viewport size.
+        var canTestBeExecuted = false;
+        if ( canBrowserResizeWindow ) {
+            // provide a certain default size if the test has needsBigScreen or needSmallScreen (if it has both, the test must take care of it itself
+            if ( test.needsBigScreen ) {
+                browser.driver.manage().window().setSize( 1024, 600 );
+            }
+            else if ( test.needsSmallScreen ) {
+                browser.driver.manage().window().setSize( 320, 480 );
+            }
+            canTestBeExecuted = true;
+        }
+        else if ( typeof test.needsSmallScreen === 'undefined' && typeof test.needsBigScreen === 'undefined' ) {
+            // we can't resize the browser window, but the test says the viewport size doesn't matter anyway.
+            canTestBeExecuted = true;
+        }
+        else if ( test.needsSmallScreen && size.width < 700 ) {
+            canTestBeExecuted = true;
+        }
+        else if ( test.needsBigScreen && size.width > 700 ) {
+            canTestBeExecuted = true;
+        }
+
+        return canTestBeExecuted;
+    }
+
+    function callTestUrl( test ) {
+        // Set special URL if a test demands it.
+        var url = 'http://localhost:8001/';
+
+        if ( test.page === 'directToOpenedFilter' ) {
+            url += '#serienauswahl';
+        }
+        /*else if ( test.page === 'nojs' ) {
+            url += 'index_nojs.html';
+        }*/
+
+        browser.get( url );
+    }
+
+    function prepareTestVars() {
+        filterForm              = element( by.id( 'serienauswahl' ) );
+        filterFormTriggerButton = element( by.className( '_is_filter_trigger' ) );
+        filterFormSubmitButton  = element( by.className( '_is_filter_submit_button' ) );
+    }
 });
