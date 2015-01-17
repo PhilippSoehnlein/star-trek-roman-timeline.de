@@ -1,4 +1,6 @@
 describe( 'Filter functionality', function() {
+    const filterId              = 'serienauswahl';
+
     var filterForm              = null;
     var filterFormTriggerButton = null;
     var filterFormSubmitButton  = null;
@@ -74,7 +76,7 @@ describe( 'Filter functionality', function() {
         },
 
         {
-            title: 'Going directly to #serienauswahl opens filter and inits it',
+            title: 'Going directly to #' + filterId + ' opens filter and inits it',
             page: 'directToOpenedFilter',
             testFunction: function() {
                 browser.driver.sleep( 1500 ).then( function() { // wait for animation to finish
@@ -88,8 +90,8 @@ describe( 'Filter functionality', function() {
         {
             title: 'Labels of checkboxes are correctly linked to their checkboxes',
             testFunction: function() {
-                var checkboxes = element.all( by.css( '#serienauswahl input[type="checkbox"]' ) );
-                var labels     = element.all( by.css( '#serienauswahl label' ) );
+                var checkboxes = element.all( by.css( '#' + filterId + ' input[type="checkbox"]' ) );
+                var labels     = element.all( by.css( '#' + filterId + ' label' ) );
 
                 expect( checkboxes.count() ).toBe( labels.count() );
 
@@ -178,7 +180,7 @@ describe( 'Filter functionality', function() {
         var url = 'http://localhost:8001/';
 
         if ( test.page === 'directToOpenedFilter' ) {
-            url += '#serienauswahl';
+            url += '#' + filterId;
         }
         /*else if ( test.page === 'nojs' ) {
             url += 'index_nojs.html';
@@ -188,7 +190,7 @@ describe( 'Filter functionality', function() {
     }
 
     function prepareTestVars() {
-        filterForm              = element( by.id( 'serienauswahl' ) );
+        filterForm              = element( by.id( filterId ) );
         filterFormTriggerButton = element( by.className( '_is_filter_trigger' ) );
         filterFormSubmitButton  = element( by.className( '_is_filter_submit_button' ) );
     }
