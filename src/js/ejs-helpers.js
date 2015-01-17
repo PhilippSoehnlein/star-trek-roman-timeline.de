@@ -1,13 +1,14 @@
 'use strict';
 
 module.exports = {
-    getSeries: getSeries,
+    getSeries:       getSeries,
+    transformString: transformString,
 };
 
 var _ = require( 'lodash-node' );
 
 function getSeries( books ) {
-    var series = _.uniq(
+    var seriesNames = _.uniq(
             books.map( function( book ) { return book.series } )
         ).sort( function( a, b ) {
             a = a.toLowerCase();
@@ -22,5 +23,18 @@ function getSeries( books ) {
                 return 0;
             }
         });
+
+    var series = [];
+    seriesNames.forEach( function( name ) {
+        series.push({
+            id:   transformString( name ),
+            name: name,
+        });
+    });
+
     return series;
+}
+
+function transformString( string ) {
+    return string.replace( /\s+/g, '-' ).toLowerCase();
 }

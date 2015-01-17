@@ -83,14 +83,36 @@ describe( 'Filter functionality', function() {
                     expect( element.all( by.className( '_is_filter_book_count' ) ).getInnerHtml() ).toMatch( /\d+/ );
                 });
             }
+        },
+
+        {
+            title: 'Labels of checkboxes are correctly linked to their checkboxes',
+            testFunction: function() {
+                var checkboxes = element.all( by.css( '#serienauswahl input[type="checkbox"]' ) );
+                var labels     = element.all( by.css( '#serienauswahl label' ) );
+
+                expect( checkboxes.count() ).toBe( labels.count() );
+
+                checkboxes.each( function( checkbox ) {
+                    expect( checkbox.getAttribute( 'checked' ) ).toBe( null );
+                });
+
+                filterFormTriggerButton.click();
+                browser.driver.sleep( 1500 ).then( function() { // wait for animation to finish
+                    labels.click();
+                    checkboxes.each( function( checkbox ) {
+                        expect( checkbox.getAttribute( 'checked' ) ).toBe( 'true' );
+                    });
+                });
+            }
         }
     ];
 
-    tests.forEach( function(test) {
+    tests.forEach( function( test ) {
         // A test can state if it needs a certain viewport size. That means on some environments (like smartphones), we have to skip some tests, because the
         // browser there doesn't have the required size and we can't change the viewport size.
         var aroundFn = function() {
-            browser.driver.manage().window().getSize().then( function(size) {
+            browser.driver.manage().window().getSize().then( function( size ) {
                 var doTest = false;
                 if ( canBrowserResizeWindow ) {
                     // provide a certain default size if the test has needsBigScreen or needSmallScreen (if it has both, the test must take care of it itself

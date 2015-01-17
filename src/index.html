@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<%
+   var books  = data.books;
+   var series = helpers.getSeries( books );
+%><!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="de" class="fullscreen-background-image no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="de" class="fullscreen-background-image no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="de" class="fullscreen-background-image no-js lt-ie9"> <![endif]-->
@@ -25,99 +28,16 @@
             <div class="l-filter-box--trigger"><a href="#serienauswahl" class="button _is_filter_trigger">Nach Serien filtern</a></div>
             <form class="l-filter-box--dialog series-filter" id="serienauswahl">
                 <div class="l-filter-box--dialog-header">
-                    Serien auswählen (2/18 gewählt):
+                    Serien auswählen (0/<%= series.length %> gewählt):
                 </div>
                 <div class="l-filter-box--dialog-content">
                     <div class="l-filter-box--checkbox-group">
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="comic" class="checkbox--checkbox" id="series-checkbox-comic">
-                            <label class="checkbox--label" for="series-checkbox-comic">Comic</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="corpsofengineers" class="checkbox--checkbox" id="series-checkbox-corpsofengineers">
-                            <label class="checkbox--label" for="series-checkbox-corpsofengineers">Corps of Engineers</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="ds9" class="checkbox--checkbox" id="series-checkbox-ds9">
-                            <label class="checkbox--label" for="series-checkbox-ds9">Deep Space 9</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="destiny" class="checkbox--checkbox" id="series-checkbox-destiny">
-                            <label class="checkbox--label" for="series-checkbox-destiny">Destiny</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="dieweltenvondeepspacenine" class="checkbox--checkbox" id="series-checkbox-dieweltenvondeepspacenine">
-                            <label class="checkbox--label" for="series-checkbox-dieweltenvondeepspacenine">Die Welten von Deep Space Nine</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="einzelschicksale" class="checkbox--checkbox" id="series-checkbox-einzelschicksale">
-                            <label class="checkbox--label" for="series-checkbox-einzelschicksale">Einzelschicksale</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="enterprise" class="checkbox--checkbox" id="series-checkbox-enterprise">
-                            <label class="checkbox--label" for="series-checkbox-enterprise">Enterprise</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="" class="checkbox--checkbox" id="series-checkbox-eugenische-kriege">
-                            <label class="checkbox--label" for="series-checkbox-eugenische-kriege">Eugenische Kriege</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="" class="checkbox--checkbox" id="series-checkbox-filmroman">
-                            <label class="checkbox--label" for="series-checkbox-filmroman">Filmroman</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="" class="checkbox--checkbox" id="series-checkbox-gesetze-der-foederation">
-                            <label class="checkbox--label" for="series-checkbox-gesetze-der-foederation">Gesetze der Föderation</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="" class="checkbox--checkbox" id="series-checkbox-new-frontier">
-                            <label class="checkbox--label" for="series-checkbox-new-frontier">New Frontier</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="" class="checkbox--checkbox" id="series-checkbox-next-generation">
-                            <label class="checkbox--label" for="series-checkbox-next-generation">Next Generation</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="" class="checkbox--checkbox" id="series-checkbox-starfleet-academy">
-                            <label class="checkbox--label" for="series-checkbox-starfleet-academy">Starfleet Academy</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="tngdoppelhelix" class="checkbox--checkbox" id="series-checkbox-tng-doppelhelix">
-                            <label class="checkbox--label" for="series-checkbox-tng-doppelhelix">TNG Doppelhelix</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="" class="checkbox--checkbox" id="series-checkbox-the-original-series">
-                            <label class="checkbox--label" for="series-checkbox-the-original-series">The Original Series</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="" class="checkbox--checkbox" id="series-checkbox-typhon-pact">
-                            <label class="checkbox--label" for="series-checkbox-typhon-pact">Typhon Pact</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="" class="checkbox--checkbox" id="series-checkbox-vanguard">
-                            <label class="checkbox--label" for="series-checkbox-vanguard">Vanguard</label>
-                        </div>
-
-                        <div class="l-filter-box--checkbox checkbox">
-                            <input type="checkbox"  name="serie" value="" class="checkbox--checkbox" id="series-checkbox-voyager">
-                            <label class="checkbox--label" for="series-checkbox-voyager">Voyager</label>
-                        </div>
+                        <% series.forEach( function( seriesData ) { %>
+                           <div class="l-filter-box--checkbox checkbox">
+                                <input type="checkbox" name="serie" value="<%= seriesData.name %>" class="checkbox--checkbox" id="series-checkbox-<%= seriesData.id %>">
+                                <label class="checkbox--label" for="series-checkbox-<%= seriesData.id %>"><%= seriesData.name %></label>
+                            </div>
+                        <% }); %>
                     </div>
                 </div>
                 <div class="l-filter-box--dialog-footer">
