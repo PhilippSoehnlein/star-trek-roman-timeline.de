@@ -160,6 +160,7 @@ module.exports = function(grunt) {
         'connect:test-e2e',
         'protractor:firefox',
         'protractor:chrome',
+        'protractor:safari',
         'protractor:iphone',
     ]);
 
