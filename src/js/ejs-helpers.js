@@ -26,10 +26,12 @@ function getSeries( books ) {
     });
 
     var series = [];
-    seriesNames.forEach( function( name ) {
+    seriesNames.forEach( function( seriesName ) {
+        var booksForThisSeries = books.filter( function( book ) { return book.series === seriesName });
         series.push({
-            id:   transformString( name ),
-            name: name,
+            id:    transformString( seriesName ),
+            name:  seriesName,
+            count: booksForThisSeries.length,
         });
     });
 

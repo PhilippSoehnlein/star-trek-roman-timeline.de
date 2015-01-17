@@ -113,10 +113,12 @@
         }
 
         function onCheckboxChanged( checkbox ) {
-            var choosenSeries = filterCheckboxes
+            var choosenSeries     = filterCheckboxes
                 .filter( function(checkbox) { return checkbox.checked; } )
-                .map( function(checkbox) { return checkbox.getAttribute('value'); } )
+                .map( function(checkbox) { return checkbox.getAttribute( 'value' ); } )
             ;
+
+            updateBookCounts();
 
             filterSeriesCountNodes.forEach( function( node ) {
                 node.innerHTML = choosenSeries.length;
@@ -133,15 +135,25 @@
         }
 
         function afterTimelineFiltered() {
-            updateBookCounts();
+
         }
 
         function updateBookCounts() {
-            var elements = isotope.getItemElements();
-            var nr = elements.filter( function( element ) { return element.offsetWidth > 0 || element.offsetHeight > 0 } ).length;
-            //console.log(nr);
+            var bookCount = 0;
+
+            var checkedCheckboxes = filterCheckboxes.filter( function(checkbox) { return checkbox.checked; } );
+            checkedCheckboxes.forEach( function( checkedCheckbox ) {
+                var count = parseInt( checkedCheckbox.getAttribute( 'data-book-count' ), 10 );
+                if ( !isNaN( count ) ) {
+                    bookCount += count;
+                }
+                else {
+                    console.error( 'data-book-count of this checkbox doesn\'t contain a number.' );
+                }
+            });
+
             filterBookCountNodes.forEach( function( node ) {
-                node.innerHTML = nr;
+                node.innerHTML = bookCount + ( bookCount === 1 ? ' Buch' : ' Bücher' );
             });
         }
 

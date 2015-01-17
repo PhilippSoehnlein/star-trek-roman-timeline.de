@@ -82,7 +82,7 @@ describe( 'Filter functionality', function() {
                 browser.driver.sleep( 1500 ).then( function() { // wait for animation to finish
                     expect( filterForm.isDisplayed() ).toBe( true );
                     expect( filterFormSubmitButton.isDisplayed() ).toBe( false );
-                    expect( element.all( by.className( '_is_filter_book_count' ) ).getInnerHtml() ).toMatch( /\d+/ );
+                    expect( element.all( by.className( '_is_filter_book_count' ) ).getInnerHtml() ).toMatch( /\d+ Bücher/ );
                 });
             }
         },

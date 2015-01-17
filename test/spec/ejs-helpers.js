@@ -29,4 +29,11 @@ describe( 'getSeries()', function() {
         var series = ejsHelpers.getSeries( exampleBooks );
         expect( typeof series[0].id ).toBe( 'string' );
     });
+
+    it( 'delivers series with correct counts', function() {
+        var series = ejsHelpers.getSeries( exampleBooks );
+        expect( series.length ).toBe( 2 );
+        expect( series[0].count ).toBe( 1 );
+        expect( series[1].count ).toBe( 2 );
+    });
 });

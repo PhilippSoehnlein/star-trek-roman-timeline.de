@@ -34,7 +34,7 @@
                     <div class="l-filter-box--checkbox-group">
                         <% series.forEach( function( seriesData ) { %>
                            <div class="l-filter-box--checkbox checkbox">
-                                <input type="checkbox" name="serie" value="<%= seriesData.name %>" class="checkbox--checkbox" id="series-checkbox-<%= seriesData.id %>">
+                                <input type="checkbox" name="serie" value="<%= seriesData.name %>" class="checkbox--checkbox" id="series-checkbox-<%= seriesData.id %>" data-book-count="<%=  seriesData.count %>">
                                 <label class="checkbox--label" for="series-checkbox-<%= seriesData.id %>"><%= seriesData.name %></label>
                             </div>
                         <% }); %>
@@ -44,12 +44,12 @@
                     <p class="l-filter-box--dialog-footer-status-box">
                         <!-- mobile with JS -->
                         <span class="l-filter-box--dialog-footer-status-text-dialog">
-                            <span lang="en">Timeline</span> enthält <em class="_is_filter_book_count">x</em> Bücher.
+                            <span lang="en">Timeline</span> enthält <em class="_is_filter_book_count">x Bücher</em>.
                         </span>
 
                         <!-- desktop with JS -->
                         <span class="l-filter-box--dialog-footer-status-text">
-                            <span lang="en">Timeline</span> für <em class="_is_filter_book_count">x</em> Bücher wird unten angezeigt.
+                            <span lang="en">Timeline</span> für <em class="_is_filter_book_count">x Bücher</em> wird unten angezeigt.
                         </span>
                     </p>
                     <div class="l-filter-box--dialog-footer-button-box">
