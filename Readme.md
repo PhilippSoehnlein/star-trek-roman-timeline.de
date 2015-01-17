@@ -11,6 +11,7 @@ A website presenting an overview of german Star Trek novels.
 - After launch: Revisit H5BP's original .htaccess to check if there are topics I forgot along the way.
 - Maybe integrate [grunt-protactor-coverage](https://www.npmjs.com/package/grunt-protractor-coverage)?
 - Figure out what dependencies in package.json are real dependencies to make the app run and which are just devDependencies.
+- Stuff from the JSON file should also get ``<span lang="en">`` if strings contain english texts.
 
 ## Environment installation
 
