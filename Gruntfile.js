@@ -8,7 +8,7 @@
  *     - test-e2e:firefox:         Executes end-to-end tests in Firefox.
  *     - test-e2e:safari:          Executes end-to-end tests in Safari.
  *     - test-e2e:iphone:          Executes end-to-end tests in a simulated iPhone.
- *     - test-unit:                Executes unit tests.
+ *     - test:unit:                Executes unit tests.
  */
 module.exports = function(grunt) {
     var ejsHelpers = require('./src/js/ejs-helpers.js');
