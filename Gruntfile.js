@@ -6,6 +6,7 @@
  *     - test-e2e:desktop-browser: Executes end-to-end tests for all configured desktop browsers.
  *     - test-e2e:chrome:          Executes end-to-end tests in Chrome.
  *     - test-e2e:firefox:         Executes end-to-end tests in Firefox.
+ *     - test-e2e:safari:          Executes end-to-end tests in Safari.
  *     - test-e2e:iphone:          Executes end-to-end tests in a simulated iPhone.
  *     - test-unit:                Executes unit tests.
  */
