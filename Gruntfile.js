@@ -17,8 +17,8 @@ module.exports = function(grunt) {
         //pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            files: ['Gruntfile.js', 'src/templates/*.ejs', 'src/books.json', 'src/ejs-helper.js', 'src/scss/**.scss', 'src/js/**'],
-            tasks: ['build']
+            files: [ 'Gruntfile.js', 'src/books.json', 'src/templates/*.ejs', 'src/scss/**/*.scss', 'src/js/**.js' ],
+            tasks: [ 'build' ]
         },
 
         render: {
