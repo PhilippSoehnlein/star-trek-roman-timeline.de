@@ -23,12 +23,19 @@ module.exports = function(grunt) {
 
         render: {
             options: {
-                data: ['src/books.json'],
                 helpers: ejsHelpers,
             },
-            html: {
+            index: {
+                options: {
+                    data: [ 'src/books.json' ],
+                },
                 files: {
-                    'build/index.html': ['src/templates/index.ejs']
+                    'build/index.html': [ 'src/templates/index.ejs' ]
+                }
+            },
+            imprint: {
+                files: {
+                    'build/impressum.html': [ 'src/templates/imprint.ejs' ]
                 }
             }
         },
@@ -169,7 +176,8 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'clean:beforeBuild',
         'copy:build',
-        'render',
+        'render:index',
+        'render:imprint',
         'sass',
         'uglify',
         'autoprefixer'
