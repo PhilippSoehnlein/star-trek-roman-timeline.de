@@ -28,6 +28,65 @@ describe( 'formatSeriesEpisode()', function() {
     });
 });
 
+describe( 'getBookLinks()', function() {
+    it( 'empty array for books without links', function() {
+        var book = {};
+        expect( ejsHelpers.getBookLinks( book ) ).toEqual( [] );
+
+        book = { publisher: 'Cross Cult', publisherUrl: null, amazonUrl: null, audibleUrl: null, goodreadsUrl: null };
+        expect( ejsHelpers.getBookLinks( book ) ).toEqual( [] );
+    });
+
+    it( 'book with publisher link', function() {
+        var book = { publisher: 'Cross Cult', publisherUrl: 'http://www.cross-cult.de/' };
+        expect( ejsHelpers.getBookLinks( book ) ).toEqual( [
+            { url: 'http://www.cross-cult.de/', type: 'publisher', cssClassName: 'icon_crosscult', caption: 'Cross Cult', captionLang: 'en', hrefLang: 'de', }
+        ] );
+    });
+
+    it( 'book with publisher and Amazon link', function() {
+        var book = {
+            publisher: 'Cross Cult',
+            publisherUrl: 'http://www.cross-cult.de/',
+            amazonUrl: 'http://www.amazon.de/'
+        };
+        expect( ejsHelpers.getBookLinks( book ) ).toEqual( [
+            { url: 'http://www.cross-cult.de/', type: 'publisher', cssClassName: 'icon_crosscult', caption: 'Cross Cult', captionLang: 'en', hrefLang: 'de', },
+            { url: 'http://www.amazon.de/',     type: 'amazon',    cssClassName: 'icon_amazon',    caption: 'Amazon',     captionLang: 'en', hrefLang: 'de', },
+        ] );
+    });
+
+    it( 'book with publisher, Amazon- and Audible-link', function() {
+        var book = {
+            publisher:    'Cross Cult',
+            publisherUrl: 'http://www.cross-cult.de/',
+            amazonUrl:    'http://www.amazon.de/',
+            audibleUrl:   'http://www.audible.de/'
+        };
+        expect( ejsHelpers.getBookLinks( book ) ).toEqual( [
+            { url: 'http://www.cross-cult.de/', type: 'publisher', cssClassName: 'icon_crosscult', caption: 'Cross Cult', captionLang: 'en', hrefLang: 'de', },
+            { url: 'http://www.amazon.de/',     type: 'amazon',    cssClassName: 'icon_amazon',    caption: 'Amazon',     captionLang: 'en', hrefLang: 'de', },
+            { url: 'http://www.audible.de/',    type: 'audible',   cssClassName: 'icon_audible',   caption: 'Audible',    captionLang: 'en', hrefLang: 'de', },
+        ] );
+    });
+
+    it( 'book with publisher, Amazon-, Audible- and Goodreads-link', function() {
+        var book = {
+            publisher:    'Cross Cult',
+            publisherUrl: 'http://www.cross-cult.de/',
+            amazonUrl:    'http://www.amazon.de/',
+            audibleUrl:   'http://www.audible.de/',
+            goodreadsUrl: 'http://www.goodreads.com/',
+        };
+        expect( ejsHelpers.getBookLinks( book ) ).toEqual( [
+            { url: 'http://www.cross-cult.de/', type: 'publisher', cssClassName: 'icon_crosscult', caption: 'Cross Cult', captionLang: 'en', hrefLang: 'de',  },
+            { url: 'http://www.amazon.de/',     type: 'amazon',    cssClassName: 'icon_amazon',    caption: 'Amazon',     captionLang: 'en', hrefLang: 'de',  },
+            { url: 'http://www.audible.de/',    type: 'audible',   cssClassName: 'icon_audible',   caption: 'Audible',    captionLang: 'en', hrefLang: 'de',  },
+            { url: 'http://www.goodreads.com/', type: 'goodreads', cssClassName: 'icon_goodreads', caption: 'Goodreads',  captionLang: 'en', hrefLang: 'en',  },
+        ] );
+    });
+});
+
 describe( 'getSeries()', function() {
     var exampleBooks = [
         { series: 'TNG Doppelhelix' },
@@ -64,5 +123,9 @@ describe( 'getSeries()', function() {
 describe( 'transformString()', function() {
     it( 'transforms well', function() {
         expect( ejsHelpers.transformString( 'Deep Space Nine' ) ).toBe( 'deep-space-nine' );
+    });
+
+    it( 'transforms well with custom whitespace replacement', function() {
+        expect( ejsHelpers.transformString( 'Deep Space Nine', '+' ) ).toBe( 'deep+space+nine' );
     });
 });

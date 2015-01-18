@@ -68,8 +68,9 @@
                         if ( index === 0 ) {
                             classes.push( 'is-l-timeline-item-first' );
                         }
-                %>
 
+                        var links = helpers.getBookLinks( book );
+                %>
                     <li class="<%= classes.join(' ') %>" data-timline-item-series="<%= book.series %>">
                         <article class="book-box">
                             <div class="book-box--data">
@@ -88,7 +89,23 @@
                                     <!-- TODO: <time class="book-box--date tag">2364</time> -->
                                 </div>
                             </div>
-                            <!-- TODO: Links -->
+
+                            <% if ( links.length ) { %>
+                                <ul class="book-box--links">
+                                    <% links.forEach( function( link ) { %>
+                                        <li class="book-box--link-wrapper">
+                                            <a
+                                                href="<%= link.url %>"
+                                                class="book-box--link <%= link.cssClassName %>"
+                                                <% if ( link.captionLang !== 'de' ) { %>lang="<%= link.captionLang %>"<%  } %>
+                                                <% if ( link.hrefLang    !== 'de' ) { %>hreflang="<%= link.hrefLang %>"<% } %>
+                                            >
+                                                <%= link.caption %>
+                                            </a>
+                                        </li>
+                                    <% }); %>
+                                </ul>
+                            <% } %>
                         </article>
                     </li>
                 <%

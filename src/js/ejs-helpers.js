@@ -3,6 +3,7 @@
 module.exports = {
     formatAuthors:       formatAuthors,
     formatSeriesEpisode: formatSeriesEpisode,
+    getBookLinks:        getBookLinks,
     getSeries:           getSeries,
     transformString:     transformString,
 };
@@ -30,6 +31,26 @@ function formatSeriesEpisode( book ) {
     else {
         return book.series + ' #' + book.episode;
     }
+}
+
+function getBookLinks( book ) {
+    var links = [];
+
+    ['publisher', 'amazon', 'audible', 'goodreads'].forEach( function( linkType ) {
+        var url = book[ linkType + 'Url' ];
+        if ( url ) {
+            links.push({
+                url:          url,
+                caption:      linkType === 'publisher' ? book.publisher : linkType.charAt( 0 ).toUpperCase() + linkType.substr( 1 ),
+                captionLang:  'en',
+                type:         linkType,
+                cssClassName: 'icon_' + transformString( linkType === 'publisher' ? book.publisher : linkType, '' ),
+                hrefLang:     linkType === 'goodreads' ? 'en' : 'de',
+            });
+        }
+    });
+
+    return links;
 }
 
 function getSeries( books ) {
@@ -63,6 +84,9 @@ function getSeries( books ) {
     return series;
 }
 
-function transformString( string ) {
-    return string.replace( /\s+/g, '-' ).toLowerCase();
+function transformString( string, whiteSpaceReplacement ) {
+    if ( typeof whiteSpaceReplacement === 'undefined' ) {
+        whiteSpaceReplacement = '-'
+    }
+    return string.replace( /\s+/g, whiteSpaceReplacement ).toLowerCase();
 }
