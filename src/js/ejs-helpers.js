@@ -1,11 +1,36 @@
 'use strict';
 
 module.exports = {
-    getSeries:       getSeries,
-    transformString: transformString,
+    formatAuthors:       formatAuthors,
+    formatSeriesEpisode: formatSeriesEpisode,
+    getSeries:           getSeries,
+    transformString:     transformString,
 };
 
 var _ = require( 'lodash-node' );
+
+function formatAuthors( authors ) {
+    var lastAuthor;
+    if ( authors.length > 1 ) {
+        lastAuthor = authors.pop();
+    }
+
+    var authorString = authors.join(', ');
+    if ( lastAuthor ) {
+        authorString += ' & ' + lastAuthor;
+    }
+
+    return authorString;
+}
+
+function formatSeriesEpisode( book ) {
+    if ( book.season ) {
+        return book.series + ' - ' + book.season + 'x' + book.episode;
+    }
+    else {
+        return book.series + ' #' + book.episode;
+    }
+}
 
 function getSeries( books ) {
     var seriesNames = _.uniq(

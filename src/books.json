@@ -48,8 +48,8 @@
         "amazonUrl":    "http://www.amazon.de/Star-Trek-Space-Stich-rechten/dp/3941248928/",
         "audibleUrl":   null,
         "goodreadsUrl": "https://www.goodreads.com/book/show/17373902-ein-stich-zur-rechten-zeit",
-        "episode":      null,
-        "season":       null,
+        "episode":      0,
+        "season":       8,
         "dates":        [
             {
                 "year":   2367,

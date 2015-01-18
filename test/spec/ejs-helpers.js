@@ -1,8 +1,30 @@
 var ejsHelpers  = require('../../src/js/ejs-helpers.js');
 
-describe( 'transformString()', function() {
-    it( 'transforms well', function() {
-        expect( ejsHelpers.transformString( 'Deep Space Nine' ) ).toBe( 'deep-space-nine' );
+describe( 'formatAuthors()', function() {
+    it( 'one author (no transformation)', function() {
+        expect( ejsHelpers.formatAuthors( [ 'Author 1' ] ) ).toBe( 'Author 1' );
+    });
+
+    it( 'two authors (& separated)', function() {
+        expect( ejsHelpers.formatAuthors( [ 'Author 1', 'Author 2', ] ) ).toBe( 'Author 1 & Author 2' );
+    });
+
+    it( 'three authors (, and & separated)', function() {
+        expect( ejsHelpers.formatAuthors( [ 'Author 1', 'Author 2', 'Author 3' ] ) ).toBe( 'Author 1, Author 2 & Author 3' );
+    });
+
+    it( 'four authors (, and & separated)', function() {
+        expect( ejsHelpers.formatAuthors( [ 'Author 1', 'Author 2', 'Author 3', 'Author 4', ] ) ).toBe( 'Author 1, Author 2, Author 3 & Author 4' );
+    });
+});
+
+describe( 'formatSeriesEpisode()', function() {
+    it( 'book has no season', function() {
+        expect( ejsHelpers.formatSeriesEpisode( { series: 'TNG Doppelhelix', episode: '1', season: null } ) ).toBe( 'TNG Doppelhelix #1' );
+    });
+
+    it( 'book has season', function() {
+        expect( ejsHelpers.formatSeriesEpisode( { series: 'Deep Space Nine', episode: '1', season: '8' } ) ).toBe( 'Deep Space Nine - 8x1' );
     });
 });
 
@@ -35,5 +57,12 @@ describe( 'getSeries()', function() {
         expect( series.length ).toBe( 2 );
         expect( series[0].count ).toBe( 1 );
         expect( series[1].count ).toBe( 2 );
+    });
+});
+
+
+describe( 'transformString()', function() {
+    it( 'transforms well', function() {
+        expect( ejsHelpers.transformString( 'Deep Space Nine' ) ).toBe( 'deep-space-nine' );
     });
 });
