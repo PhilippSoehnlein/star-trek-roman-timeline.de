@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         //pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            files: ['Gruntfile.js', 'src/templates/*.ejs', 'src/books.json', 'src/ejs-helper.js', 'src/main.scss', 'src/scss/**/*.scss', 'src/js/**'],
+            files: ['Gruntfile.js', 'src/templates/*.ejs', 'src/books.json', 'src/ejs-helper.js', 'src/scss/**.scss', 'src/js/**'],
             tasks: ['build']
         },
 
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
         sass: {
             build: {
                 files: {
-                    'build/main.css': 'src/main.scss'
+                    'build/main.css': 'src/scss/main.scss'
                 }
             }
         },
@@ -94,14 +94,14 @@ module.exports = function(grunt) {
         copy: {
             build: {
                 files: [
-                    { src: 'src/favicon.ico',                      dest: 'build/favicon.ico' },
-                    { src: 'src/apple-touch-icon-precomposed.png', dest: 'build/apple-touch-icon-precomposed.png' },
-                    { src: 'src/robots.txt',                       dest: 'build/robots.txt' },
-                    { src: 'src/humans.txt',                       dest: 'build/humans.txt' },
-                    { src: 'src/.htaccess',                        dest: 'build/.htaccess' },
-                    { src: 'src/img/kaemira-nebula640.jpg',        dest: 'build/img/kaemira-nebula640.jpg' },
-                    { src: 'src/img/kaemira-nebula1280.jpg',       dest: 'build/img/kaemira-nebula1280.jpg' },
-                    { src: 'src/img/kaemira-nebula1920.jpg',       dest: 'build/img/kaemira-nebula1920.jpg' }
+                    { src: 'src/docroot/favicon.ico',                      dest: 'build/favicon.ico' },
+                    { src: 'src/docroot/apple-touch-icon-precomposed.png', dest: 'build/apple-touch-icon-precomposed.png' },
+                    { src: 'src/docroot/robots.txt',                       dest: 'build/robots.txt' },
+                    { src: 'src/docroot/humans.txt',                       dest: 'build/humans.txt' },
+                    { src: 'src/docroot/.htaccess',                        dest: 'build/.htaccess' },
+                    { src: 'src/img/kaemira-nebula640.jpg',                dest: 'build/img/kaemira-nebula640.jpg' },
+                    { src: 'src/img/kaemira-nebula1280.jpg',               dest: 'build/img/kaemira-nebula1280.jpg' },
+                    { src: 'src/img/kaemira-nebula1920.jpg',               dest: 'build/img/kaemira-nebula1920.jpg' }
                 ]
             }
         },

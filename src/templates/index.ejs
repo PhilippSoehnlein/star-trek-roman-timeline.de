@@ -5,6 +5,12 @@
 %>
 <% include _header %>
 
+<!--
+<button class="button" onclick="timelineFilter(function(nr){ return nr < 3; })">Remove 3 and 4</button>
+<button class="button" onclick="timelineFilter(function(nr){ return nr !== 3; })">Remove 3</button>
+<button class="button" onclick="timelineFilter(function() { return true; })">Show all</button>
+-->
+
 <div class="l-mainframe--filter l-filter-box">
     <div class="l-filter-box--trigger"><a href="#serienauswahl" class="button _is_filter_trigger">Nach Serien filtern</a></div>
     <form class="l-filter-box--dialog series-filter" id="serienauswahl">
@@ -92,7 +98,185 @@
         <%
             });
         %>
+
+        <!--
+        <li class="l-timeline--item is-l-timeline-item-odd is-l-timeline-item-first" data-timline-item-series="tngdoppelhelix">
+            <article class="book-box">
+                <div class="book-box--data">
+                    <div class="book-box--main">
+                        <h3 class="book-box--title">Infektion</h3>
+                        <p class="book-box--description">John Gregory Betancourt</p>
+                    </div>
+
+                    <div class="book-box--image-wrapper">
+                        <img src="http://www.cross-cult.de/system/html/ST_DS9_810_cover-65fded03.jpg" class="book-box--cover" />
+                    </div>
+
+                    <div class="book-box--header-bar">
+                        <div class="book-box--series">TNG Doppelhelix #1</div>
+                        <time class="book-box--date tag">2364</time>
+                    </div>
+                </div>
+
+                <ul class="book-box--links">
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_crosscult" lang="en">Cross Cult</a>
+                    </li>
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_amazon" lang="en">Amazon</a>
+                    </li>
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_goodreads" lang="en" hreflang="en">Goodreads</a>
+                    </li>
+                </ul>
+            </article>
+        </li>
+        <li class="l-timeline--item is-l-timeline-item-even _is_timeline_item" data-timline-item-series="comic">
+            <article class="book-box">
+                <div class="book-box--data">
+                    <div class="book-box--main">
+                        <h3 class="book-box--title">Infektion</h3>
+                        <p class="book-box--description">John Gregory Betancourt</p>
+                    </div>
+
+                    <div class="book-box--image-wrapper">
+                        <img src="http://www.cross-cult.de/system/html/ST_DS9_810_cover-65fded03.jpg" class="book-box--cover" />
+                    </div>
+
+                    <div class="book-box--header-bar">
+                        <div class="book-box--series">TNG Doppelhelix #1</div>
+                        <time class="book-box--date tag">2364</time>
+                    </div>
+                </div>
+
+                <ul class="book-box--links">
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_crosscult" lang="en">Cross Cult</a>
+                    </li>
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_amazon" lang="en">Amazon</a>
+                    </li>
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_goodreads" lang="en" hreflang="en">Goodreads</a>
+                    </li>
+                </ul>
+            </article>
+        </li>
+        <li class="l-timeline--item is-l-timeline-item-odd _is_timeline_item" data-timline-item-series="ds9">
+            <article class="book-box">
+                <div class="book-box--data">
+                    <div class="book-box--main">
+                        <h3 class="book-box--title">Infektion</h3>
+                        <p class="book-box--description">John Gregory Betancourt</p>
+                    </div>
+
+                    <div class="book-box--image-wrapper">
+                        <img src="http://www.cross-cult.de/system/html/ST_DS9_810_cover-65fded03.jpg" class="book-box--cover" />
+                    </div>
+
+                    <div class="book-box--header-bar">
+                        <div class="book-box--series">TNG Doppelhelix #1</div>
+                        <time class="book-box--date tag">2364</time>
+                    </div>
+                </div>
+
+                <ul class="book-box--links">
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_crosscult" lang="en">Cross Cult</a>
+                    </li>
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_amazon" lang="en">Amazon</a>
+                    </li>
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_goodreads" lang="en" hreflang="en">Goodreads</a>
+                    </li>
+                </ul>
+            </article>
+        </li>
+        <li class="l-timeline--item is-l-timeline-item-even _is_timeline_item" data-timline-item-series="tngdoppelhelix">
+            <article class="book-box">
+                <div class="book-box--data">
+                    <div class="book-box--main">
+                        <h3 class="book-box--title">Infektion</h3>
+                        <p class="book-box--description">John Gregory Betancourt</p>
+                    </div>
+
+                    <div class="book-box--image-wrapper">
+                        <img src="http://www.cross-cult.de/system/html/ST_DS9_810_cover-65fded03.jpg" class="book-box--cover" />
+                    </div>
+
+                    <div class="book-box--header-bar">
+                        <div class="book-box--series">TNG Doppelhelix #1</div>
+                        <time class="book-box--date tag">2364</time>
+                    </div>
+                </div>
+
+                <ul class="book-box--links">
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_crosscult" lang="en">Cross Cult</a>
+                    </li>
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_amazon" lang="en">Amazon</a>
+                    </li>
+                    <li class="book-box--link-wrapper">
+                        <a href="#TODO" class="book-box--link icon_goodreads" lang="en" hreflang="en">Goodreads</a>
+                    </li>
+                </ul>
+            </article>
+        </li>-->
     </ol>
 </main>
 
 <% include _footer %>
+
+<!--
+<script src="js/isotope.js"></script>
+<script src="js/jquery.js"></script>
+<script>
+    var iso = new Isotope( '#timeline', {
+        itemSelector: '.l-timeline--item',
+    });
+
+    /*
+    iso.arrange({
+        filter: function( itemElem ) {
+            return (parseInt(itemElem.getAttribute('data-item-no'), 10) > 2)
+        }
+    });
+    */
+
+    iso.on('layoutComplete', function(event) {
+        event.filteredItems.forEach( function( item, index ) {
+//                    item.element.classList.remove('is-l-timeline-item-odd');
+//                    item.element.classList.remove('is-l-timeline-item-even');
+            item.element.classList.add( index % 2 === 0 ? 'is-l-timeline-item-odd' : 'is-l-timeline-item-even' );
+        });
+
+        //iso.layout();
+    });
+
+    function timelineFilter(fn) {
+        var filter_fn = function( itemElem ) {
+            var nr = parseInt(itemElem.getAttribute('data-item-no'), 10);
+            return fn(nr);
+        };
+
+        var $timeline = jQuery('#timeline');
+        $timeline.find('._is_timeline_item').removeClass('is-l-timeline-item-odd is-l-timeline-item-even');
+
+        var visibleItems = [];
+        $timeline.find('._is_timeline_item').each(function(index, element) {
+            var nr = parseInt(element.getAttribute('data-item-no'), 10);
+            if (fn(nr)) {
+                visibleItems.push(element);
+            }
+        });
+        visibleItems.forEach(function(element, index) {
+            element.classList.add( index % 2 === 0 ? 'is-l-timeline-item-odd' : 'is-l-timeline-item-even' );
+        });
+
+        iso.arrange({ filter: filter_fn });
+    }
+</script>
+
+-->
