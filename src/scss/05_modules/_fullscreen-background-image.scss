@@ -1,3 +1,4 @@
+// TODO: Check why iOS doesn't scale the background image correctly (looks like background-size: cover and background-attachment: fixed don't work together on iOS)
 .fullscreen-background-image {
     background-position: center;
     background-size: cover;

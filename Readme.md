@@ -4,7 +4,6 @@ A website presenting an overview of german Star Trek novels.
 
 ## TODO
 
-- All the implementing stuff…
 - Replace H5BP (fav)icons with real icons.
 - Test font stack on various OSes and consider alternatives (see ``src/scss/01_globals/_fonts.scss``).
 - WebP version of background image including [modernizr test](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/img/webp.js).
@@ -12,6 +11,7 @@ A website presenting an overview of german Star Trek novels.
 - Maybe integrate [grunt-protactor-coverage](https://www.npmjs.com/package/grunt-protractor-coverage)?
 - Figure out what dependencies in package.json are real dependencies to make the app run and which are just devDependencies.
 - Stuff from the JSON file should also get ``<span lang="en">`` if strings contain english texts.
+- All the other TODOs stated in the source code.
 
 ## Environment installation
 
