@@ -33,6 +33,14 @@ module.exports = function(grunt) {
                     'build/index.html': [ 'src/templates/index.ejs' ]
                 }
             },
+            'index-test': {
+                options: {
+                    data: [ 'src/books-test.json' ],
+                },
+                files: {
+                    'build/index.html': [ 'src/templates/index.ejs' ]
+                }
+            },
             imprint: {
                 files: {
                     'build/impressum.html': [ 'src/templates/imprint.ejs' ]
@@ -184,8 +192,14 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build:test', [
-        'build'
-        // TODO: Add test build here, too
+        // Same as build, but with render:index-test instead of render:index
+        'clean:beforeBuild',
+        'copy:build',
+        'render:index-test',
+        'render:imprint',
+        'sass',
+        'uglify',
+        'autoprefixer'
     ]);
 
     grunt.registerTask('test-e2e', [

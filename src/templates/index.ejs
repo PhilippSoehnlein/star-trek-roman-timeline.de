@@ -1,5 +1,5 @@
 <%
-    var books           = data.books;
+    var books           = data.booksTest ? data.booksTest : data.books;
     var series          = helpers.getSeries( books );
     var pageTitleSuffix = '';
 %>
