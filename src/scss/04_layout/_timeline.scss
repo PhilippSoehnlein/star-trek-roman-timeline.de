@@ -2,10 +2,10 @@ $timeline-line-width: 4px;
 $timeline-item-margin: $visual-horizontal-body-padding;
 $timeline-two-column-media-query: "min-width: 600px";
 
+/* The element which is used by Isotope (.l-timeline--list) can't have padding, otherwise Isotope will calculate wrong positions. */
+
 .l-timeline {
     padding: 0 $timeline-item-margin 0 ($timeline-item-margin * 2);
-    margin: 0 auto;
-    max-width: 1000px;
 
     background: linear-gradient(
         to right,
@@ -15,8 +15,16 @@ $timeline-two-column-media-query: "min-width: 600px";
         transparent $timeline-item-margin + $timeline-line-width + 1
     );
     background-repeat: repeat-y;
+}
 
+.l-timeline--list {
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+
+.l-timeline--item {
+    width: 100%; // This will be made position: absolute by Isotope, that why we have to add 'width: 100%'.
 }
 
 .l-timeline--item:not(.is-l-timeline-item-first) {
@@ -25,7 +33,10 @@ $timeline-two-column-media-query: "min-width: 600px";
 
 @media screen and(#{$timeline-two-column-media-query}) {
     .l-timeline {
+        margin: 0 auto;
         padding: 0 $timeline-item-margin;
+        max-width: 1000px;
+
         background: linear-gradient(
             to right,
             transparent 0,
@@ -34,7 +45,9 @@ $timeline-two-column-media-query: "min-width: 600px";
             $main-color calc(50% + (#{$timeline-line-width} / 2)       ),
             transparent calc(50% + (#{$timeline-line-width} / 2) + 1px )
         );
+    }
 
+    .l-timeline--list {
         @include clearfix;
     }
 
