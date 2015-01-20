@@ -35,6 +35,13 @@ $book-box-circle-connector-border-width: 2px;
     padding: $book-box-padding;
 }
 
+.book-box--image-wrapper {
+    // Just in case the image needs some time to load, we style the alt text with these:
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
 .book-box--image-wrapper,
 .book-box--cover {
     width: 60px; // TODO: This should be more responsive in the future.
