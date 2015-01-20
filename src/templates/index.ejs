@@ -51,7 +51,7 @@
         <ol class="l-timeline--list" id="timeline">
             <%
                 books.forEach( function( book, index ) {
-                    var classes = [ 'l-timeline--item' ];
+                    var classes = [ 'l-timeline--item', '_is_timeline_item' ];
                     classes.push( 'is-l-timeline-item-' + ( index % 2 ? 'even' : 'odd' ) );
                     if ( index === 0 ) {
                         classes.push( 'is-l-timeline-item-first' );

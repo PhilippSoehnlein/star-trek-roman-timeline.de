@@ -124,7 +124,53 @@ describe( 'Filter functionality', function() {
                     expect( counterNode.getInnerHtml() ).toBe( '2' );
                 });
             }
-        }
+        },
+
+        {
+            title: 'Selecting a series shows or hides the right books',
+            testFunction: function() {
+                filterFormTriggerButton.click();
+                browser.driver.sleep( 1500 ).then( function() { // wait for filter animation to finish
+                    element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
+                    browser.driver.sleep( 600 ).then( function() { // wait for isotope animation to finish
+                        var timelineItems = element.all( by.css( '._is_timeline_item' ) );
+                        expect( timelineItems.count() ).toBe( 4 );
+
+                        timelineItems.each( function( timelineItem ) {
+                            timelineItem.getAttribute( 'data-timline-item-series' ).then( function( series ) {
+                                timelineItem.getAttribute( 'style' ).then(function(style) {console.log(style);});
+                                if ( series === 'TNG Doppelhelix' ) {
+                                    expect( timelineItem.isDisplayed() ).toBe( true );
+                                }
+                                else {
+                                    expect( timelineItem.isDisplayed() ).toBe( false );
+                                }
+                            })
+                        });
+                    });
+                });
+            }
+        },
+
+        {
+            title: 'Selecting a series sets right classes on items',
+            testFunction: function() {
+                filterFormTriggerButton.click();
+                browser.driver.sleep( 1500 ).then( function() { // wait for filter animation to finish
+                    element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
+                    browser.driver.sleep( 600 ).then( function() { // wait for isotope animation to finish
+                        var timelineItems = element.all( by.css( '._is_timeline_item[data-timline-item-series="TNG Doppelhelix"]' ) );
+                        expect( timelineItems.count() ).toBe( 2 );
+                        expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-odd\b/ );
+                        expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-even\b/ );
+                        expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-first\b/ );
+                        expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-odd\b/ );
+                        expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-even\b/ );
+                        expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-first\b/ );
+                    });
+                });
+            }
+        },
     ];
 
     tests.forEach( function( test ) {

@@ -6,7 +6,10 @@
             filterFormId:           'serienauswahl',
             filterFormVisibleClass: 'is-l-filter-box-dialog-visible',
             timelineId:             'timeline',
-            timelineItemClass:      'l-timeline--item',
+            timelineItemClass:      '_is_timeline_item',
+            itemIsOddClass:         'is-l-timeline-item-odd',
+            itemIsEvenClass:        'is-l-timeline-item-even',
+            itemIsFirstClass:       'is-l-timeline-item-first',
         };
 
         var triggerButtons         = [];
@@ -55,11 +58,11 @@
                 false
             );
 
-            [].forEach.call( document.getElementsByClassName( '_is_filter_book_count' ), function ( node ) {
+            [].forEach.call( document.getElementsByClassName( '_is_filter_book_count' ), function( node ) {
                 filterBookCountNodes.push( node );
             });
 
-            [].forEach.call( document.getElementsByClassName( '_is_filter_series_count' ), function ( node ) {
+            [].forEach.call( document.getElementsByClassName( '_is_filter_series_count' ), function( node ) {
                 filterSeriesCountNodes.push( node );
             });
 
@@ -90,7 +93,6 @@
 
             if ( !isotope ) {
                 isotope = new Isotope( '#' + config.timelineId, { itemSelector: '.' + config.timelineItemClass, });
-                isotope.on( 'layoutComplete', afterTimelineFiltered );
             }
 
             updateBookCounts();
@@ -116,7 +118,7 @@
         }
 
         function onCheckboxChanged( checkbox ) {
-            var choosenSeries     = filterCheckboxes
+            var choosenSeries = filterCheckboxes
                 .filter( function(checkbox) { return checkbox.checked; } )
                 .map( function(checkbox) { return checkbox.getAttribute( 'value' ); } )
             ;
@@ -128,17 +130,28 @@
             });
 
             // TODO: Only do this in desktop mode.
+            var numberOfVisibleItems = 0;
             isotope.arrange({
                 //transitionDuration: '1s',
                 filter: function( itemNode ) {
-                    var itemSeries = itemNode.getAttribute( 'data-timline-item-series' );
-                    return choosenSeries.some( function ( seriesId ) { return seriesId === itemSeries } );
+                    var itemSeries          = itemNode.getAttribute( 'data-timline-item-series' );
+                    var itemShouldBeVisible = choosenSeries.some( function ( seriesId ) { return seriesId === itemSeries } );
+
+                    if ( itemShouldBeVisible ) {
+                        numberOfVisibleItems++;
+                        var itemNodeClasses = itemNode.classList;
+                        itemNodeClasses.remove( config.itemIsFirstClass );
+                        itemNodeClasses.remove( config.itemIsOddClass );
+                        itemNodeClasses.remove( config.itemIsEvenClass );
+                        itemNodeClasses.add( numberOfVisibleItems % 2 == 0 ? config.itemIsEvenClass : config.itemIsOddClass );
+                        if ( numberOfVisibleItems === 1 ) {
+                            itemNodeClasses.add( config.itemIsFirstClass );
+                        }
+                    }
+
+                    return itemShouldBeVisible;
                 }
             });
-        }
-
-        function afterTimelineFiltered() {
-
         }
 
         function updateBookCounts() {
