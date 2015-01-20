@@ -66,6 +66,8 @@
             if ( window.location.hash === '#' + config.filterFormId ) {
                 showFilterForm();
             }
+
+            // TODO: Implement close on escape
         }
 
         function onFilterTriggerClick( event ) {
@@ -81,6 +83,7 @@
         }
 
         function showFilterForm() {
+            // TODO: Calculate top coordinate of filterForm
             filterForm.classList.add( config.filterFormVisibleClass );
             changeFilterDisplayBasedOnMediaQuery();
             window.history.replaceState( {}, null, '#' + config.filterFormId );
