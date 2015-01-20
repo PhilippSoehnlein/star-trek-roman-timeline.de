@@ -40,7 +40,7 @@
             });
 
             // fill filterCheckboxes
-            [].forEach.call( document.querySelectorAll( 'input[type="checkbox"][name="serie"]' ), function( checkbox ) {
+            [].forEach.call( document.querySelectorAll( '#' +  config.filterFormId + ' input[type="checkbox"][name="serie"]' ), function( checkbox ) {
                 filterCheckboxes.push( checkbox );
             });
 
