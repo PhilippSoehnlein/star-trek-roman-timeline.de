@@ -138,7 +138,6 @@ describe( 'Filter functionality', function() {
 
                         timelineItems.each( function( timelineItem ) {
                             timelineItem.getAttribute( 'data-timline-item-series' ).then( function( series ) {
-                                timelineItem.getAttribute( 'style' ).then(function(style) {console.log(style);});
                                 if ( series === 'TNG Doppelhelix' ) {
                                     expect( timelineItem.isDisplayed() ).toBe( true );
                                 }
@@ -171,6 +170,38 @@ describe( 'Filter functionality', function() {
                 });
             }
         },
+
+        {
+            title: 'Unchecking all previously checked checkboxes should show all books again',
+            testFunction: function() {
+                filterFormTriggerButton.click();
+                browser.driver
+                    .sleep( 1500 )
+                    .then( function() { // wait for filter animation to finish
+                        return element.all( by.css( '._is_timeline_item' ) ).count();
+                    })
+                    .then( function( numberOfTimelineItems ) {
+                        var bookCounterRegex = new RegExp( '^' + numberOfTimelineItems + ' ' );
+                        var bookCounterNodes = element.all( by.className( '_is_filter_book_count' ) );
+                        var checkboxToClick  = element( by.id( 'series-checkbox-tng-doppelhelix' ) );
+
+                        expect( bookCounterNodes.getInnerHtml() ).toMatch( bookCounterRegex );
+                        checkboxToClick.click();
+
+                        expect( bookCounterNodes.getInnerHtml() ).not.toMatch( bookCounterRegex );
+                        checkboxToClick.click();
+
+                        browser.driver.sleep( 600 ).then( function() { // wait for isotope animation to finish
+                            var timelineItems = element.all( by.css( '._is_timeline_item' ) );
+                            timelineItems.each( function( timelineItem ) {
+                                expect( timelineItem.isDisplayed() ).toBe( true );
+                            });
+                            expect( bookCounterNodes.getInnerHtml() ).toMatch( bookCounterRegex );
+                        });
+                    })
+                ;
+            }
+        }
     ];
 
     tests.forEach( function( test ) {

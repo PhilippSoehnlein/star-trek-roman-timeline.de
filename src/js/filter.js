@@ -122,6 +122,9 @@
                 .filter( function(checkbox) { return checkbox.checked; } )
                 .map( function(checkbox) { return checkbox.getAttribute( 'value' ); } )
             ;
+            if ( choosenSeries.length === 0 ) {
+                choosenSeries = filterCheckboxes.map( function(checkbox) { return checkbox.getAttribute( 'value' ); } )
+            }
 
             updateBookCounts();
 
@@ -157,7 +160,11 @@
         function updateBookCounts() {
             var bookCount = 0;
 
-            var checkedCheckboxes = filterCheckboxes.filter( function(checkbox) { return checkbox.checked; } );
+            var checkedCheckboxes = filterCheckboxes.filter( function( checkbox ) { return checkbox.checked; } );
+            if ( checkedCheckboxes.length === 0 ) {
+                checkedCheckboxes = filterCheckboxes;
+            }
+
             checkedCheckboxes.forEach( function( checkedCheckbox ) {
                 var count = parseInt( checkedCheckbox.getAttribute( 'data-book-count' ), 10 );
                 if ( !isNaN( count ) ) {
