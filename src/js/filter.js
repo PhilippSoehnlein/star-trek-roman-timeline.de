@@ -70,7 +70,16 @@
                 showFilterForm();
             }
 
-            // TODO: Implement close on escape
+            // close on escape
+            document.addEventListener(
+                'keyup',
+                function ( event ) {
+                    if ( event.keyCode === 27 && getFilterDisplayMode() === 'dialog' && filterForm.classList.contains( config.filterFormVisibleClass ) ) {
+                        closeFilterForm();
+                    }
+                },
+                false
+            );
         }
 
         function onFilterTriggerClick( event ) {

@@ -201,7 +201,20 @@ describe( 'Filter functionality', function() {
                     })
                 ;
             }
-        }
+        },
+
+        {
+            title: 'Pressing Escape key closes filter dialog in dialog mode (when opened)',
+            needsSmallScreen: true,
+            testFunction: function() {
+                filterFormTriggerButton.click()
+                    .then( function() { return browser.driver.sleep( 1000 ); } ) // wait for filter animation to finish
+                    .then( function() { return $('body').sendKeys( protractor.Key.ESCAPE ); })
+                    .then( function() { return browser.driver.sleep( 1000 ); } )
+                    .then( function() { expect( filterForm.isDisplayed() ).toBe( false ); } )
+                ;
+            }
+        },
     ];
 
     tests.forEach( function( test ) {
