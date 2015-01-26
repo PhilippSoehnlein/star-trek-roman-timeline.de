@@ -276,6 +276,9 @@ describe( 'Filter functionality', function() {
     }
 
     function callTestUrl( test ) {
+        // Tests may time out in Safari when you switch from an url to another and the only difference is the hash. To prevent this, request another page first.
+        browser.get( 'about:blank' );
+
         // Set special URL if a test demands it.
         var url = 'http://localhost:8001/';
 
