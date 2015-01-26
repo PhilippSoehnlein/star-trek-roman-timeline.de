@@ -229,7 +229,17 @@ describe( 'Filter functionality', function() {
                     callTestUrl( test );
                     prepareTestVars();
 
-                    test.testFunction();
+                    browser.getCapabilities().then( function ( capabilities ) {
+                        /* Delay test in Chrome, because it plays all transitions when the page is rendering which may lead to inaccurate test results,
+                           because the transitions may still be in progress when the first scripted click (or whatever) happens and sometimes this
+                           click may land on the just running transition. The correct thing would be to fix the strange behaviour in Chrome right away, but
+                           the only way I can think of right now is http://css-tricks.com/transitions-only-after-page-load/ and I don't like a JS solution for
+                           that. So, this is the current workaround for the tests, the actual implementation should be changed later. Therefore: TODO */
+                        if ( test.needsSmallScreen && capabilities.caps_.browserName === 'chrome' ) {
+                            browser.driver.sleep( 500 );
+                        }
+                        test.testFunction();
+                    });
                 }
             });
         }
