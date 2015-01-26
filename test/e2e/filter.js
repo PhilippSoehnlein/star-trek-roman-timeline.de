@@ -5,6 +5,7 @@ describe( 'Filter functionality', function() {
     var filterFormTriggerButton = null;
     var filterFormSubmitButton  = null;
 
+    // TODO: Rewrite all promises. It looks like the .then() cascades aren't necessary (WTF? Cool!)
     var tests = [
         {
             title: 'filterForm is not visible initially',
@@ -111,6 +112,7 @@ describe( 'Filter functionality', function() {
 
         {
             title: 'Selecting series changes the series counter',
+            needsSmallScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1500 ).then( function() { // wait for animation to finish
@@ -128,6 +130,7 @@ describe( 'Filter functionality', function() {
 
         {
             title: 'Selecting a series shows or hides the right books',
+            needsBigScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1500 ).then( function() { // wait for filter animation to finish
@@ -153,6 +156,7 @@ describe( 'Filter functionality', function() {
 
         {
             title: 'Selecting a series sets right classes on items',
+            needsBigScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1500 ).then( function() { // wait for filter animation to finish
@@ -173,6 +177,7 @@ describe( 'Filter functionality', function() {
 
         {
             title: 'Unchecking all previously checked checkboxes should show all books again',
+            needsBigScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver
