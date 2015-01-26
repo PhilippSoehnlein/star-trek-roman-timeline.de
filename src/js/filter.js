@@ -101,7 +101,20 @@
             window.history.replaceState( {}, null, '#' + config.filterFormId );
 
             if ( !isotope ) {
+                /*
+                    For a short time Isotope sets all items to "position: absolute" during init, which leads to a
+                    collapse of the current scroll position if the browser window is higher than the page without
+                    the items (because of layout collapsing). To prevent this, save current scroll position and
+                    recover it after Isotope is initialized.
+                */
+                var currentScrollPosition = {
+                    top:  window.pageYOffset,
+                    left: window.pageXOffset
+                };
+
                 isotope = new Isotope( '#' + config.timelineId, { itemSelector: '.' + config.timelineItemClass, });
+
+                window.scrollTo( currentScrollPosition.left, currentScrollPosition.top );
             }
 
             updateBookCounts();

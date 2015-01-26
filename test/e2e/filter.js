@@ -207,6 +207,21 @@ describe( 'Filter functionality', function() {
                 expect( filterForm.isDisplayed() ).toBe( false );
             }
         },
+
+        {
+            title: 'Opening the filter shouldn\'t alter the scroll position',
+            testFunction: function() {
+                // to make this test work, we need a viewport which has a vertical scrollbar
+                browser.driver.manage().window().setSize( 1024, 300 );
+
+                var scrollTopValue = 100;
+                browser.driver.executeScript( 'window.scrollTo(0, ' + scrollTopValue + ')' );
+                filterFormTriggerButton.click();
+                browser.driver.executeScript( 'return window.pageYOffset;' ).then( function ( scrollY ) {
+                    expect( scrollY ).toBe( scrollTopValue );
+                });
+            }
+        }
     ];
 
     tests.forEach( function( test ) {
@@ -244,7 +259,7 @@ describe( 'Filter functionality', function() {
         // browser there doesn't have the required size and we can't change the viewport size.
         var canTestBeExecuted = false;
         if ( canBrowserResizeWindow ) {
-            // provide a certain default size if the test has needsBigScreen or needSmallScreen (if it has both, the test must take care of it itself
+            // provide a certain default size if the test has needsBigScreen or needSmallScreen
             if ( test.needsBigScreen ) {
                 browser.driver.manage().window().setSize( 1024, 600 );
             }
