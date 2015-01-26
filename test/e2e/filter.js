@@ -5,7 +5,6 @@ describe( 'Filter functionality', function() {
     var filterFormTriggerButton = null;
     var filterFormSubmitButton  = null;
 
-    // TODO: Rewrite all promises. It looks like the .then() cascades aren't necessary (WTF? Cool!)
     var tests = [
         {
             title: 'filterForm is not visible initially',
@@ -56,10 +55,9 @@ describe( 'Filter functionality', function() {
             needsSmallScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
-                browser.driver.sleep( 1000 ).then( function() { // wait for animation to finish
-                    expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).toBe( true );
-                    expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).toBe( false );
-                });
+                browser.driver.sleep( 1000 );  // wait for animation to finish
+                expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).toBe( true );
+                expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).toBe( false );
             }
         },
 
@@ -68,11 +66,9 @@ describe( 'Filter functionality', function() {
             needsBigScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
-
-                browser.driver.sleep( 1500 ).then( function() { // wait for animation to finish
-                    expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).toBe( false );
-                    expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).toBe( true );
-                });
+                browser.driver.sleep( 1500 ); // wait for animation to finish
+                expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).toBe( false );
+                expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).toBe( true );
             }
         },
 
@@ -80,11 +76,10 @@ describe( 'Filter functionality', function() {
             title: 'Going directly to #' + filterId + ' opens filter and inits it',
             page: 'directToOpenedFilter',
             testFunction: function() {
-                browser.driver.sleep( 1500 ).then( function() { // wait for animation to finish
-                    expect( filterForm.isDisplayed() ).toBe( true );
-                    expect( filterFormSubmitButton.isDisplayed() ).toBe( false );
-                    expect( element.all( by.className( '_is_filter_book_count' ) ).getText() ).toMatch( /\d+ Bücher/ );
-                });
+                browser.driver.sleep( 1500 ); // wait for animation to finish
+                expect( filterForm.isDisplayed() ).toBe( true );
+                expect( filterFormSubmitButton.isDisplayed() ).toBe( false );
+                expect( element.all( by.className( '_is_filter_book_count' ) ).getText() ).toMatch( /\d+ Bücher/ );
             }
         },
 
@@ -101,11 +96,10 @@ describe( 'Filter functionality', function() {
                 });
 
                 filterFormTriggerButton.click();
-                browser.driver.sleep( 1500 ).then( function() { // wait for animation to finish
-                    labels.click();
-                    checkboxes.each( function( checkbox ) {
-                        expect( checkbox.getAttribute( 'checked' ) ).toBe( 'true' );
-                    });
+                browser.driver.sleep( 1500 ); // wait for animation to finish
+                labels.click();
+                checkboxes.each( function( checkbox ) {
+                    expect( checkbox.getAttribute( 'checked' ) ).toBe( 'true' );
                 });
             }
         },
@@ -115,16 +109,15 @@ describe( 'Filter functionality', function() {
             needsSmallScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
-                browser.driver.sleep( 1500 ).then( function() { // wait for animation to finish
-                    var checkboxes  = element.all( by.css( '#' + filterId + ' input[type="checkbox"]' ) );
-                    var counterNode = element( by.className( '_is_filter_series_count' ) );
+                browser.driver.sleep( 1500 ); // wait for animation to finish
+                var checkboxes  = element.all( by.css( '#' + filterId + ' input[type="checkbox"]' ) );
+                var counterNode = element( by.className( '_is_filter_series_count' ) );
 
-                    expect( counterNode.getText() ).toBe( '0' );
-                    checkboxes.get( 0 ).click();
-                    expect( counterNode.getText() ).toBe( '1' );
-                    checkboxes.get( 1 ).click();
-                    expect( counterNode.getText() ).toBe( '2' );
-                });
+                expect( counterNode.getText() ).toBe( '0' );
+                checkboxes.get( 0 ).click();
+                expect( counterNode.getText() ).toBe( '1' );
+                checkboxes.get( 1 ).click();
+                expect( counterNode.getText() ).toBe( '2' );
             }
         },
 
@@ -133,23 +126,21 @@ describe( 'Filter functionality', function() {
             needsBigScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
-                browser.driver.sleep( 1500 ).then( function() { // wait for filter animation to finish
-                    element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
-                    browser.driver.sleep( 600 ).then( function() { // wait for isotope animation to finish
-                        var timelineItems = element.all( by.css( '._is_timeline_item' ) );
-                        expect( timelineItems.count() ).toBe( 4 );
+                browser.driver.sleep( 1500 ); // wait for filter animation to finish
+                element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
+                browser.driver.sleep( 600 ); // wait for isotope animation to finish
+                var timelineItems = element.all( by.css( '._is_timeline_item' ) );
+                expect( timelineItems.count() ).toBe( 4 );
 
-                        timelineItems.each( function( timelineItem ) {
-                            timelineItem.getAttribute( 'data-timline-item-series' ).then( function( series ) {
-                                if ( series === 'TNG Doppelhelix' ) {
-                                    expect( timelineItem.isDisplayed() ).toBe( true );
-                                }
-                                else {
-                                    expect( timelineItem.isDisplayed() ).toBe( false );
-                                }
-                            })
-                        });
-                    });
+                timelineItems.each( function( timelineItem ) {
+                    timelineItem.getAttribute( 'data-timline-item-series' ).then( function( series ) {
+                        if ( series === 'TNG Doppelhelix' ) {
+                            expect( timelineItem.isDisplayed() ).toBe( true );
+                        }
+                        else {
+                            expect( timelineItem.isDisplayed() ).toBe( false );
+                        }
+                    })
                 });
             }
         },
@@ -159,19 +150,19 @@ describe( 'Filter functionality', function() {
             needsBigScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
-                browser.driver.sleep( 1500 ).then( function() { // wait for filter animation to finish
-                    element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
-                    browser.driver.sleep( 1000 ).then( function() { // wait for isotope animation to finish
-                        var timelineItems = element.all( by.css( '._is_timeline_item[data-timline-item-series="TNG Doppelhelix"]' ) );
-                        expect( timelineItems.count() ).toBe( 2 );
-                        expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-odd\b/ );
-                        expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-even\b/ );
-                        expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-first\b/ );
-                        expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-odd\b/ );
-                        expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-even\b/ );
-                        expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-first\b/ );
-                    });
-                });
+
+                browser.driver.sleep( 1500 ); // wait for filter animation to finish
+                element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
+
+                browser.driver.sleep( 1000 ); // wait for isotope animation to finish
+                var timelineItems = element.all( by.css( '._is_timeline_item[data-timline-item-series="TNG Doppelhelix"]' ) );
+                expect( timelineItems.count() ).toBe( 2 );
+                expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-odd\b/ );
+                expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-even\b/ );
+                expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-first\b/ );
+                expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-odd\b/ );
+                expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-even\b/ );
+                expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-first\b/ );
             }
         },
 
@@ -180,34 +171,28 @@ describe( 'Filter functionality', function() {
             needsBigScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
-                browser.driver
-                    .sleep( 1500 )
-                    .then( function() { // wait for filter animation to finish
-                        return element.all( by.css( '._is_timeline_item' ) ).count();
-                    })
-                    .then( function( numberOfTimelineItems ) {
-                        var bookCounterRegex = new RegExp( '^' + numberOfTimelineItems + ' ' );
-                        var bookCounterNodes = element.all( by.className( '_is_filter_book_count' ) );
-                        var checkboxToClick  = element( by.id( 'series-checkbox-tng-doppelhelix' ) );
+                browser.driver.sleep( 1500 ); // wait for filter animation to finish
+                element.all( by.css( '._is_timeline_item' ) ).count().then( function( numberOfTimelineItems ) {
+                    var bookCounterRegex = new RegExp( '^' + numberOfTimelineItems + ' ' );
+                    var bookCounterNodes = element.all( by.className( '_is_filter_book_count' ) );
+                    var checkboxToClick  = element( by.id( 'series-checkbox-tng-doppelhelix' ) );
 
-                        // all these last() calls here are because the test is probably done in a wider browser and a
-                        // expect( bookCounterNodes.getText() ).toMatch( bookCounterRegex ) doesn't match in Firefox
-                        // because the webdriver for Firefox only returns text for visible nodes.
-                        expect( bookCounterNodes.last().getText() ).toMatch( bookCounterRegex );
-                        checkboxToClick.click();
+                    // all these last() calls here are because the test is probably done in a wider browser and a
+                    // expect( bookCounterNodes.getText() ).toMatch( bookCounterRegex ) doesn't match in Firefox
+                    // because the webdriver for Firefox only returns text for visible nodes.
+                    expect( bookCounterNodes.last().getText() ).toMatch( bookCounterRegex );
+                    checkboxToClick.click();
 
-                        expect( bookCounterNodes.last().getText() ).not.toMatch( bookCounterRegex );
-                        checkboxToClick.click();
+                    expect( bookCounterNodes.last().getText() ).not.toMatch( bookCounterRegex );
+                    checkboxToClick.click();
 
-                        browser.driver.sleep( 600 ).then( function() { // wait for isotope animation to finish
-                            var timelineItems = element.all( by.css( '._is_timeline_item' ) );
-                            timelineItems.each( function( timelineItem ) {
-                                expect( timelineItem.isDisplayed() ).toBe( true );
-                            });
-                            expect( bookCounterNodes.last().getText() ).toMatch( bookCounterRegex );
-                        });
-                    })
-                ;
+                    browser.driver.sleep( 600 ); // wait for isotope animation to finish
+                    var timelineItems = element.all( by.css( '._is_timeline_item' ) );
+                    timelineItems.each( function( timelineItem ) {
+                        expect( timelineItem.isDisplayed() ).toBe( true );
+                    });
+                    expect( bookCounterNodes.last().getText() ).toMatch( bookCounterRegex );
+                });
             }
         },
 
@@ -215,12 +200,11 @@ describe( 'Filter functionality', function() {
             title: 'Pressing Escape key closes filter dialog in dialog mode (when opened)',
             needsSmallScreen: true,
             testFunction: function() {
-                filterFormTriggerButton.click()
-                    .then( function() { return browser.driver.sleep( 1000 ); } ) // wait for filter animation to finish
-                    .then( function() { return $('body').sendKeys( protractor.Key.ESCAPE ); })
-                    .then( function() { return browser.driver.sleep( 1000 ); } )
-                    .then( function() { expect( filterForm.isDisplayed() ).toBe( false ); } )
-                ;
+                filterFormTriggerButton.click();
+                browser.driver.sleep( 1000 ); // wait for filter animation to finish
+                return $('body').sendKeys( protractor.Key.ESCAPE );
+                browser.driver.sleep( 1000 ); // wait for filter animation to finish
+                expect( filterForm.isDisplayed() ).toBe( false );
             }
         },
     ];
