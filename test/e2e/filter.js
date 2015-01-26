@@ -55,7 +55,7 @@ describe( 'Filter functionality', function() {
             needsSmallScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
-                browser.driver.sleep( 500 ).then( function() { // wait for animation to finish
+                browser.driver.sleep( 1000 ).then( function() { // wait for animation to finish
                     expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).toBe( true );
                     expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).toBe( false );
                 });
@@ -157,7 +157,7 @@ describe( 'Filter functionality', function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1500 ).then( function() { // wait for filter animation to finish
                     element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
-                    browser.driver.sleep( 600 ).then( function() { // wait for isotope animation to finish
+                    browser.driver.sleep( 1000 ).then( function() { // wait for isotope animation to finish
                         var timelineItems = element.all( by.css( '._is_timeline_item[data-timline-item-series="TNG Doppelhelix"]' ) );
                         expect( timelineItems.count() ).toBe( 2 );
                         expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-odd\b/ );
