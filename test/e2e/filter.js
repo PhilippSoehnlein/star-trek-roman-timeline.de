@@ -82,7 +82,7 @@ describe( 'Filter functionality', function() {
                 browser.driver.sleep( 1500 ).then( function() { // wait for animation to finish
                     expect( filterForm.isDisplayed() ).toBe( true );
                     expect( filterFormSubmitButton.isDisplayed() ).toBe( false );
-                    expect( element.all( by.className( '_is_filter_book_count' ) ).getInnerHtml() ).toMatch( /\d+ Bücher/ );
+                    expect( element.all( by.className( '_is_filter_book_count' ) ).getText() ).toMatch( /\d+ Bücher/ );
                 });
             }
         },
@@ -117,11 +117,11 @@ describe( 'Filter functionality', function() {
                     var checkboxes  = element.all( by.css( '#' + filterId + ' input[type="checkbox"]' ) );
                     var counterNode = element( by.className( '_is_filter_series_count' ) );
 
-                    expect( counterNode.getInnerHtml() ).toBe( '0' );
+                    expect( counterNode.getText() ).toBe( '0' );
                     checkboxes.get( 0 ).click();
-                    expect( counterNode.getInnerHtml() ).toBe( '1' );
+                    expect( counterNode.getText() ).toBe( '1' );
                     checkboxes.get( 1 ).click();
-                    expect( counterNode.getInnerHtml() ).toBe( '2' );
+                    expect( counterNode.getText() ).toBe( '2' );
                 });
             }
         },
@@ -185,10 +185,13 @@ describe( 'Filter functionality', function() {
                         var bookCounterNodes = element.all( by.className( '_is_filter_book_count' ) );
                         var checkboxToClick  = element( by.id( 'series-checkbox-tng-doppelhelix' ) );
 
-                        expect( bookCounterNodes.getInnerHtml() ).toMatch( bookCounterRegex );
+                        // all these last() calls here are because the test is probably done in a wider browser and a
+                        // expect( bookCounterNodes.getText() ).toMatch( bookCounterRegex ) doesn't match in Firefox
+                        // because the webdriver for Firefox only returns text for visible nodes.
+                        expect( bookCounterNodes.last().getText() ).toMatch( bookCounterRegex );
                         checkboxToClick.click();
 
-                        expect( bookCounterNodes.getInnerHtml() ).not.toMatch( bookCounterRegex );
+                        expect( bookCounterNodes.last().getText() ).not.toMatch( bookCounterRegex );
                         checkboxToClick.click();
 
                         browser.driver.sleep( 600 ).then( function() { // wait for isotope animation to finish
@@ -196,7 +199,7 @@ describe( 'Filter functionality', function() {
                             timelineItems.each( function( timelineItem ) {
                                 expect( timelineItem.isDisplayed() ).toBe( true );
                             });
-                            expect( bookCounterNodes.getInnerHtml() ).toMatch( bookCounterRegex );
+                            expect( bookCounterNodes.last().getText() ).toMatch( bookCounterRegex );
                         });
                     })
                 ;
