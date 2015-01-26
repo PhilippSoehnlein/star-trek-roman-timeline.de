@@ -230,6 +230,8 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('test-e2e:desktop-browser', [
+        'build:test',
+        'connect:test-e2e',
         'protractor:firefox',
         'protractor:chrome',
         'protractor:safari',
