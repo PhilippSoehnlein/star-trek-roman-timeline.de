@@ -264,7 +264,7 @@ describe( 'Filter functionality', function() {
     tests.forEach( function( test ) {
         var aroundFn = function() {
             browser.driver.manage().window().getSize().then( function( size ) {
-                var doTest = prepareBrowserViewport( test );
+                var doTest = prepareBrowserViewport( test, size );
                 if ( !doTest ) {
                     expect( true ).toBe( true );
                     console.info( 'Skipping test "' + test.title + '", because it needs a certain viewport size and we run in a browser in which we can\'t change it.' );
@@ -291,9 +291,9 @@ describe( 'Filter functionality', function() {
         it( test.title, aroundFn );
     });
 
-    function prepareBrowserViewport( test ) {
         // A test can state if it needs a certain viewport size. That means on some environments (like smartphones), we have to skip some tests, because the
         // browser there doesn't have the required size and we can't change the viewport size.
+    function prepareBrowserViewport( test, viewPortSize ) {
         var canTestBeExecuted = false;
         if ( canBrowserResizeWindow ) {
             // provide a certain default size if the test has needsBigScreen or needSmallScreen
@@ -309,10 +309,10 @@ describe( 'Filter functionality', function() {
             // we can't resize the browser window, but the test says the viewport size doesn't matter anyway.
             canTestBeExecuted = true;
         }
-        else if ( test.needsSmallScreen && size.width < 700 ) {
+        else if ( test.needsSmallScreen && viewPortSize.width < 700 ) {
             canTestBeExecuted = true;
         }
-        else if ( test.needsBigScreen && size.width > 700 ) {
+        else if ( test.needsBigScreen && viewPortSize.width > 700 ) {
             canTestBeExecuted = true;
         }
 
