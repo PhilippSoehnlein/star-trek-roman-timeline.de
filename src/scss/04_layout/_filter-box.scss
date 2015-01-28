@@ -37,7 +37,7 @@ $filter-box-checkbox-group-margin: 4px;
         $filter-box-dialog-margin: 3%;     // the outer margin the dialog box has against the viepwort.
         $filter-box-dialog-padding: 5vmin; // the inner padding of the dialog box.
 
-        &--dialog {
+        &--dialog { // This selector is used is JS, too!
             position: fixed;
             z-index: 1;
             top: $filter-box-dialog-margin; // will be overwritten by JS to make open animation start at the middle of the trigger button
@@ -46,7 +46,7 @@ $filter-box-checkbox-group-margin: 4px;
             right: $filter-box-dialog-margin;
 
             transform: scale(0);
-            top: 152px; // TODO: calculate dynamically (document.getElementsByClassName('l-filter-box')[0].offsetTop)
+            top: 210px; // Estimated vertical middle position of filter trigger. Will be overwritten by JS
 
             transition-property: transform top;
             transition-duration: 0.3s;

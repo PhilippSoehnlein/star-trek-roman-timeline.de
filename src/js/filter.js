@@ -3,13 +3,14 @@
 
     function Filter() {
         var config = {
-            filterFormId:           'serienauswahl',
-            filterFormVisibleClass: 'is-l-filter-box-dialog-visible',
-            timelineId:             'timeline',
-            timelineItemClass:      '_is_timeline_item',
-            itemIsOddClass:         'is-l-timeline-item-odd',
-            itemIsEvenClass:        'is-l-timeline-item-even',
-            itemIsFirstClass:       'is-l-timeline-item-first',
+            filterFormId:              'serienauswahl',
+            filerFormPositionSelector: '.l-filter-box--dialog',
+            filterFormVisibleClass:    'is-l-filter-box-dialog-visible',
+            timelineId:                'timeline',
+            timelineItemClass:         '_is_timeline_item',
+            itemIsOddClass:            'is-l-timeline-item-odd',
+            itemIsEvenClass:           'is-l-timeline-item-even',
+            itemIsFirstClass:          'is-l-timeline-item-first',
         };
 
         var triggerButtons         = [];
@@ -90,12 +91,31 @@
                 closeFilterForm();
             }
             else {
-                showFilterForm();
+                showFilterForm( { clickedButton: event.target } );
             }
         }
 
-        function showFilterForm() {
-            // TODO: Calculate top coordinate of filterForm
+        function showFilterForm( params ) {
+            if ( getFilterDisplayMode() === 'dialog' ) {
+                var triggerButton   = params.clickedButton;
+                var buttonBoundings = triggerButton.getBoundingClientRect();
+                var topCoordinate   = buttonBoundings.top + ( ( buttonBoundings.bottom - buttonBoundings.top ) / 2 );
+                var allStyleSheets  = document.styleSheets;
+                var styleSheet      = allStyleSheets[ allStyleSheets.length - 1 ];
+
+                filterForm.style.transition = 'none';
+                filterForm.offsetHeight; // force redraw
+
+                styleSheet.insertRule(
+                    config.filerFormPositionSelector + ' { top: ' + topCoordinate + 'px; }',
+                    styleSheet.cssRules.length
+                );
+                filterForm.offsetHeight; // force redraw
+
+                filterForm.style.transition = '';
+                filterForm.offsetHeight; // force redraw
+            }
+
             filterForm.classList.add( config.filterFormVisibleClass );
             changeFilterDisplayBasedOnMediaQuery();
             window.history.replaceState( {}, null, '#' + config.filterFormId );

@@ -221,6 +221,43 @@ describe( 'Filter functionality', function() {
                     expect( scrollY ).toBe( scrollTopValue );
                 });
             }
+        },
+
+        {
+            title: 'Filter dialog transitions "out of the button"',
+            needsSmallScreen: true,
+            testFunction: function() {
+                // Well, this doesn't really test if the dialog transition "out of the button", but at least it's able
+                // to check if the top coordinate of filterForm gets manipulated (which is the start point of the
+                // animation.
+                var topInitial, topAfterFirstScroll;
+                filterForm.getCssValue( 'top' )
+                    .then( function( top ) {
+                        topInitial = top;
+
+                        browser.driver.executeScript( 'window.scrollTo(0, 100)' );
+                        filterFormTriggerButton.click();
+                        $( 'body' ).sendKeys( protractor.Key.ESCAPE );
+                        browser.driver.sleep( 1000 ); // make sure the former dialog open / close stuff is done
+
+                        return filterForm.getCssValue( 'top' );
+                    })
+                    .then( function( top ) {
+                        topAfterFirstScroll = top;
+                        expect( topAfterFirstScroll ).not.toBe( topInitial );
+
+                        browser.driver.executeScript( 'window.scrollTo(0, 50)' );
+                        filterFormTriggerButton.click();
+                        $( 'body' ).sendKeys( protractor.Key.ESCAPE );
+                        browser.driver.sleep( 1000 ); // make sure the former dialog open / close stuff is done
+
+                        return filterForm.getCssValue( 'top' );
+                    })
+                    .then( function( top ) {
+                        expect( top ).not.toBe( topAfterFirstScroll );
+                    })
+                ;
+            }
         }
     ];
 
