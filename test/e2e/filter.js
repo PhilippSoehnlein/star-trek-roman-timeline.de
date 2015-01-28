@@ -1,3 +1,13 @@
+/*
+    This is a rewrite of the filter e2e tests with Mocha. Some things I discovered:
+    - Not sure what is better: expect( something ).to.eventually.equal( true ) or expect( something ).to.eventually.be.true.
+      The later is IMO a bit easier to read, but jshint will complain.
+    - It looks like Chai doesn't automatically resolve promises as last part of the assertion:
+      expect( something ).to.eventually.equal( somePromise ) <-- somePromise has to be resolved by the test first
+      See test "Labels of checkboxes are correctly linked to their checkboxes"
+    - Nyan reporter rules! ;-) http://mochajs.org/#nyan-reporter
+*/
+
 describe( 'Filter functionality', function() {
     const filterId              = 'serienauswahl';
 
@@ -9,7 +19,7 @@ describe( 'Filter functionality', function() {
         {
             title: 'filterForm is not visible initially',
             testFunction: function() {
-                expect( filterForm.isDisplayed() ).toBe( false );
+                expect( filterForm.isDisplayed() ).to.eventually.equal( false );
             },
         },
         {
@@ -20,8 +30,8 @@ describe( 'Filter functionality', function() {
                     .then( function( url ) { start_url = url; })
                     .then( function() {
                         filterFormTriggerButton.click();
-                        expect( filterForm.isDisplayed() ).toBe( true );
-                        browser.driver.getCurrentUrl().then( function(url) { expect(url).not.toBe( start_url ) } );
+                        expect( filterForm.isDisplayed() ).to.eventually.equal( true );
+                        browser.driver.getCurrentUrl().then( function(url) { expect(url).to.not.equal( start_url ) } );
                     })
                 ;
             },
@@ -36,8 +46,8 @@ describe( 'Filter functionality', function() {
                     .then( function() {
                             filterFormTriggerButton.click();
                             filterFormTriggerButton.click();
-                            expect( filterForm.isDisplayed() ).toBe( false );
-                            browser.driver.getCurrentUrl().then( function(url) { expect(url).toBe( start_url ) } );
+                            expect( filterForm.isDisplayed() ).to.eventually.equal( false );
+                            browser.driver.getCurrentUrl().then( function(url) { expect(url).to.equal( start_url ) } );
                         })
                 ;
             },
@@ -47,7 +57,7 @@ describe( 'Filter functionality', function() {
             needsBigScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
-                expect( filterFormSubmitButton.isDisplayed() ).toBe( false );
+                expect( filterFormSubmitButton.isDisplayed() ).to.eventually.equal( false );
             }
         },
         {
@@ -56,8 +66,8 @@ describe( 'Filter functionality', function() {
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1000 );  // wait for animation to finish
-                expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).toBe( true );
-                expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).toBe( false );
+                expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).to.eventually.equal( true );
+                expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).to.eventually.equal( false );
             }
         },
 
@@ -67,8 +77,8 @@ describe( 'Filter functionality', function() {
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1500 ); // wait for animation to finish
-                expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).toBe( false );
-                expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).toBe( true );
+                expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).to.eventually.equal( false );
+                expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).to.eventually.equal( true );
             }
         },
 
@@ -77,9 +87,9 @@ describe( 'Filter functionality', function() {
             page: 'directToOpenedFilter',
             testFunction: function() {
                 browser.driver.sleep( 1500 ); // wait for animation to finish
-                expect( filterForm.isDisplayed() ).toBe( true );
-                expect( filterFormSubmitButton.isDisplayed() ).toBe( false );
-                expect( element.all( by.className( '_is_filter_book_count' ) ).getText() ).toMatch( /\d+ Bücher/ );
+                expect( filterForm.isDisplayed() ).to.eventually.equal( true );
+                expect( filterFormSubmitButton.isDisplayed() ).to.eventually.equal( false );
+                expect( element.all( by.className( '_is_filter_book_count' ) ).getText() ).to.eventually.match( /\d+ Bücher/ );
             }
         },
 
@@ -89,17 +99,19 @@ describe( 'Filter functionality', function() {
                 var checkboxes = element.all( by.css( '#' + filterId + ' input[type="checkbox"]' ) );
                 var labels     = element.all( by.css( '#' + filterId + ' label' ) );
 
-                expect( checkboxes.count() ).toBe( labels.count() );
+                labels.count().then( function( labelCount ) {
+                    expect( checkboxes.count() ).to.eventually.equal( labelCount );
+                });
 
                 checkboxes.each( function( checkbox ) {
-                    expect( checkbox.getAttribute( 'checked' ) ).toBe( null );
+                    expect( checkbox.getAttribute( 'checked' ) ).to.eventually.be.null;
                 });
 
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1500 ); // wait for animation to finish
                 labels.click();
                 checkboxes.each( function( checkbox ) {
-                    expect( checkbox.getAttribute( 'checked' ) ).toBe( 'true' );
+                    expect( checkbox.getAttribute( 'checked' ) ).to.eventually.equal( 'true' );
                 });
             }
         },
@@ -113,11 +125,11 @@ describe( 'Filter functionality', function() {
                 var checkboxes  = element.all( by.css( '#' + filterId + ' input[type="checkbox"]' ) );
                 var counterNode = element( by.className( '_is_filter_series_count' ) );
 
-                expect( counterNode.getText() ).toBe( '0' );
+                expect( counterNode.getText() ).to.eventually.equal( '0' );
                 checkboxes.get( 0 ).click();
-                expect( counterNode.getText() ).toBe( '1' );
+                expect( counterNode.getText() ).to.eventually.equal( '1' );
                 checkboxes.get( 1 ).click();
-                expect( counterNode.getText() ).toBe( '2' );
+                expect( counterNode.getText() ).to.eventually.equal( '2' );
             }
         },
 
@@ -130,15 +142,15 @@ describe( 'Filter functionality', function() {
                 element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
                 browser.driver.sleep( 600 ); // wait for isotope animation to finish
                 var timelineItems = element.all( by.css( '._is_timeline_item' ) );
-                expect( timelineItems.count() ).toBe( 4 );
+                expect( timelineItems.count() ).to.eventually.equal( 4 );
 
                 timelineItems.each( function( timelineItem ) {
                     timelineItem.getAttribute( 'data-timline-item-series' ).then( function( series ) {
                         if ( series === 'TNG Doppelhelix' ) {
-                            expect( timelineItem.isDisplayed() ).toBe( true );
+                            expect( timelineItem.isDisplayed() ).to.eventually.be.true;
                         }
                         else {
-                            expect( timelineItem.isDisplayed() ).toBe( false );
+                            expect( timelineItem.isDisplayed() ).to.eventually.be.false;
                         }
                     })
                 });
@@ -156,13 +168,13 @@ describe( 'Filter functionality', function() {
 
                 browser.driver.sleep( 1000 ); // wait for isotope animation to finish
                 var timelineItems = element.all( by.css( '._is_timeline_item[data-timline-item-series="TNG Doppelhelix"]' ) );
-                expect( timelineItems.count() ).toBe( 2 );
-                expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-odd\b/ );
-                expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-even\b/ );
-                expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-first\b/ );
-                expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-odd\b/ );
-                expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-even\b/ );
-                expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-first\b/ );
+                expect( timelineItems.count() ).to.eventually.equal( 2 );
+                expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).to.eventually.match( /\bis-l-timeline-item-odd\b/ );
+                expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).to.eventually.not.match( /\bis-l-timeline-item-even\b/ );
+                expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).to.eventually.match( /\bis-l-timeline-item-first\b/ );
+                expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).to.eventually.not.match( /\bis-l-timeline-item-odd\b/ );
+                expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).to.eventually.match( /\bis-l-timeline-item-even\b/ );
+                expect( timelineItems.get( 1 ).getAttribute( 'class' ) ).to.eventually.not.match( /\bis-l-timeline-item-first\b/ );
             }
         },
 
@@ -180,22 +192,22 @@ describe( 'Filter functionality', function() {
                     // all these last() calls here are because the test is probably done in a wider browser and a
                     // expect( bookCounterNodes.getText() ).toMatch( bookCounterRegex ) doesn't match in Firefox
                     // because the webdriver for Firefox only returns text for visible nodes.
-                    expect( bookCounterNodes.last().getText() ).toMatch( bookCounterRegex );
+                    expect( bookCounterNodes.last().getText() ).to.eventually.match( bookCounterRegex );
                     checkboxToClick.click();
 
-                    expect( bookCounterNodes.last().getText() ).not.toMatch( bookCounterRegex );
+                    expect( bookCounterNodes.last().getText() ).to.eventually.not.match( bookCounterRegex );
                     checkboxToClick.click();
 
                     browser.driver.sleep( 600 ); // wait for isotope animation to finish
                     var timelineItems = element.all( by.css( '._is_timeline_item' ) );
                     timelineItems.each( function( timelineItem ) {
-                        expect( timelineItem.isDisplayed() ).toBe( true );
+                        expect( timelineItem.isDisplayed() ).to.eventually.be.true;
                     });
-                    expect( bookCounterNodes.last().getText() ).toMatch( bookCounterRegex );
+                    expect( bookCounterNodes.last().getText() ).to.eventually.match( bookCounterRegex );
                 });
             }
         },
-
+        
         {
             title: 'Pressing Escape key closes filter dialog in dialog mode (when opened)',
             needsSmallScreen: true,
@@ -204,7 +216,7 @@ describe( 'Filter functionality', function() {
                 browser.driver.sleep( 1000 ); // wait for filter animation to finish
                 $('body').sendKeys( protractor.Key.ESCAPE );
                 browser.driver.sleep( 1000 ); // wait for filter animation to finish
-                expect( filterForm.isDisplayed() ).toBe( false );
+                expect( filterForm.isDisplayed() ).to.eventually.be.false;
             }
         },
     ];
