@@ -27,10 +27,8 @@
                 triggerButtons.push( button );
             });
 
-            // assign event to triggerButtons
-            triggerButtons.forEach( function(button) {
-                button.addEventListener( 'click', onFilterTriggerClick, false );
-            });
+            // assign event to triggerButtons (first one is enough)
+            triggerButtons[0].addEventListener( 'click', onFilterTriggerClick, true );
 
             // fill filterForm
             filterForm = document.getElementById( config.filterFormId );
