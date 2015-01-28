@@ -1,5 +1,8 @@
+/* jshint node:true */
+/* global describe:true, expect:true, browser:true, element:true, by:true, $:true, protractor:true, it:true */
 describe( 'Filter functionality', function() {
-    const filterId              = 'serienauswahl';
+    'use strict';
+    var filterId                = 'serienauswahl';
 
     var filterForm              = null;
     var filterFormTriggerButton = null;
@@ -12,36 +15,39 @@ describe( 'Filter functionality', function() {
                 expect( filterForm.isDisplayed() ).toBe( false );
             },
         },
+
         {
             title: 'clicking the trigger opens the filterForm and changes the URL',
             testFunction: function() {
-                var start_url;
+                var startUrl;
                 browser.driver.getCurrentUrl()
-                    .then( function( url ) { start_url = url; })
+                    .then( function( url ) { startUrl = url; })
                     .then( function() {
                         filterFormTriggerButton.click();
                         expect( filterForm.isDisplayed() ).toBe( true );
-                        browser.driver.getCurrentUrl().then( function(url) { expect(url).not.toBe( start_url ) } );
+                        browser.driver.getCurrentUrl().then( function( url ) { expect( url ).not.toBe( startUrl ); } );
                     })
                 ;
             },
         },
+
         {
             title: 'clicking the trigger button again closes the filterForm and resets the URL',
             needsBigScreen: true,
             testFunction: function() {
-                var start_url;
+                var startUrl;
                 browser.driver.getCurrentUrl()
-                    .then( function( url ) { start_url = url; })
+                    .then( function( url ) { startUrl = url; })
                     .then( function() {
-                            filterFormTriggerButton.click();
-                            filterFormTriggerButton.click();
-                            expect( filterForm.isDisplayed() ).toBe( false );
-                            browser.driver.getCurrentUrl().then( function(url) { expect(url).toBe( start_url ) } );
-                        })
+                        filterFormTriggerButton.click();
+                        filterFormTriggerButton.click();
+                        expect( filterForm.isDisplayed() ).toBe( false );
+                        browser.driver.getCurrentUrl().then( function( url ) { expect( url ).toBe( startUrl ); } );
+                    })
                 ;
             },
         },
+
         {
             title: 'the opened filter doesn\'t show the filter button on large screens',
             needsBigScreen: true,
@@ -50,14 +56,19 @@ describe( 'Filter functionality', function() {
                 expect( filterFormSubmitButton.isDisplayed() ).toBe( false );
             }
         },
+
         {
             title: 'status text for dialog mode is shown on small screens',
             needsSmallScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1000 );  // wait for animation to finish
-                expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).toBe( true );
-                expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).toBe( false );
+
+                var dialogStatusNode = element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) );
+                expect( dialogStatusNode.isDisplayed() ).toBe( true );
+
+                var statusNode = element( by.className( 'l-filter-box--dialog-footer-status-text' ) );
+                expect( statusNode.isDisplayed() ).toBe( false );
             }
         },
 
@@ -67,8 +78,12 @@ describe( 'Filter functionality', function() {
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1500 ); // wait for animation to finish
-                expect( element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) ).isDisplayed() ).toBe( false );
-                expect( element( by.className( 'l-filter-box--dialog-footer-status-text'        ) ).isDisplayed() ).toBe( true );
+
+                var dialogStatusNode = element( by.className( 'l-filter-box--dialog-footer-status-text-dialog' ) );
+                expect( dialogStatusNode.isDisplayed() ).toBe( false );
+
+                var statusNode = element( by.className( 'l-filter-box--dialog-footer-status-text' ) );
+                expect( statusNode.isDisplayed() ).toBe( true );
             }
         },
 
@@ -140,7 +155,7 @@ describe( 'Filter functionality', function() {
                         else {
                             expect( timelineItem.isDisplayed() ).toBe( false );
                         }
-                    })
+                    });
                 });
             }
         },
@@ -155,7 +170,8 @@ describe( 'Filter functionality', function() {
                 element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
 
                 browser.driver.sleep( 1000 ); // wait for isotope animation to finish
-                var timelineItems = element.all( by.css( '._is_timeline_item[data-timline-item-series="TNG Doppelhelix"]' ) );
+                var timelineItemsSelector = '._is_timeline_item[data-timline-item-series="TNG Doppelhelix"]';
+                var timelineItems         = element.all( by.css( timelineItemsSelector ) );
                 expect( timelineItems.count() ).toBe( 2 );
                 expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).toMatch( /\bis-l-timeline-item-odd\b/ );
                 expect( timelineItems.get( 0 ).getAttribute( 'class' ) ).not.toMatch( /\bis-l-timeline-item-even\b/ );
@@ -202,7 +218,7 @@ describe( 'Filter functionality', function() {
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1000 ); // wait for filter animation to finish
-                $('body').sendKeys( protractor.Key.ESCAPE );
+                $( 'body' ).sendKeys( protractor.Key.ESCAPE );
                 browser.driver.sleep( 1000 ); // wait for filter animation to finish
                 expect( filterForm.isDisplayed() ).toBe( false );
             }
@@ -215,7 +231,7 @@ describe( 'Filter functionality', function() {
                 browser.driver.manage().window().setSize( 1024, 300 );
 
                 var scrollTopValue = 100;
-                browser.driver.executeScript( 'window.scrollTo(0, ' + scrollTopValue + ')' );
+                browser.driver.executeScript( 'window.scrollTo( 0, ' + scrollTopValue + ' )' );
                 filterFormTriggerButton.click();
                 browser.driver.executeScript( 'return window.pageYOffset;' ).then( function ( scrollY ) {
                     expect( scrollY ).toBe( scrollTopValue );
@@ -235,7 +251,7 @@ describe( 'Filter functionality', function() {
                     .then( function( top ) {
                         topInitial = top;
 
-                        browser.driver.executeScript( 'window.scrollTo(0, 100)' );
+                        browser.driver.executeScript( 'window.scrollTo( 0, 100 )' );
                         filterFormTriggerButton.click();
                         $( 'body' ).sendKeys( protractor.Key.ESCAPE );
                         browser.driver.sleep( 1000 ); // make sure the former dialog open / close stuff is done
@@ -246,7 +262,7 @@ describe( 'Filter functionality', function() {
                         topAfterFirstScroll = top;
                         expect( topAfterFirstScroll ).not.toBe( topInitial );
 
-                        browser.driver.executeScript( 'window.scrollTo(0, 50)' );
+                        browser.driver.executeScript( 'window.scrollTo( 0, 50 )' );
                         filterFormTriggerButton.click();
                         $( 'body' ).sendKeys( protractor.Key.ESCAPE );
                         browser.driver.sleep( 1000 ); // make sure the former dialog open / close stuff is done
@@ -267,18 +283,22 @@ describe( 'Filter functionality', function() {
                 var doTest = prepareBrowserViewport( test, size );
                 if ( !doTest ) {
                     expect( true ).toBe( true );
-                    console.info( 'Skipping test "' + test.title + '", because it needs a certain viewport size and we run in a browser in which we can\'t change it.' );
+                    console.info( 'Skipping test "' + test.title + '", because it needs a certain viewport size ' +
+                                  'and we run in a browser in which we can\'t change it.' );
                 }
                 else {
                     callTestUrl( test );
                     prepareTestVars();
 
                     browser.getCapabilities().then( function ( capabilities ) {
-                        /* Delay test in Chrome, because it plays all transitions when the page is rendering which may lead to inaccurate test results,
-                           because the transitions may still be in progress when the first scripted click (or whatever) happens and sometimes this
-                           click may land on the just running transition. The correct thing would be to fix the strange behaviour in Chrome right away, but
-                           the only way I can think of right now is http://css-tricks.com/transitions-only-after-page-load/ and I don't like a JS solution for
-                           that. So, this is the current workaround for the tests, the actual implementation should be changed later. Therefore: TODO */
+                        /* Delay test in Chrome, because it plays all transitions when the page is rendering which may
+                           lead to inaccurate test results, because the transitions may still be in progress when the
+                           first scripted click (or whatever) happens and sometimes this click may land on the just
+                           running transition. The correct thing would be to fix the strange behaviour in Chrome right
+                           away, but the only way I can think of right now is
+                           http://css-tricks.com/transitions-only-after-page-load/ and I don't like a JS solution for
+                           that. So, this is the current workaround for the tests, the actual implementation should be
+                           changed later. Therefore: TODO */
                         if ( test.needsSmallScreen && capabilities.caps_.browserName === 'chrome' ) {
                             browser.driver.sleep( 500 );
                         }
@@ -286,16 +306,19 @@ describe( 'Filter functionality', function() {
                     });
                 }
             });
-        }
+        };
 
         it( test.title, aroundFn );
     });
 
-        // A test can state if it needs a certain viewport size. That means on some environments (like smartphones), we have to skip some tests, because the
-        // browser there doesn't have the required size and we can't change the viewport size.
     function prepareBrowserViewport( test, viewPortSize ) {
+        /* A test can state if it needs a certain viewport size. That means on some environments (like smartphones),
+           we have to skip some tests, because the browser there doesn't have the required size and we can't change
+           the viewport size.
+        */
+
         var canTestBeExecuted = false;
-        if ( canBrowserResizeWindow ) {
+        if ( global.canBrowserResizeWindow ) {
             // provide a certain default size if the test has needsBigScreen or needSmallScreen
             if ( test.needsBigScreen ) {
                 browser.driver.manage().window().setSize( 1024, 600 );
@@ -320,7 +343,9 @@ describe( 'Filter functionality', function() {
     }
 
     function callTestUrl( test ) {
-        // Tests may time out in Safari when you switch from an url to another and the only difference is the hash. To prevent this, request another page first.
+        /* Tests may time out in Safari when you switch from an url to another and the only difference is the hash.
+           To prevent this, request another page first.
+        */
         browser.get( 'about:blank' );
 
         // Set special URL if a test demands it.
