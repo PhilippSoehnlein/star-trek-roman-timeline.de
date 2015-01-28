@@ -87,6 +87,7 @@ module.exports = function(grunt) {
         uglify: {
             main: {
                 options: {
+                    mangle: true,
                     sourceMap: true,
                     sourceMapName: 'build/main.map'
                 },
