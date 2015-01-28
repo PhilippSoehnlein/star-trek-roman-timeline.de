@@ -202,7 +202,7 @@ describe( 'Filter functionality', function() {
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1000 ); // wait for filter animation to finish
-                return $('body').sendKeys( protractor.Key.ESCAPE );
+                $('body').sendKeys( protractor.Key.ESCAPE );
                 browser.driver.sleep( 1000 ); // wait for filter animation to finish
                 expect( filterForm.isDisplayed() ).toBe( false );
             }
