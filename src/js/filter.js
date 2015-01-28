@@ -1,4 +1,5 @@
-(function () {
+( function () {
+    /* global Isotope:true, window:true, document:true */
     'use strict';
 
     function Filter() {
@@ -39,17 +40,18 @@
             });
 
             // fill filterCheckboxes
-            [].forEach.call( document.querySelectorAll( '#' +  config.filterFormId + ' input[type="checkbox"][name="serie"]' ), function( checkbox ) {
-                filterCheckboxes.push( checkbox );
-            });
+            [].forEach.call(
+                document.querySelectorAll( '#' +  config.filterFormId + ' input[type="checkbox"][name="serie"]' ),
+                function( checkbox ) { filterCheckboxes.push( checkbox ); }
+            );
 
             // assign event listener to checkboxes
             filterForm.addEventListener(
                 'change',
                 function( event ) {
-                    if (    event.target.nodeName.toLowerCase() === 'input'
-                         && event.target.getAttribute( 'type' ) === 'checkbox'
-                         && event.target.getAttribute( 'name' ) === 'serie'
+                    if ( event.target.nodeName.toLowerCase() === 'input' &&
+                         event.target.getAttribute( 'type' ) === 'checkbox' &&
+                         event.target.getAttribute( 'name' ) === 'serie'
                     ) {
                         onCheckboxChanged( event.target );
                     }
@@ -73,7 +75,9 @@
             document.addEventListener(
                 'keyup',
                 function ( event ) {
-                    if ( event.keyCode === 27 && getFilterDisplayMode() === 'dialog' && filterForm.classList.contains( config.filterFormVisibleClass ) ) {
+                    if ( event.keyCode === 27 && getFilterDisplayMode() === 'dialog' &&
+                         filterForm.classList.contains( config.filterFormVisibleClass )
+                    ) {
                         closeFilterForm();
                     }
                 },
@@ -95,6 +99,7 @@
 
         function showFilterForm( params ) {
             if ( getFilterDisplayMode() === 'dialog' ) {
+                /* jshint -W030 */
                 var triggerButton   = params.clickedButton;
                 var buttonBoundings = triggerButton.getBoundingClientRect();
                 var topCoordinate   = buttonBoundings.top + ( ( buttonBoundings.bottom - buttonBoundings.top ) / 2 );
@@ -102,16 +107,16 @@
                 var styleSheet      = allStyleSheets[ allStyleSheets.length - 1 ];
 
                 filterForm.style.transition = 'none';
-                filterForm.offsetHeight; // force redraw
+                filterForm.offsetHeight; // force redraw (jshint will complain, error W030)
 
                 styleSheet.insertRule(
                     config.filerFormPositionSelector + ' { top: ' + topCoordinate + 'px; }',
                     styleSheet.cssRules.length
                 );
-                filterForm.offsetHeight; // force redraw
+                filterForm.offsetHeight; // force redraw (jshint will complain, error W030)
 
                 filterForm.style.transition = '';
-                filterForm.offsetHeight; // force redraw
+                filterForm.offsetHeight; // force redraw (jshint will complain, error W030)
             }
 
             filterForm.classList.add( config.filterFormVisibleClass );
@@ -158,12 +163,15 @@
         }
 
         function onCheckboxChanged( checkbox ) {
+            /* jshint unused: false */
             var choosenSeries = filterCheckboxes
-                .filter( function(checkbox) { return checkbox.checked; } )
-                .map( function(checkbox) { return checkbox.getAttribute( 'value' ); } )
+                .filter( function( checkbox ) { return checkbox.checked; } )
+                .map(    function( checkbox ) { return checkbox.getAttribute( 'value' ); } )
             ;
             if ( choosenSeries.length === 0 ) {
-                choosenSeries = filterCheckboxes.map( function(checkbox) { return checkbox.getAttribute( 'value' ); } )
+                choosenSeries = filterCheckboxes.map( function( checkbox ) {
+                    return checkbox.getAttribute( 'value' );
+                } );
             }
 
             updateBookCounts();
@@ -221,13 +229,18 @@
         }
 
         function getFilterDisplayMode() {
+            // see https://github.com/jquery/jquery/blob/master/src/dimensions.js#L24
+            var viewportWidth = document.documentElement.clientWidth;
+
             // TODO: Find a way to not hard code the value!
-            var viewportWidth = document.documentElement.clientWidth; // see https://github.com/jquery/jquery/blob/master/src/dimensions.js#L24
             return viewportWidth > 700 ? 'accordion' : 'dialog';
         }
 
         init();
     }
 
-    new Filter();
-}());
+    ( function() {
+        /* jshint nonew: false */
+        new Filter();
+    }() );
+}() );
