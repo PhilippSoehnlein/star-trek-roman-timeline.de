@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 
         autoprefixer: {
             options: {
-                opbrowsers: ['last 2 version']
+                browsers: ['last 2 version']
             },
             single_file: {
                 src: 'build/main.css',
