@@ -98,6 +98,8 @@
         function onFilterTriggerClick( event ) {
             event.preventDefault();
 
+            // TODO: This doesn't work, if we call the site directly with #serienauswahl hash, because then the :target
+            // applies, makes the filter visible, but it can never be hidden.
             var isFilterFormVisible = filterForm.classList.contains( config.filterFormVisibleClass );
             if ( isFilterFormVisible ) {
                 closeFilterForm();
@@ -159,6 +161,7 @@
         }
 
         function closeFilterForm() {
+            //document.location.hash = '';
             filterForm.classList.remove( config.filterFormVisibleClass );
             window.history.replaceState( {}, null, '/' );
         }
