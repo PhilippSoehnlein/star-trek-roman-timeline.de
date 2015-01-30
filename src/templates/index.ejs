@@ -5,12 +5,6 @@
 %>
 <% include _header %>
 
-<!--
-<button class="button" onclick="timelineFilter(function(nr){ return nr < 3; })">Remove 3 and 4</button>
-<button class="button" onclick="timelineFilter(function(nr){ return nr !== 3; })">Remove 3</button>
-<button class="button" onclick="timelineFilter(function() { return true; })">Show all</button>
--->
-
 <div class="l-mainframe--filter l-filter-box">
     <div class="l-filter-box--trigger"><a href="#serienauswahl" class="button _is_filter_trigger">Nach Serien filtern</a></div>
     <!-- TODO: check semantics: What about <dialog> <header> and <footer>? -->
@@ -236,55 +230,3 @@
 </main>
 
 <% include _footer %>
-
-<!--
-<script src="js/isotope.js"></script>
-<script src="js/jquery.js"></script>
-<script>
-    var iso = new Isotope( '#timeline', {
-        itemSelector: '.l-timeline--item',
-    });
-
-    /*
-    iso.arrange({
-        filter: function( itemElem ) {
-            return (parseInt(itemElem.getAttribute('data-item-no'), 10) > 2)
-        }
-    });
-    */
-
-    iso.on('layoutComplete', function(event) {
-        event.filteredItems.forEach( function( item, index ) {
-//                    item.element.classList.remove('is-l-timeline-item-odd');
-//                    item.element.classList.remove('is-l-timeline-item-even');
-            item.element.classList.add( index % 2 === 0 ? 'is-l-timeline-item-odd' : 'is-l-timeline-item-even' );
-        });
-
-        //iso.layout();
-    });
-
-    function timelineFilter(fn) {
-        var filter_fn = function( itemElem ) {
-            var nr = parseInt(itemElem.getAttribute('data-item-no'), 10);
-            return fn(nr);
-        };
-
-        var $timeline = jQuery('#timeline');
-        $timeline.find('._is_timeline_item').removeClass('is-l-timeline-item-odd is-l-timeline-item-even');
-
-        var visibleItems = [];
-        $timeline.find('._is_timeline_item').each(function(index, element) {
-            var nr = parseInt(element.getAttribute('data-item-no'), 10);
-            if (fn(nr)) {
-                visibleItems.push(element);
-            }
-        });
-        visibleItems.forEach(function(element, index) {
-            element.classList.add( index % 2 === 0 ? 'is-l-timeline-item-odd' : 'is-l-timeline-item-even' );
-        });
-
-        iso.arrange({ filter: filter_fn });
-    }
-</script>
-
--->
