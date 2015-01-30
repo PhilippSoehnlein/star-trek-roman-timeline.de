@@ -1,5 +1,5 @@
 /* jshint node:true */
-/* global describe:true, expect:true, browser:true, element:true, by:true, $:true, protractor:true, it:true */
+/* global describe:true, expect:true, browser:true, element:true, by:true, $:true, protractor:true, it:true, xit:true */
 describe( 'Filter functionality', function() {
     'use strict';
     var filterId                = 'serienauswahl';
@@ -11,6 +11,7 @@ describe( 'Filter functionality', function() {
     var tests = [
         {
             title: 'filterForm is not visible initially',
+            skipTest: true,
             testFunction: function() {
                 expect( filterForm.isDisplayed() ).toBe( false );
             },
@@ -310,9 +311,13 @@ describe( 'Filter functionality', function() {
                         expect( top ).not.toBe( topAfterFirstScroll );
                     })
                 ;
-            }
+            },
         },
     ];
+
+    if ( tests.some( function ( test ) { return test.isExclusive; } ) ) {
+        tests = tests.filter( function ( test ) { return test.isExclusive; } );
+    }
 
     tests.forEach( function( test ) {
         var aroundFn = function() {
@@ -345,7 +350,12 @@ describe( 'Filter functionality', function() {
             });
         };
 
-        it( test.title, aroundFn );
+        if ( test.skipTest ) {
+            xit( test.title, aroundFn );
+        }
+        else {
+            it( test.title, aroundFn );
+        }
     });
 
     function prepareBrowserViewport( test, viewPortSize ) {
