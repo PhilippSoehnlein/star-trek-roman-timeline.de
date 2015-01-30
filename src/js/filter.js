@@ -43,6 +43,7 @@
 
             // fill filterForm
             filterForm = document.getElementById( config.filterFormId );
+            filterForm.addEventListener( 'submit', onFilterFormSubmit, false );
 
             // fill filterSubmitButtons
             [].forEach.call( document.getElementsByClassName( '_is_filter_submit_button' ), function( button ) {
@@ -114,6 +115,12 @@
             closeFilterForm();
         }
 
+        function onFilterFormSubmit( event ) {
+            event.preventDefault();
+            filterTimeline();
+            closeFilterForm();
+        }
+
         function showFilterForm( params ) {
             if ( getFilterDisplayMode() === 'dialog' ) {
                 /* jshint -W030 */
@@ -180,31 +187,48 @@
             }
         }
 
-        function onCheckboxChanged( checkbox ) {
-            /* jshint unused: false */
-            var choosenSeries = filterCheckboxes
+        function onCheckboxChanged() {
+            updateBookCounts();
+
+            var chosenSeries = getChosenSeries();
+            filterSeriesCountNodes.forEach( function( node ) {
+                node.innerHTML = chosenSeries.length;
+            });
+
+            if ( getFilterDisplayMode() === 'accordion' ) {
+                filterTimeline();
+            }
+        }
+
+        function getChosenSeries() {
+            var chosenSeries = filterCheckboxes
                 .filter( function( checkbox ) { return checkbox.checked; } )
                 .map(    function( checkbox ) { return checkbox.getAttribute( 'value' ); } )
             ;
-            if ( choosenSeries.length === 0 ) {
-                choosenSeries = filterCheckboxes.map( function( checkbox ) {
+
+            // special behaviour: In no series is chosen, all should be considered chosen.
+            if ( chosenSeries.length === 0 ) {
+                chosenSeries = filterCheckboxes.map( function( checkbox ) {
                     return checkbox.getAttribute( 'value' );
                 } );
             }
 
-            updateBookCounts();
+            return chosenSeries;
+        }
 
-            filterSeriesCountNodes.forEach( function( node ) {
-                node.innerHTML = choosenSeries.length;
-            });
+        function filterTimeline() {
+            var chosenSeries = getChosenSeries();
 
-            // TODO: Only do this in desktop mode.
             var numberOfVisibleItems = 0;
-            isotope.arrange({
+            isotope.arrange( {
                 //transitionDuration: '1s',
+
+                // this function returns if a timeline item is visible and prepares it for being moved to a new position.
                 filter: function( itemNode ) {
                     var itemSeries          = itemNode.getAttribute( 'data-timline-item-series' );
-                    var itemShouldBeVisible = choosenSeries.some( function ( seriesId ) { return seriesId === itemSeries } );
+                    var itemShouldBeVisible = chosenSeries.some( function ( seriesId ) {
+                        return seriesId === itemSeries;
+                    } );
 
                     if ( itemShouldBeVisible ) {
                         numberOfVisibleItems++;
@@ -212,7 +236,10 @@
                         itemNodeClasses.remove( config.itemIsFirstClass );
                         itemNodeClasses.remove( config.itemIsOddClass );
                         itemNodeClasses.remove( config.itemIsEvenClass );
-                        itemNodeClasses.add( numberOfVisibleItems % 2 == 0 ? config.itemIsEvenClass : config.itemIsOddClass );
+                        itemNodeClasses.add( numberOfVisibleItems % 2 === 0 ?
+                                                config.itemIsEvenClass :
+                                                config.itemIsOddClass
+                        );
                         if ( numberOfVisibleItems === 1 ) {
                             itemNodeClasses.add( config.itemIsFirstClass );
                         }
@@ -220,7 +247,7 @@
 
                     return itemShouldBeVisible;
                 }
-            });
+            } );
         }
 
         function updateBookCounts() {

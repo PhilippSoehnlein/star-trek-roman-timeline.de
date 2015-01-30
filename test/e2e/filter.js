@@ -137,13 +137,38 @@ describe( 'Filter functionality', function() {
         },
 
         {
-            title: 'Selecting a series shows or hides the right books',
+            title: 'Selecting a series shows or hides the right books (accordion mode)',
             needsBigScreen: true,
             testFunction: function() {
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1500 ); // wait for filter animation to finish
                 element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
                 browser.driver.sleep( 600 ); // wait for isotope animation to finish
+                var timelineItems = element.all( by.css( '._is_timeline_item' ) );
+                expect( timelineItems.count() ).toBe( 4 );
+
+                timelineItems.each( function( timelineItem ) {
+                    timelineItem.getAttribute( 'data-timline-item-series' ).then( function( series ) {
+                        if ( series === 'TNG Doppelhelix' ) {
+                            expect( timelineItem.isDisplayed() ).toBe( true );
+                        }
+                        else {
+                            expect( timelineItem.isDisplayed() ).toBe( false );
+                        }
+                    });
+                });
+            }
+        },
+
+        {
+            title: 'Selecting a series shows or hides the right books (dialog mode)',
+            needsSmallScreen: true,
+            testFunction: function() {
+                filterFormTriggerButton.click();
+                browser.driver.sleep( 1000 ); // wait for filter animation to finish
+                element( by.id( 'series-checkbox-tng-doppelhelix' ) ).click();
+                filterFormSubmitButton.click();
+                browser.driver.sleep( 1000 ); // wait for isotope animation to finish
                 var timelineItems = element.all( by.css( '._is_timeline_item' ) );
                 expect( timelineItems.count() ).toBe( 4 );
 
