@@ -192,6 +192,7 @@
 
             var chosenSeries = getChosenSeries();
             filterSeriesCountNodes.forEach( function( node ) {
+                // TODO: This is wrong when a series was chosen and then unchosen, because the counter say 4 (=all) instead of 0!
                 node.innerHTML = chosenSeries.length;
             });
 
@@ -253,6 +254,7 @@
         function updateBookCounts() {
             var bookCount = 0;
 
+            // TODO: Refactor. This is basically the same as getChosenSeries()
             var checkedCheckboxes = filterCheckboxes.filter( function( checkbox ) { return checkbox.checked; } );
             if ( checkedCheckboxes.length === 0 ) {
                 checkedCheckboxes = filterCheckboxes;
