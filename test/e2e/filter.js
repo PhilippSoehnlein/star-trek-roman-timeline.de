@@ -225,6 +225,18 @@ describe( 'Filter functionality', function() {
         },
 
         {
+            title: 'Filter form closes when using the close button',
+            needsSmallScreen: true,
+            testFunction: function() {
+                filterFormTriggerButton.click();
+                browser.driver.sleep( 1000 ); // wait for filter animation to finish
+                element( by.className( '_is_filter_close_button' ) ).click();
+                browser.driver.sleep( 1000 ); // wait for filter animation to finish
+                expect( filterForm.isDisplayed() ).toBe( false );
+            }
+        },
+
+        {
             title: 'Opening the filter shouldn\'t alter the scroll position',
             testFunction: function() {
                 // to make this test work, we need a viewport which has a vertical scrollbar
@@ -274,7 +286,7 @@ describe( 'Filter functionality', function() {
                     })
                 ;
             }
-        }
+        },
     ];
 
     tests.forEach( function( test ) {

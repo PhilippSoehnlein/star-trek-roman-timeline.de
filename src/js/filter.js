@@ -7,6 +7,7 @@
             filterFormId:              'serienauswahl',
             filerFormPositionSelector: '.l-filter-box--dialog',
             filterFormVisibleClass:    'is-l-filter-box-dialog-visible',
+            filterCloseButtonClass:    '_is_filter_close_button',
             timelineId:                'timeline',
             timelineItemClass:         '_is_timeline_item',
             itemIsOddClass:            'is-l-timeline-item-odd',
@@ -15,6 +16,7 @@
         };
 
         var triggerButtons         = [];
+        var filterCloseButtons     = [];
         var filterForm             = null;
         var filterSubmitButtons    = [];
         var filterCheckboxes       = [];
@@ -30,6 +32,14 @@
 
             // assign event to triggerButtons (first one is enough)
             triggerButtons[0].addEventListener( 'click', onFilterTriggerClick, true );
+
+            // fill filterCloseButtons
+            [].forEach.call( document.getElementsByClassName( '_is_filter_close_button' ), function( button ) {
+                filterCloseButtons.push( button );
+            });
+
+            // assign event to filterCloseButtons (first one is enough)
+            filterCloseButtons[0].addEventListener( 'click', onFilterCloseClick, false );
 
             // fill filterForm
             filterForm = document.getElementById( config.filterFormId );
@@ -95,6 +105,11 @@
             else {
                 showFilterForm( { clickedButton: event.target } );
             }
+        }
+
+        function onFilterCloseClick( event ) {
+            event.preventDefault();
+            closeFilterForm();
         }
 
         function showFilterForm( params ) {

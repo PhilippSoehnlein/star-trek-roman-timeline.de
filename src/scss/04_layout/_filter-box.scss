@@ -76,12 +76,30 @@ $filter-box-checkbox-group-margin: 4px;
         }
 
         &--dialog-header {
-            text-align: center;
+            display: table;
+            width: 100%;
+            box-sizing: border-box;
             background-color: $light-grey;
             padding-top: 0.4rem;
             padding-bottom: 0.4rem;
             padding-left: $filter-box-dialog-padding;
             padding-right: $filter-box-dialog-padding;
+        }
+
+        &--dialog-header-left-column,
+        &--dialog-header-right-column {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        &--dialog-header-left-column {
+            text-align: center;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        &--dialog-header-right-column {
+            width: 1%;
         }
 
         &--dialog-content {
