@@ -24,7 +24,7 @@ $timeline-two-column-media-query: "min-width: 600px";
 }
 
 .l-timeline--item {
-    width: 100%; // This will be made position: absolute by Isotope, that why we have to add 'width: 100%'.
+    width: 100%; // This will be made position: absolute by Isotope, that's why I have to add 'width: 100%'.
 }
 
 .l-timeline--item:not(.is-l-timeline-item-first) {
