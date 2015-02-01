@@ -149,19 +149,28 @@
 
             if ( !isotope ) {
                 /*
-                    For a short time Isotope sets all items to "position: absolute" during init, which leads to a
+                    (1) For a short time Isotope sets all items to "position: absolute" during init, which leads to a
                     collapse of the current scroll position if the browser window is higher than the page without
                     the items (because of layout collapsing). To prevent this, save current scroll position and
                     recover it after Isotope is initialized.
+                    (2) This may also lead to a disappearing scrollbar during init (because all items are layed out
+                    at the top left of the parent node. In that case Isotope will calculate slightly wrong item
+                    positions for the right column, because they are calculated when the scrollbar isn't there.
+                    To fix this, calculate the width of the timeline node, write it into a style attribute, let
+                    Isotope initialize and then unset the style attribute.
+                    TODO: File a bug at Isotope's Github issue page.
                 */
-                var currentScrollPosition = {
+                var timelineNode = document.getElementById( config.timelineId );
+                var currentScrollPosition = { // (1)
                     top:  window.pageYOffset,
                     left: window.pageXOffset
                 };
+                timelineNode.style.width = timelineNode.offsetWidth + 'px'; // (2)
 
                 isotope = new Isotope( '#' + config.timelineId, { itemSelector: '.' + config.timelineItemClass, });
 
-                window.scrollTo( currentScrollPosition.left, currentScrollPosition.top );
+                window.scrollTo( currentScrollPosition.left, currentScrollPosition.top ); // (1)
+                timelineNode.style.width = null; // (2)
             }
 
             updateBookCounts();
