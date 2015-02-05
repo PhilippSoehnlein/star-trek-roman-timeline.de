@@ -183,6 +183,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build', [
+        // TODO: Add CSS minifier
         'clean:beforeBuild',
         'copy:build',
         'render:index',
