@@ -191,25 +191,35 @@ $filter-box-checkbox-group-margin: 4px;
         }
 
         &--checkbox-group {
-            column-count: 1;
-
-            @media screen and (min-width: $filter-box-layout-switch-media-query-value) {
-                column-count: 2;
-            }
-
-            @media screen and (min-width: $filter-box-layout-switch-media-query-value + 300px) {
-                column-count: 3;
-            }
-
-            @media screen and (min-width: $filter-box-layout-switch-media-query-value + 650px) {
-                column-count: 4;
-            }
-
-            @media screen and (min-width: $filter-box-layout-switch-media-query-value + 1000px) {
-                column-count: 5;
-            }
-
+            column-count: 1; // → see also media queries for .l-filter-box--checkbox-group at the end
             column-gap: $filter-box-checkbox-group-margin;
         }
+    }
+}
+
+// These media queries have to be outside of the .l-filter-box block, because libsass < 3.2 will generate nested media
+// queries which are not interpreted by IE. We can reintegrate them into the nesting after libsass 3.2 is released, see
+// https://github.com/sass/libsass/issues/185
+@media screen and (min-width: $filter-box-layout-switch-media-query-value) {
+    .l-filter-box--checkbox-group {
+        column-count: 2;
+    }
+}
+
+@media screen and (min-width: $filter-box-layout-switch-media-query-value + 300px) {
+    .l-filter-box--checkbox-group {
+        column-count: 3;
+    }
+}
+
+@media screen and (min-width: $filter-box-layout-switch-media-query-value + 650px) {
+    .l-filter-box--checkbox-group {
+        column-count: 4;
+    }
+}
+
+@media screen and (min-width: $filter-box-layout-switch-media-query-value + 1000px) {
+    .l-filter-box--checkbox-group {
+        column-count: 5;
     }
 }
