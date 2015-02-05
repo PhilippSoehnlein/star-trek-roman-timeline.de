@@ -39,12 +39,12 @@ $timeline-two-column-media-query: "min-width: 600px";
 
         background: linear-gradient(
             to right,
-            transparent 0,
-            transparent calc(50% - (#{$timeline-line-width} / 2) - 1px ),
-            $main-color calc(50% - (#{$timeline-line-width} / 2)       ),
-            $main-color calc(50% + (#{$timeline-line-width} / 2)       ),
-            transparent calc(50% + (#{$timeline-line-width} / 2) + 1px )
+            $main-color 0px,
+            $main-color 1px
         );
+        background-repeat: repeat-y;
+        background-size: $timeline-line-width 1px;
+        background-position: center top;
     }
 
     .l-timeline--list {
