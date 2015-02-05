@@ -28,6 +28,12 @@ $filter-box-checkbox-group-margin: 4px;
         text-align: center;
     }
 
+    &--checkbox-group {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
     &--checkbox {
         margin-bottom: $filter-box-checkbox-group-margin;
     }

@@ -18,14 +18,14 @@
             </div>
         </div>
         <div class="l-filter-box--dialog-content">
-            <div class="l-filter-box--checkbox-group">
+            <ol class="l-filter-box--checkbox-group">
                 <% series.forEach( function( seriesData ) { %>
-                   <div class="l-filter-box--checkbox checkbox">
+                   <li class="l-filter-box--checkbox checkbox">
                         <input type="checkbox" name="serie" value="<%= seriesData.name %>" class="checkbox--checkbox" id="series-checkbox-<%= seriesData.id %>" data-book-count="<%=  seriesData.count %>">
                         <label class="checkbox--label" for="series-checkbox-<%= seriesData.id %>"><%= seriesData.name %></label>
-                    </div>
+                    </li>
                 <% }); %>
-            </div>
+            </ol>
         </div>
         <div class="l-filter-box--dialog-footer">
             <p class="l-filter-box--dialog-footer-status-box">
