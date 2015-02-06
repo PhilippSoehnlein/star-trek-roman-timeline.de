@@ -1,6 +1,6 @@
 $book-box-padding: 15px;
 $book-box-border-width: 1px;
-$book-box-arrow-connector-height: 16px;
+$book-box-arrow-connector-height: 14px; // should be even
 $book-box-arrow-connector-width: $book-box-arrow-connector-height / 2;
 
 $book-box-circle-connector-width: 6px;
@@ -8,21 +8,27 @@ $book-box-circle-connector-height: $book-box-circle-connector-width;
 $book-box-circle-connector-border-width: 2px;
 
 .book-box {
+}
+
+.book-box--inner {
     background-color: rgba( darken($light-grey, 27%), 0.8 );
     border: $book-box-border-width solid $light-grey;
-    border-radius: 4px;
+    border-radius: 4px; // TODO: 4px isn't enough for wide book-boxes. A percent value would probably be a good choice.
+    overflow: hidden;
 }
 
 .book-box--data {
     display: table;
-    width: 100%;
+    width: calc(100% + 1px); // fixing webkit sub pixel rendering issue (if the actual width isn't dividable by 2,
+                             // 100% is 1px to narrow, which is visible because of the background-color of
+                             // .book-box--header-bar)
 }
 
 .book-box--header-bar {
     display: table-caption;
     background-color: rgba( $light-grey, 0.7 );
     font-size: 0.8rem;
-    padding: $book-box-padding / 2;
+    padding: floor($book-box-padding / 2);
     padding-left: $book-box-padding; // vertical (left) align with the content in $book-box--main
 
     @include clearfix;
@@ -45,6 +51,7 @@ $book-box-circle-connector-border-width: 2px;
 .book-box--image-wrapper,
 .book-box--cover {
     width: 60px; // TODO: This should be more responsive in the future.
+    // TODO: Add min-height in case an image couldn't be loaded (breaks timeline layout).
 }
 
 .book-box--series {
@@ -107,7 +114,6 @@ $book-box-circle-connector-border-width: 2px;
         $timeline-item-margin
         - ($timeline-line-width / 2)
         + ( ( $book-box-circle-connector-width + 2 * $book-box-circle-connector-border-width ) / 2)
-        + $book-box-border-width
     );
 }
 
@@ -117,7 +123,6 @@ $book-box-circle-connector-border-width: 2px;
         right: -(
             $timeline-item-margin
             + ( ( $book-box-circle-connector-width + 2 * $book-box-circle-connector-border-width ) / 2)
-            + $book-box-border-width
         );
     }
 
@@ -125,7 +130,6 @@ $book-box-circle-connector-border-width: 2px;
         left: -(
             $timeline-item-margin
             + ( ( $book-box-circle-connector-width + 2 * $book-box-circle-connector-border-width ) / 2)
-            + $book-box-border-width
         );
     }
 }
