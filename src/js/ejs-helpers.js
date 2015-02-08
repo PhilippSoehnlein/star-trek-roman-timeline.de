@@ -1,3 +1,4 @@
+/* jshint node:true */
 'use strict';
 
 module.exports = {
@@ -41,7 +42,7 @@ function getBookLinks( book ) {
         if ( url ) {
             links.push({
                 url:          url,
-                caption:      linkType === 'publisher' ? book.publisher : linkType.charAt( 0 ).toUpperCase() + linkType.substr( 1 ),
+                caption:      linkType === 'publisher' ? book.publisher : _ucFirst( linkType ),
                 captionLang:  'en',
                 type:         linkType,
                 cssClassName: 'icon_' + transformString( linkType === 'publisher' ? book.publisher : linkType, '' ),
@@ -55,7 +56,7 @@ function getBookLinks( book ) {
 
 function getSeries( books ) {
     var seriesNames = _.uniq(
-        books.map( function( book ) { return book.series } )
+        books.map( function( book ) { return book.series; } )
     );
     seriesNames.sort( function( a, b ) {
         a = a.toLowerCase();
@@ -73,7 +74,7 @@ function getSeries( books ) {
 
     var series = [];
     seriesNames.forEach( function( seriesName ) {
-        var booksForThisSeries = books.filter( function( book ) { return book.series === seriesName });
+        var booksForThisSeries = books.filter( function( book ) { return book.series === seriesName; });
         series.push({
             id:    transformString( seriesName ),
             name:  seriesName,
@@ -86,7 +87,11 @@ function getSeries( books ) {
 
 function transformString( string, whiteSpaceReplacement ) {
     if ( typeof whiteSpaceReplacement === 'undefined' ) {
-        whiteSpaceReplacement = '-'
+        whiteSpaceReplacement = '-';
     }
     return string.replace( /\s+/g, whiteSpaceReplacement ).toLowerCase();
+}
+
+function _ucFirst( string ) {
+    return string.charAt( 0 ).toUpperCase + string.substr( 1 );
 }
