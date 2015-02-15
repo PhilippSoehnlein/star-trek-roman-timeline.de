@@ -16,3 +16,12 @@ a {
         text-decoration-color: $main-color;
     }
 }
+
+abbr[title],
+time[title] {
+    cursor: help;
+}
+
+abbr.is-abbreviation-simple {
+    border-bottom: 0;
+}

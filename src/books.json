@@ -11,18 +11,21 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/22147672-star-trek",
         "episode":      1,
         "season":       null,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2233,
-                "month":  3,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/Star_Trek_%28novel%29"
+                "type":      "point",
+                "year":      2233,
+                "month":     3,
+                "day":       null,
+                "source":    "http://en.memory-alpha.org/wiki/Star_Trek_%28novel%29"
             },
             {
-                "year":   2258,
-                "month":  null,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/Star_Trek_%28novel%29"
+                "type":      "point",
+                "year":      2258,
+                "month":     null,
+                "day":       null,
+                "source":    "http://en.memory-alpha.org/wiki/Star_Trek_%28novel%29",
+                "isPrimary": true
             }
         ]
     },
@@ -38,12 +41,14 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/17209684-infektion",
         "episode":      1,
         "season":       null,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2364,
-                "month":  3,
-                "day":    18,
-                "source": "http://de.memory-alpha.org/wiki/Infektion_%28Roman%29"
+                "type":      "point",
+                "year":      2364,
+                "month":     3,
+                "day":       18,
+                "source":    "http://de.memory-alpha.org/wiki/Infektion_%28Roman%29",
+                "isPrimary": true
             }
         ]
     },
@@ -59,12 +64,13 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/20628514-bertr-ger",
         "episode":      2,
         "season":       null,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2366,
-                "month":  null,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/Vectors"
+                "year":      2366,
+                "month":     null,
+                "day":       null,
+                "source":    "http://en.memory-alpha.org/wiki/Vectors",
+                "isPrimary": true
             }
         ]
     },
@@ -80,12 +86,14 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/17373902-ein-stich-zur-rechten-zeit",
         "episode":      0,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2367,
-                "month":  null,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/A_Stitch_in_Time"
+                "type":      "point",
+                "year":      2367,
+                "month":     null,
+                "day":       null,
+                "source":    "http://en.memory-alpha.org/wiki/A_Stitch_in_Time",
+                "isPrimary": true
             }
         ]
     },
@@ -101,12 +109,14 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/6828189-offenbarung",
         "episode":      1,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  4,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/Avatar%2C_Book_1"
+                "type":      "point",
+                "year":      2376,
+                "month":     4,
+                "day":       null,
+                "source":    "http://en.memory-alpha.org/wiki/Avatar%2C_Book_1",
+                "isPrimary": true
             }
         ]
     },
@@ -122,12 +132,14 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/6828190-offenbarung",
         "episode":      2,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  4,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/Avatar%2C_Book_1"
+                "type":      "point",
+                "year":      2376,
+                "month":     4,
+                "day":       null,
+                "source":    "http://en.memory-alpha.org/wiki/Avatar%2C_Book_1",
+                "isPrimary": true
             }
         ]
     },
@@ -143,12 +155,14 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/16054496-sektion-31",
         "episode":      3,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  null,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/Abyss"
+                "type":      "point",
+                "year":      2376,
+                "month":     null,
+                "day":       null,
+                "source":    "http://en.memory-alpha.org/wiki/Abyss",
+                "isPrimary": true
             }
         ]
     },
@@ -164,12 +178,14 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/17373884-d-monen-der-luft-und-finsternis",
         "episode":      4,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  null,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/Demons_of_Air_and_Darkness"
+                "type":      "point",
+                "year":      2376,
+                "month":     null,
+                "day":       null,
+                "source":    "http://en.memory-alpha.org/wiki/Demons_of_Air_and_Darkness",
+                "isPrimary": true
             }
         ]
     },
@@ -185,18 +201,22 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/17373888-zwielicht-mission-gamma-1",
         "episode":      5,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  5,
-                "day":    null,
-                "source": "http://memory-beta.wikia.com/wiki/Twilight_%28novel%29"
-            },
-            {
-                "year":   2376,
-                "month":  6,
-                "day":    null,
-                "source": "http://memory-beta.wikia.com/wiki/Twilight_%28novel%29"
+                "type":      "range",
+                "isPrimary": true,
+                "start": {
+                    "year":   2376,
+                    "month":  5,
+                    "day":    null,
+                    "source": "http://memory-beta.wikia.com/wiki/Twilight_%28novel%29"
+                },
+                "end": {
+                    "year":   2376,
+                    "month":  6,
+                    "day":    null,
+                    "source": "http://memory-beta.wikia.com/wiki/Twilight_%28novel%29"
+                }
             }
         ]
     },
@@ -212,12 +232,14 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/16120100-dieser-graue-geist-mission-gamma-2",
         "episode":      6,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  6,
-                "day":    21,
-                "source": "http://en.memory-alpha.org/wiki/This_Gray_Spirit"
+                "type":      "point",
+                "year":      2376,
+                "month":     6,
+                "day":       21,
+                "source":    "http://en.memory-alpha.org/wiki/This_Gray_Spirit",
+                "isPrimary": true
             }
         ]
     },
@@ -233,18 +255,22 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/14290845-kathedrale-mission-gamma-3",
         "episode":      7,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  7,
-                "day":    29,
-                "source": "http://de.memory-alpha.org/wiki/Kathedrale"
-            },
-            {
-                "year":   2376,
-                "month":  7,
-                "day":    31,
-                "source": "http://de.memory-alpha.org/wiki/Kathedrale"
+                "type":      "range",
+                "isPrimary": true,
+                "start": {
+                    "year":   2376,
+                    "month":  7,
+                    "day":    29,
+                    "source": "http://de.memory-alpha.org/wiki/Kathedrale"
+                },
+                "end": {
+                    "year":   2376,
+                    "month":  7,
+                    "day":    31,
+                    "source": "http://de.memory-alpha.org/wiki/Kathedrale"
+                }
             }
         ]
     },
@@ -260,36 +286,42 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/17373848-das-kleinere-bel-mission-gamma-4",
         "episode":      8,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  8,
-                "day":    null,
-                "source": "http://memory-beta.wikia.com/wiki/Lesser_Evil"
+                "type":      "point",
+                "year":      2376,
+                "month":     8,
+                "day":       null,
+                "source":    "http://memory-beta.wikia.com/wiki/Lesser_Evil",
+                "isPrimary": true
             },
             {
-                "year":   2347,
-                "month":  null,
-                "day":    null,
-                "source": "http://memory-beta.wikia.com/wiki/Lesser_Evil"
+                "type":      "point",
+                "year":      2347,
+                "month":     null,
+                "day":       null,
+                "source":    "http://memory-beta.wikia.com/wiki/Lesser_Evil"
             },
             {
-                "year":   2349,
-                "month":  null,
-                "day":    null,
-                "source": "http://memory-beta.wikia.com/wiki/Lesser_Evil"
+                "type":      "point",
+                "year":      2349,
+                "month":     null,
+                "day":       null,
+                "source":    "http://memory-beta.wikia.com/wiki/Lesser_Evil"
             },
             {
-                "year":   2355,
-                "month":  null,
-                "day":    null,
-                "source": "http://memory-beta.wikia.com/wiki/Lesser_Evil"
+                "type":      "point",
+                "year":      2355,
+                "month":     null,
+                "day":       null,
+                "source":    "http://memory-beta.wikia.com/wiki/Lesser_Evil"
             },
             {
-                "year":   2369,
-                "month":  null,
-                "day":    null,
-                "source": "http://memory-beta.wikia.com/wiki/Lesser_Evil"
+                "type":      "point",
+                "year":      2369,
+                "month":     null,
+                "day":       null,
+                "source":    "http://memory-beta.wikia.com/wiki/Lesser_Evil"
             }
         ]
     },
@@ -305,18 +337,22 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/17373849-so-der-sohn",
         "episode":      9,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  4,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/Rising_Son"
-            },
-            {
-                "year":   2376,
-                "month":  8,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/Rising_Son"
+                "type":      "range",
+                "isPrimary": true,
+                "start": {
+                    "year":   2376,
+                    "month":  4,
+                    "day":    null,
+                    "source": "http://en.memory-alpha.org/wiki/Rising_Son"
+                },
+                "end": {
+                    "year":   2376,
+                    "month":  8,
+                    "day":    null,
+                    "source": "http://en.memory-alpha.org/wiki/Rising_Son"
+                }
             }
         ]
     },
@@ -332,12 +368,14 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/17373853-einheit",
         "episode":      10,
         "season":       8,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  9,
-                "day":    null,
-                "source": "http://en.memory-alpha.org/wiki/Unity"
+                "type":      "point",
+                "year":      2376,
+                "month":     9,
+                "day":       null,
+                "source":    "http://en.memory-alpha.org/wiki/Unity",
+                "isPrimary": true
             }
         ]
     },
@@ -353,18 +391,21 @@
         "goodreadsUrl": "https://www.goodreads.com/book/show/6644450-eine-neue-ra",
         "episode":      1,
         "season":       null,
-        "dates":        [
+        "plotTimes":    [
             {
-                "year":   2376,
-                "month":  10,
-                "day":    30,
-                "source": "http://de.memory-alpha.org/wiki/Eine_neue_%C3%84ra?oldid=527581"
+                "type":      "point",
+                "year":      2376,
+                "month":     10,
+                "day":       30,
+                "source":    "http://de.memory-alpha.org/wiki/Eine_neue_%C3%84ra?oldid=527581"
             },
             {
-                "year":   2380,
-                "month":  1,
-                "day":    9,
-                "source": "http://de.memory-alpha.org/wiki/Eine_neue_%C3%84ra?oldid=527581"
+                "type":      "point",
+                "year":      2380,
+                "month":     1,
+                "day":       9,
+                "source":    "http://de.memory-alpha.org/wiki/Eine_neue_%C3%84ra?oldid=527581",
+                "isPrimary": true
             }
         ]
     }

@@ -75,7 +75,22 @@
 
                                 <div class="book-box--header-bar">
                                     <div class="book-box--series"><%= helpers.formatSeriesEpisode( book ) %></div>
-                                    <!-- TODO: <time class="book-box--date tag">2364</time> -->
+                                    <% var formattedPlotTimes = helpers.formatPlotTimes( book ); %>
+
+                                    <time
+                                        class="book-box--date tag"
+                                        datetime="<%= formattedPlotTimes.primary.dateTime %>"
+                                        <% if (
+                                                formattedPlotTimes.all.length > 1 ||
+                                                ( formattedPlotTimes.all.length === 1 &&
+                                                  formattedPlotTimes.all[0].type === 'range'
+                                                )
+                                        ) { %>
+                                            title="<%= formattedPlotTimes.all.map( function( time ) { return time.value; } ).join( ', \n' ) %>"
+                                        <% } %>
+                                    >
+                                        <%- formattedPlotTimes.primary.html %>
+                                    </time>
                                 </div>
                             </div>
 
