@@ -207,3 +207,363 @@ describe( 'transformString()', function() {
         expect( ejsHelpers.transformString( 'Deep Space Nine', '+' ) ).toBe( 'deep+space+nine' );
     });
 });
+
+describe( 'formatPlotTimes()', function() {
+    var abbrClass = 'is-abbreviation-simple';
+    describe( 'primary plot time', function() {
+        it( 'should return a primary point in time with a year and no month', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ { type: 'point', year: 2100, month: null, day: null, isPrimary: true } ] }
+            );
+            expect( plotTime.primary.dateTime ).toBe( '2100' );
+            expect( plotTime.primary.html     ).toBe( '2100' );
+            expect( plotTime.primary.value    ).toBe( '2100' );
+        });
+
+        it( 'should return a primary point in time with a year and a month', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ { type: 'point', year: 2100, month: 1, day: null, isPrimary: true } ] }
+            );
+            expect( plotTime.primary.dateTime ).toBe( '2100-01' );
+            expect( plotTime.primary.html     ).toBe( '<abbr title="Januar" class="' + abbrClass + '">Jan.</abbr> 2100' );
+            expect( plotTime.primary.value    ).toBe( 'Jan. 2100' );
+        });
+
+        it( 'should return a primary point in time with a year, a month and a day in "all"', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ { type: 'point', year: 2100, month: 1, day: 2, isPrimary: true } ] }
+            );
+            expect( plotTime.primary.dateTime ).toBe( '2100-01' );
+            expect( plotTime.primary.html     ).toBe( '<abbr title="Januar" class="' + abbrClass + '">Jan.</abbr> 2100' );
+            expect( plotTime.primary.value    ).toBe( 'Jan. 2100' );
+        });
+
+        it( 'should return a primary point in time for ranges with a year and no month', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ {
+                    type:      'range',
+                    isPrimary: true,
+                    start:     { year: 2100, month: null, day: null, },
+                    end:       { year: 2101, month: null, day: null, },
+                } ] }
+            );
+            expect( plotTime.primary.dateTime ).toBe( '2100' );
+            expect( plotTime.primary.html     ).toBe( '2100' );
+            expect( plotTime.primary.value    ).toBe( '2100' );
+        });
+
+        it( 'should return a primary point in time for ranges with a year and a month', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ {
+                    type:      'range',
+                    isPrimary: true,
+                    start:     { year: 2100, month: 1, day: null, },
+                    end:       { year: 2100, month: 2, day: null, },
+                } ] }
+            );
+            expect( plotTime.primary.dateTime ).toBe( '2100-01' );
+            expect( plotTime.primary.html     ).toBe( '<abbr title="Januar" class="' + abbrClass + '">Jan.</abbr> 2100' );
+            expect( plotTime.primary.value    ).toBe( 'Jan. 2100' );
+        });
+
+        it( 'should return a primary point in time for ranges with a year, a month and a day in "all"', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ {
+                    type:      'range',
+                    isPrimary: true,
+                    start:     { year: 2100, month: 1, day: 1, },
+                    end:       { year: 2100, month: 2, day: 2, },
+                } ] }
+            );
+            expect( plotTime.primary.dateTime ).toBe( '2100-01' );
+            expect( plotTime.primary.html     ).toBe( '<abbr title="Januar" class="' + abbrClass + '">Jan.</abbr> 2100' );
+            expect( plotTime.primary.value    ).toBe( 'Jan. 2100' );
+        });
+
+        it( 'should not abbreviate Mai', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [
+                    {
+                        type:      'point',
+                        year:      2100,
+                        month:     5,
+                        day:       null,
+                        isPrimary: true,
+                    },
+                ] }
+            );
+
+            expect( plotTime.primary.dateTime ).toBe( '2100-05' );
+            expect( plotTime.primary.html     ).toBe( 'Mai 2100' );
+            expect( plotTime.primary.value    ).toBe( 'Mai 2100' );
+        });
+    });
+
+    describe( 'all plot times', function() {
+        it( 'should return a primary point in time with a year and no month', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ { type: 'point', year: 2100, month: null, day: null, isPrimary: true } ] }
+            );
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type   ).toBe( 'point' );
+            expect( plotTime.all[0].value  ).toBe( '2100' );
+        });
+
+        it( 'should return a primary point in time with a year and a month', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ { type: 'point', year: 2100, month: 1, day: null, isPrimary: true } ] }
+            );
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type   ).toBe( 'point' );
+            expect( plotTime.all[0].value  ).toBe( 'Januar 2100' );
+        });
+
+        it( 'should return a primary point in time with a year, a month and a day', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ { type: 'point', year: 2100, month: 1, day: 2, isPrimary: true } ] }
+            );
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type   ).toBe( 'point' );
+            expect( plotTime.all[0].value  ).toBe( '02. Januar 2100' );
+        });
+
+        it( 'should return a range with a year only', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ {
+                    type:      'range',
+                    isPrimary: true,
+                    start: {
+                        year:  2100,
+                        month: null,
+                        day:   null,
+                    },
+                    end: {
+                        year:  2101,
+                        month: null,
+                        day:   null,
+                    }
+                } ] }
+            );
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type   ).toBe( 'range' );
+            expect( plotTime.all[0].value  ).toBe( '2100 - 2101' );
+        });
+
+        it( 'should return a range with a year and a month (different months, same year)', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ {
+                    type:      'range',
+                    isPrimary: true,
+                    start: {
+                        year:  2100,
+                        month: 1,
+                        day:   null,
+                    },
+                    end: {
+                        year:  2100,
+                        month: 2,
+                        day:   null,
+                    }
+                } ] }
+            );
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type   ).toBe( 'range' );
+            expect( plotTime.all[0].value  ).toBe( 'Januar - Februar 2100' );
+        });
+
+        it( 'should return a range with a year and a month (different months, different years)', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ {
+                    type:      'range',
+                    isPrimary: true,
+                    start: {
+                        year:  2100,
+                        month: 1,
+                        day:   null,
+                    },
+                    end: {
+                        year:  2101,
+                        month: 2,
+                        day:   null,
+                    }
+                } ] }
+            );
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type   ).toBe( 'range' );
+            expect( plotTime.all[0].value  ).toBe( 'Januar 2100 - Februar 2101' );
+        });
+
+        it( 'should return a range with a year, a month and days (different months, same year)', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ {
+                    type:      'range',
+                    isPrimary: true,
+                    start: {
+                        year:  2100,
+                        month: 1,
+                        day:   1,
+                    },
+                    end: {
+                        year:  2100,
+                        month: 2,
+                        day:   2,
+                    }
+                } ] }
+            );
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type   ).toBe( 'range' );
+            expect( plotTime.all[0].value  ).toBe( '01. Januar - 02. Februar 2100' );
+        });
+
+        it( 'should return a range with a year, a month and days (same month, same year)', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ {
+                    type:      'range',
+                    isPrimary: true,
+                    start: {
+                        year:  2100,
+                        month: 1,
+                        day:   1,
+                    },
+                    end: {
+                        year:  2100,
+                        month: 1,
+                        day:   2,
+                    }
+                } ] }
+            );
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type   ).toBe( 'range' );
+            expect( plotTime.all[0].value  ).toBe( '01. - 02. Januar 2100' );
+        });
+
+        it( 'should return a range with a year, a month and days (same month, different year)', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ {
+                    type:      'range',
+                    isPrimary: true,
+                    start: {
+                        year:  2100,
+                        month: 1,
+                        day:   1,
+                    },
+                    end: {
+                        year:  2101,
+                        month: 1,
+                        day:   1,
+                    }
+                } ] }
+            );
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type   ).toBe( 'range' );
+            expect( plotTime.all[0].value  ).toBe( '01. Januar 2100 - 01. Januar 2101' );
+        });
+
+        it( 'should return a range with a year, a month and days (different month, different year)', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [ {
+                    type:      'range',
+                    isPrimary: true,
+                    start: {
+                        year:  2100,
+                        month: 1,
+                        day:   1,
+                    },
+                    end: {
+                        year:  2101,
+                        month: 2,
+                        day:   1,
+                    }
+                } ] }
+            );
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type   ).toBe( 'range' );
+            expect( plotTime.all[0].value  ).toBe( '01. Januar 2100 - 01. Februar 2101' );
+        });
+
+        it( 'should return multiple times correctly (marking the primary one, too)', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [
+                    {
+                        type:      'range',
+                        isPrimary: true,
+                        start: {
+                            year:  2100,
+                            month: 1,
+                            day:   1,
+                        },
+                        end: {
+                            year:  2101,
+                            month: 2,
+                            day:   1,
+                        }
+                    },
+                    {
+                        type:  'point',
+                        year:  2102,
+                        month: 4,
+                        day:   null,
+                    },
+                ] }
+            );
+
+            expect( plotTime.all.length ).toBe( 2 );
+            expect( plotTime.all[0].type   ).toBe( 'range' );
+            expect( plotTime.all[0].value  ).toBe( '01. Januar 2100 - 01. Februar 2101 (*)' );
+            expect( plotTime.all[1].type   ).toBe( 'point' );
+            expect( plotTime.all[1].value  ).toBe( 'April 2102' );
+        });
+
+        it( 'should sort multiple times correctly', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [
+                    {
+                        type:      'point',
+                        year:      2102,
+                        month:     4,
+                        day:       null,
+                        isPrimary: true,
+                    },
+                    {
+                        type:  'point',
+                        year:  2100,
+                        month: 2,
+                        day:   null,
+                    },
+                    {
+                        type:  'point',
+                        year:  2100,
+                        month: null,
+                        day:   null,
+                    },
+                    {
+                        type:  'point',
+                        year:  2101,
+                        month: 6,
+                        day:   10,
+                    },
+                    {
+                        type: 'range',
+                        start: {
+                            year:  2101,
+                            month: 7,
+                            day:   16,
+                        },
+                        end: {
+                            year:  2101,
+                            month: 7,
+                            day:   19,
+                        }
+                    }
+                ] }
+            );
+
+            expect( plotTime.all.length ).toBe( 5 );
+            expect( plotTime.all[0].value ).toBe( '2100' );
+            expect( plotTime.all[1].value ).toBe( 'Februar 2100' );
+            expect( plotTime.all[2].value ).toBe( '10. Juni 2101' );
+            expect( plotTime.all[3].value ).toBe( '16. - 19. Juli 2101' );
+            expect( plotTime.all[4].value ).toBe( 'April 2102 (*)' );
+        });
+    });
+});

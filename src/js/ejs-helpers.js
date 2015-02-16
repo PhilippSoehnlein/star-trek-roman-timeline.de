@@ -156,14 +156,19 @@ function _formatAllPlotTimes( allTimes ) {
                 var toStr   = '';
 
                 if ( time.start.day ) {
-                    fromStr += time.start.day + '. ';
+                    fromStr += sprintf( '%02d. ', time.start.day );
                 }
 
                 if ( time.end.day ) {
-                    toStr += time.end.day + '. ';
+                    toStr += sprintf( '%02d. ', time.end.day);
                 }
 
-                if ( time.start.month && time.start.year === time.end.year && time.start.month !== time.end.month ) {
+                if ( time.start.month &&
+                     (
+                        ( time.start.year === time.end.year && time.start.month !== time.end.month ) ||
+                        ( time.start.year !== time.end.year )
+                    )
+                ) {
                     fromStr += _toGermanMonth( time.start.month, 'name' ) + ' ';
                 }
 
@@ -172,16 +177,16 @@ function _formatAllPlotTimes( allTimes ) {
                 }
 
                 if ( time.start.year !== time.end.year ) {
-                    fromStr += time.start.year;
+                    fromStr += time.start.year + ' ';
                 }
 
                 toStr += time.end.year;
 
-                timeStr = fromStr + ' - ' + toStr;
+                timeStr = fromStr + '- ' + toStr;
             }
             else {
                 if ( time.day && time.month && time.year ) {
-                    timeStr = sprintf( '%02d', time.day ) + '. ' +
+                    timeStr = sprintf( '%02d. ', time.day ) +
                               _toGermanMonth( time.month, 'name' ) + ' ' +
                               time.year;
                 }
@@ -189,7 +194,7 @@ function _formatAllPlotTimes( allTimes ) {
                     timeStr = _toGermanMonth( time.month, 'name' ) + ' ' + time.year;
                 }
                 else {
-                    timeStr = time.year;
+                    timeStr = time.year + ''; // + '' = force string
                 }
             }
 
