@@ -29,3 +29,7 @@ See [Selenium Issue 7933: Since updating to Safari 6.2 or 7.1 unable to establis
 ``node_modules/appium/bin/appium-doctor.js --ios``
 ``sudo node_modules/appium/bin/authorize-ios.js``
 Having a look at https://github.com/appium/appium/blob/master/docs/en/appium-setup/running-on-osx.md doesn't hurt either.
+
+#### Code Coverage
+Code coverage reports for all unit tests can be generated like this (no grunt task yet):
+``node_modules/istanbul/lib/cli.js cover node_modules/grunt-jasmine-node/node_modules/jasmine-node/bin/jasmine-node test/spec/``
