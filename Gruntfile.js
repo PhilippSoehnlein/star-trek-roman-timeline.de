@@ -6,7 +6,14 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         watch: {
-            files: [ 'Gruntfile.js', 'src/books.json', 'src/templates/*.ejs', 'src/scss/**/*.scss', 'src/js/**.js' ],
+            files: [
+                'Gruntfile.js',
+                'src/books.json',
+                'src/templates/*.ejs',
+                'src/scss/**/*.scss',
+                'src/js/**.js',
+                'src/books/**/*.json'
+            ],
             tasks: [ 'build' ]
         },
 
@@ -16,7 +23,7 @@ module.exports = function(grunt) {
             },
             index: {
                 options: {
-                    data: [ 'src/books.json' ],
+                    data: [ 'src/books/live/*.json' ],
                 },
                 files: {
                     'build/index.html': [ 'src/templates/index.ejs' ]
@@ -24,7 +31,7 @@ module.exports = function(grunt) {
             },
             'index-test': {
                 options: {
-                    data: [ 'src/books-test.json' ],
+                    data: [ 'src/books/test/*.json' ],
                 },
                 files: {
                     'build/index.html': [ 'src/templates/index.ejs' ]

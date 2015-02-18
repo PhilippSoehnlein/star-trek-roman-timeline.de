@@ -2,15 +2,15 @@
 'use strict';
 
 module.exports = {
-    formatAuthors:       formatAuthors,
-    formatSeriesEpisode: formatSeriesEpisode,
-    getBookLinks:        getBookLinks,
-    getSeries:           getSeries,
-    transformString:     transformString,
-    formatPlotTimes:     formatPlotTimes,
+    formatAuthors:             formatAuthors,
+    formatPlotTimes:           formatPlotTimes,
+    formatSeriesEpisode:       formatSeriesEpisode,
+    getBookLinks:              getBookLinks,
+    getSeries:                 getSeries,
+    transformDataFilesToBooks: transformDataFilesToBooks,
+    transformString:           transformString,
 };
 
-var _       = require( 'lodash-node' );
 var sprintf = require( 'sprintf-js' ).sprintf;
 
 function formatAuthors( authors ) {
@@ -30,10 +30,10 @@ function formatAuthors( authors ) {
 function formatSeriesEpisode( book ) {
     // TODO: DS9 books should be formated as 8x09 e.g., because DS9 series has 10 books.
     if ( book.season ) {
-        return book.series + ' - ' + book.season + 'x' + book.episode;
+        return book.series.name + ' - ' + book.season + 'x' + book.episode;
     }
     else {
-        return book.series + ' #' + book.episode;
+        return book.series.name + ' #' + book.episode;
     }
 }
 
@@ -58,12 +58,20 @@ function getBookLinks( book ) {
 }
 
 function getSeries( books ) {
-    var seriesNames = _.uniq(
-        books.map( function( book ) { return book.series; } )
-    );
-    seriesNames.sort( function( a, b ) {
-        a = a.toLowerCase();
-        b = b.toLowerCase();
+    var seriesDataFor = {};
+    books.forEach( function( book ) {
+        if ( !seriesDataFor[ book.series.name ] ) {
+            seriesDataFor[ book.series.name ] = book.series;
+        }
+    } );
+
+    var series = Object.keys( seriesDataFor ).map( function( key ) {
+        return seriesDataFor[ key ];
+    });
+
+    series.sort( function( a, b ) {
+        a = a.name.toLowerCase();
+        b = b.name.toLowerCase();
         if ( a > b ) {
             return 1;
         }
@@ -75,15 +83,16 @@ function getSeries( books ) {
         }
     });
 
-    var series = [];
-    seriesNames.forEach( function( seriesName ) {
-        var booksForThisSeries = books.filter( function( book ) { return book.series === seriesName; });
-        series.push({
-            id:    transformString( seriesName ),
-            name:  seriesName,
-            count: booksForThisSeries.length,
-        });
+    series = series.map( function( seriesData ) {
+        seriesData.id = transformString( seriesData.name );
+
+        var booksForThisSeries = books.filter( function( book ) { return book.series.name === seriesData.name; });
+        seriesData.count = booksForThisSeries.length;
+
+        return seriesData;
     });
+
+
 
     return series;
 }
@@ -95,8 +104,54 @@ function transformString( string, whiteSpaceReplacement ) {
     return string.replace( /\s+/g, whiteSpaceReplacement ).toLowerCase();
 }
 
+function transformDataFilesToBooks( data ) {
+    var books = [];
+
+    Object.keys( data ).forEach( function( fileName ) {
+        var series = data[ fileName ];
+
+        series.books
+            .map(     function( book ) { book.series = { name: series.name }; return book; } )
+            .forEach( function( book ) { books.push( book ); } )
+        ;
+    } );
+
+    books.sort( function( a, b ) {
+        var aPrimaryTime = a.plotTimes.filter( function( time ) { return time.isPrimary; } )[0];
+        var bPrimaryTime = b.plotTimes.filter( function( time ) { return time.isPrimary; } )[0];
+
+        var aPrimaryTimePoint = ( aPrimaryTime.type === 'range' ) ? aPrimaryTime.start : aPrimaryTime;
+        var bPrimaryTimePoint = ( bPrimaryTime.type === 'range' ) ? bPrimaryTime.start : bPrimaryTime;
+
+        var aSortValue, bSortValue;
+        if ( a.series.name === b.series.name ) {
+            aSortValue = ( a.season || 0 ) + '_' + sprintf( '%02d', a.episode || 0 );
+            bSortValue = ( b.season || 0 ) + '_' + sprintf( '%02d', b.episode || 0 );
+        }
+        else {
+            aSortValue = aPrimaryTimePoint.year +
+                            sprintf( '%02d', aPrimaryTimePoint.month || 1 ) +
+                            sprintf( '%02d', aPrimaryTimePoint.day   || 1 );
+            bSortValue = bPrimaryTimePoint.year +
+                            sprintf( '%02d', bPrimaryTimePoint.month || 1 ) +
+                            sprintf( '%02d', bPrimaryTimePoint.day   || 1 );
+        }
+
+        if ( aSortValue < bSortValue ) {
+            return -1;
+        }
+        else if ( aSortValue > bSortValue ) {
+            return 1;
+        }
+
+        return 0;
+    } );
+
+    return books;
+}
+
 function formatPlotTimes( book ) {
-    var primaryTime = book.plotTimes.filter( function( time ) { return  time.isPrimary; } )[0];
+    var primaryTime = book.plotTimes.filter( function( time ) { return time.isPrimary; } )[0];
     var allTimes    = book.plotTimes;
 
     if ( typeof primaryTime !== 'object' ) {

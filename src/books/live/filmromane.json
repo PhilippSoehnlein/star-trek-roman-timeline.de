@@ -1,0 +1,34 @@
+{
+    "name":  "Filmromane",
+    "books": [
+        {
+            "title":        "Star Trek (2009)",
+            "authors":      [ "Alan Dean Foster" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_filmroman/band_01/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-filmroman-roman-zum-film.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Roman-zum-Film-ebook/dp/B005MN22OW/",
+            "audibleUrl":   "http://www.audible.de/pd/English-Science-Fiction-Fantasy/Star-Trek-Movie-Tie-In-Hoerbuch/B004UVORPY/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/22147672-star-trek",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "year":      2233,
+                    "month":     3,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Star_Trek_%28novel%29"
+                },
+                {
+                    "type":      "point",
+                    "year":      2258,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Star_Trek_%28novel%29",
+                    "isPrimary": true
+                }
+            ]
+        }
+    ]
+}

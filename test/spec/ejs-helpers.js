@@ -2,7 +2,7 @@
 /* global describe:true, it:true, expect:true */
 'use strict';
 
-var ejsHelpers  = require('../../src/js/ejs-helpers.js');
+var ejsHelpers  = require( '../../src/js/ejs-helpers.js' );
 
 describe( 'formatAuthors()', function() {
     it( 'one author (no transformation)', function() {
@@ -26,12 +26,12 @@ describe( 'formatAuthors()', function() {
 
 describe( 'formatSeriesEpisode()', function() {
     it( 'book has no season', function() {
-        expect( ejsHelpers.formatSeriesEpisode( { series: 'TNG Doppelhelix', episode: '1', season: null } ) )
+        expect( ejsHelpers.formatSeriesEpisode( { series: { name: 'TNG Doppelhelix' }, episode: '1', season: null } ) )
             .toBe( 'TNG Doppelhelix #1' );
     });
 
     it( 'book has season', function() {
-        expect( ejsHelpers.formatSeriesEpisode( { series: 'Deep Space Nine', episode: '1', season: '8' } ) )
+        expect( ejsHelpers.formatSeriesEpisode( { series: { name: 'Deep Space Nine' }, episode: '1', season: '8' } ) )
             .toBe( 'Deep Space Nine - 8x1' );
     });
 });
@@ -167,9 +167,9 @@ describe( 'getBookLinks()', function() {
 
 describe( 'getSeries()', function() {
     var exampleBooks = [
-        { series: 'TNG Doppelhelix' },
-        { series: 'Deep Space Nine' },
-        { series: 'TNG Doppelhelix' },
+        { series: { name: 'TNG Doppelhelix' } },
+        { series: { name: 'Deep Space Nine' } },
+        { series: { name: 'TNG Doppelhelix' } },
     ];
 
     it( 'delivers unique series', function() {
@@ -206,6 +206,84 @@ describe( 'transformString()', function() {
     it( 'transforms well with custom whitespace replacement', function() {
         expect( ejsHelpers.transformString( 'Deep Space Nine', '+' ) ).toBe( 'deep+space+nine' );
     });
+});
+
+describe( 'transformDataFilesToBooks()', function() {
+    var testDataFromDataFiles = {
+        deepSpaceNine:  require( '../../src/books/test/deep_space_nine.json' ),
+        filmromane:     require( '../../src/books/test/filmromane.json' ),
+        tngDoppelhelix: require( '../../src/books/test/tng_doppelhelix.json' ),
+    };
+
+    it( 'should return an array of books', function() {
+        var books = ejsHelpers.transformDataFilesToBooks( testDataFromDataFiles );
+        expect( books instanceof Array    ).toBe( true );
+        expect( typeof books[0].title     ).toBe( 'string' );
+        expect( typeof books[0].publisher ).toBe( 'string' );
+    });
+
+    it( 'should insert the series into books', function() {
+        var books = ejsHelpers.transformDataFilesToBooks( testDataFromDataFiles );
+        expect( typeof books[0].series.name ).toBe( 'string' );
+    });
+
+    it( 'should order books of different series according to their date', function() {
+        var testData = {
+            deepSpaceNine: {
+                name: 'Deep Space Nine',
+                books: [
+                    {
+                        name:      'second',
+                        plotTimes: [
+                            {
+                                type:     'point',
+                                year:     2376,
+                                month:    10,
+                                day:      30,
+                                isPrimary: true,
+                            },
+                        ],
+                    }
+                ],
+            },
+            titan: {
+                name: 'Titan',
+                books: [
+                    {
+                        name:      'first',
+                        plotTimes: [
+                            {
+                                type:     'point',
+                                year:     2375,
+                                month:    null,
+                                day:      null,
+                                isPrimary: true
+                            }
+                        ]
+                    },
+                    {
+                        name:      'third',
+                        plotTimes: [
+                            {
+                                type:     'point',
+                                year:     2380,
+                                month:    1,
+                                day:      9,
+                                isPrimary: true
+                            }
+                        ]
+                    }
+                ],
+            }
+        };
+        var books = ejsHelpers.transformDataFilesToBooks( testData );
+        expect( books.length  ).toBe( 3 );
+        expect( books[0].name ).toBe( 'first' );
+        expect( books[1].name ).toBe( 'second' );
+        expect( books[2].name ).toBe( 'third' );
+    });
+
+    // TODO: More tests regarding sorting needed (time ranges, sorting books of the same series etc.)
 });
 
 describe( 'formatPlotTimes()', function() {

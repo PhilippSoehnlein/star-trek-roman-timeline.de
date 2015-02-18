@@ -1,5 +1,5 @@
 <%
-    var books           = data.booksTest ? data.booksTest : data.books;
+    var books           = helpers.transformDataFilesToBooks( data );
     var series          = helpers.getSeries( books );
     var pageTitleSuffix = '';
 %>
@@ -59,7 +59,7 @@
 
                     var links = helpers.getBookLinks( book );
             %>
-                <li class="<%= classes.join(' ') %>" data-timline-item-series="<%= book.series %>">
+                <li class="<%= classes.join(' ') %>" data-timline-item-series="<%= book.series.name %>">
                     <article class="book-box">
                         <div class="book-box--inner">
                             <div class="book-box--data">
