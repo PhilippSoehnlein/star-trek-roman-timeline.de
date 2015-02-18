@@ -1,9 +1,10 @@
+/* jshint node:true */
 module.exports = function(grunt) {
-    var ejsHelpers = require('./src/js/ejs-helpers.js');
+    'use strict';
+
+    var ejsHelpers = require( './src/js/ejs-helpers.js' );
 
     grunt.initConfig({
-        //pkg: grunt.file.readJSON('package.json'),
-
         watch: {
             files: [ 'Gruntfile.js', 'src/books.json', 'src/templates/*.ejs', 'src/scss/**/*.scss', 'src/js/**.js' ],
             tasks: [ 'build' ]
@@ -66,7 +67,7 @@ module.exports = function(grunt) {
             options: {
                 browsers: ['last 2 versions']
             },
-            single_file: {
+            main: {
                 src: 'build/main.css',
                 dest: 'build/main.css'
             },
@@ -81,7 +82,9 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'build/main.js': [
-                        'bower_components/isotope/dist/isotope.pkgd.js', // not using minified version here, to have a proper sourceMap
+                        // not using minified version here, to have a proper sourceMap
+                        'bower_components/isotope/dist/isotope.pkgd.js',
+
                         'src/js/filter.js'
                     ]
                 }
@@ -92,7 +95,7 @@ module.exports = function(grunt) {
             build: {
                 files: [
                     { src: 'src/docroot/favicon.ico',                      dest: 'build/favicon.ico' },
-                    { src: 'src/docroot/apple-touch-icon-precomposed.png', dest: 'build/apple-touch-icon-precomposed.png' },
+                    { src: 'src/docroot/apple-touch-icon-precomposed.png', dest: 'build/apple-touch-icon-precomposed.png' }, // jshint ignore:line
                     { src: 'src/docroot/robots.txt',                       dest: 'build/robots.txt' },
                     { src: 'src/docroot/humans.txt',                       dest: 'build/humans.txt' },
                     { src: 'src/docroot/.htaccess',                        dest: 'build/.htaccess' },
@@ -145,7 +148,7 @@ module.exports = function(grunt) {
             }
         },
 
-        jasmine_node: {
+        jasmine_node: {  // jshint ignore:line
             options: {
                 matchall: true, // true = test file doesn't need to have "spec" in the filename.
             },
@@ -237,4 +240,4 @@ module.exports = function(grunt) {
     grunt.registerTask('test:unit', 'Executes unit tests.', [
         'jasmine_node',
     ]);
-}
+};
