@@ -1,15 +1,3 @@
-/**
- * Available tasks:
- *     - build:                    Builds the site and puts it into the build/ folder.
- *     - dev:                      Makes a build, starts a local DEV server at localhost:8000 and runs the watch task.
- *     - test-e2e:                 Executes end-to-end tests for all configured browsers.
- *     - test-e2e:desktop-browser: Executes end-to-end tests for all configured desktop browsers.
- *     - test-e2e:chrome:          Executes end-to-end tests in Chrome.
- *     - test-e2e:firefox:         Executes end-to-end tests in Firefox.
- *     - test-e2e:safari:          Executes end-to-end tests in Safari.
- *     - test-e2e:iphone:          Executes end-to-end tests in a simulated iPhone.
- *     - test:unit:                Executes unit tests.
- */
 module.exports = function(grunt) {
     var ejsHelpers = require('./src/js/ejs-helpers.js');
 
@@ -176,13 +164,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-protractor-runner');
     grunt.loadNpmTasks('grunt-jasmine-node');
 
-    grunt.registerTask('dev', [
+    grunt.registerTask('dev', 'Makes a build, starts a local DEV server at localhost:8000 and runs the watch task.', [
         'build',
         'connect:dev',
         'watch',
     ]);
 
-    grunt.registerTask('build', [
+    grunt.registerTask('build', 'Builds the site and puts it into the build/ folder.', [
         // TODO: Add CSS minifier
         'clean:beforeBuild',
         'copy:build',
@@ -193,7 +181,7 @@ module.exports = function(grunt) {
         'autoprefixer'
     ]);
 
-    grunt.registerTask('build:test', [
+    grunt.registerTask('build:test', 'Builds the site with test data and puts it into the build/ folder.', [
         // Same as build, but with render:index-test instead of render:index
         'clean:beforeBuild',
         'copy:build',
@@ -204,7 +192,7 @@ module.exports = function(grunt) {
         'autoprefixer'
     ]);
 
-    grunt.registerTask('test-e2e', [
+    grunt.registerTask('test-e2e', 'Executes end-to-end tests for all configured browsers.', [
         'build:test',
         'connect:test-e2e',
         'protractor:firefox',
@@ -213,25 +201,25 @@ module.exports = function(grunt) {
         'protractor:iphone',
     ]);
 
-    grunt.registerTask('test-e2e:firefox', [
+    grunt.registerTask('test-e2e:firefox', 'Executes end-to-end tests in Firefox.', [
         'build:test',
         'connect:test-e2e',
         'protractor:firefox',
     ]);
 
-    grunt.registerTask('test-e2e:chrome', [
+    grunt.registerTask('test-e2e:chrome', 'Executes end-to-end tests in Chrome.', [
         'build:test',
         'connect:test-e2e',
         'protractor:chrome',
     ]);
 
-    grunt.registerTask('test-e2e:safari', [
+    grunt.registerTask('test-e2e:safari', 'Executes end-to-end tests in Safari.', [
         'build:test',
         'connect:test-e2e',
         'protractor:safari',
     ]);
 
-    grunt.registerTask('test-e2e:desktop-browser', [
+    grunt.registerTask('test-e2e:desktop-browser', 'Executes end-to-end tests for all configured desktop browsers.', [
         'build:test',
         'connect:test-e2e',
         'protractor:firefox',
@@ -239,14 +227,14 @@ module.exports = function(grunt) {
         'protractor:safari',
     ]);
 
-    grunt.registerTask('test-e2e:iphone', [
+    grunt.registerTask('test-e2e:iphone', 'Executes end-to-end tests in a simulated iPhone.', [
         // TODO: appium has to run for this to work (node_modules/appium/bin/appium.js). Check how we can automate this.
         'build:test',
         'connect:test-e2e',
         'protractor:iphone',
     ]);
 
-    grunt.registerTask('test:unit', [
+    grunt.registerTask('test:unit', 'Executes unit tests.', [
         'jasmine_node',
     ]);
 }
