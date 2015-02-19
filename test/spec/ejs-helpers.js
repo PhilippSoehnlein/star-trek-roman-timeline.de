@@ -32,7 +32,7 @@ describe( 'formatSeriesEpisode()', function() {
 
     it( 'book has season', function() {
         expect( ejsHelpers.formatSeriesEpisode( { series: { name: 'Deep Space Nine' }, episode: '1', season: '8' } ) )
-            .toBe( 'Deep Space Nine - 8x1' );
+            .toBe( 'Deep Space Nine - 8x01' );
     });
 });
 

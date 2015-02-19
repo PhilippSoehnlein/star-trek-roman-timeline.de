@@ -28,9 +28,8 @@ function formatAuthors( authors ) {
 }
 
 function formatSeriesEpisode( book ) {
-    // TODO: DS9 books should be formated as 8x09 e.g., because DS9 series has 10 books.
     if ( book.season ) {
-        return book.series.name + ' - ' + book.season + 'x' + book.episode;
+        return book.series.name + ' - ' + book.season + 'x' + sprintf( '%02d', book.episode );
     }
     else {
         return book.series.name + ' #' + book.episode;
