@@ -29,6 +29,28 @@
                     "isPrimary": true
                 }
             ]
+        },
+        {
+            "title":        "Into Darkness",
+            "authors":      [ "Alan Dean Foster" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_filmroman/band_02/Into%20Darkness%20Filmroman.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-into-darkness.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Into-Darkness-Roman/dp/386425194X/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Into-Darkness-Hoerbuch/B00DCOPQB4/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/18047857-star-trek-into-darkness",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2259,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Star_Trek_Into_Darkness?oldid=1687783"
+                }
+            ]
         }
     ]
 }
