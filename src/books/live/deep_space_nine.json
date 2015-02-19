@@ -294,6 +294,104 @@
                     "isPrimary": true
                 }
             ]
+        },
+        {
+            "title":        "Kriegspfad",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_ds9/band_11/ST_DS9_901_cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/deep-space-nine-901.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Deep-Space-Kriegspfad/dp/3864251680/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/24974554-kriegspfad",
+            "episode":      1,
+            "season":       9,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "year":      2377,
+                    "month":     1,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Warpath?oldid=1656454",
+                    "isPrimary": true
+                }
+            ]
+        },
+        {
+            "title":        "Entsetzliches Gleichmaß",
+            "authors":      [ "Olivia Woods" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_ds9/band_12/Cover%20Entsetzliches%20Gleichmass.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/deep-space-nine-902.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Space-Entsetzliches-Gleichmaß/dp/3864251702/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/24974635-entsetzliches-gleichma",
+            "episode":      2,
+            "season":       9,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2377,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Fearful_Symmetry?oldid=454469"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                    "start": {
+                        "year":   2357,
+                        "month":  null,
+                        "day":    null,
+                        "source": "http://memory-beta.wikia.com/wiki/Fearful_Symmetry?oldid=454469"
+                    },
+                    "end": {
+                        "year":   2361,
+                        "month":  null,
+                        "day":    null,
+                        "source": "http://memory-beta.wikia.com/wiki/Fearful_Symmetry?oldid=454469"
+                    }
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2375,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Fearful_Symmetry?oldid=454469"
+                }
+            ]
+        },
+        {
+            "title":        "Der Seelenschlüssel",
+            "authors":      [ "Olivia Woods" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_ds9/band_13/Cover%20Der%20Seelenschluessel.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/deep-space-nine-903.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Deep-Space-Seelenschlüssel/dp/3864251737/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/18330857-der-seelenschl-ssel",
+            "episode":      3,
+            "season":       9,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2377,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Soul_Key?oldid=488830"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2376,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Soul_Key?oldid=488830"
+                }
+            ]
         }
     ]
 }
