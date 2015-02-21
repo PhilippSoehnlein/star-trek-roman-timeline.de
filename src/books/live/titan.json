@@ -15,6 +15,7 @@
             "plotTimes":    [
                 {
                     "type":      "point",
+                    "isPrimary": false,
                     "year":      2376,
                     "month":     10,
                     "day":       30,
@@ -22,11 +23,40 @@
                 },
                 {
                     "type":      "point",
+                    "isPrimary": true,
                     "year":      2380,
                     "month":     1,
                     "day":       9,
-                    "source":    "http://de.memory-alpha.org/wiki/Eine_neue_%C3%84ra?oldid=527581",
-                    "isPrimary": true
+                    "source":    "http://de.memory-alpha.org/wiki/Eine_neue_%C3%84ra?oldid=527581"
+                }
+            ]
+        },
+        {
+            "title":        "Der rote König",
+            "authors":      [ "Andy Mangels", "Michael A. Martin" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_titan/band_02/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-titan-2-der-rote-koenig.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Titan-rote-König/dp/3941248022/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Der-rote-Koenig-Titan-2-Hoerbuch/B004UZWXF6/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/6346666-der-rote-k-nig",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":      2380,
+                        "month":     1,
+                        "day":       10
+                    },
+                    "end": {
+                        "year":      2380,
+                        "month":     1,
+                        "day":       30
+                    },
+                    "source":    "http://de.memory-alpha.org/wiki/Der_rote_K%C3%B6nig?oldid=544802"
                 }
             ]
         }
