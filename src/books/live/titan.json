@@ -59,6 +59,130 @@
                     "source":    "http://de.memory-alpha.org/wiki/Der_rote_K%C3%B6nig?oldid=544802"
                 }
             ]
+        },
+        {
+            "title":        "Die Hunde des Orion",
+            "authors":      [ "Christopher L. Bennett" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_titan/band_03/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-titan-3-die-hunde-des-orion.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Titan-Hunde-Orion/dp/3941248030/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Die-Hunde-des-Orion-Titan-3-Hoerbuch/B004UZL1D6/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/6505996-die-hunde-des-orion",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":      2380,
+                        "month":     2,
+                        "day":       20
+                    },
+                    "end": {
+                        "year":      2380,
+                        "month":     3,
+                        "day":       22
+                    },
+                    "source":    "http://en.memory-alpha.org/wiki/Orion%27s_Hounds?oldid=1460216"
+                }
+            ]
+        },
+        {
+            "title":        "Schwert des Damokles",
+            "authors":      [ "Geoffrey Thorne" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_titan/band_04/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-titan-4-schwert-des-damokles.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Titan-Schwert-Damokles/dp/3941248049/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Schwert-des-Damokles-Titan-4-Hoerbuch/B004UZOKNE/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/7486105-schwert-des-damokles",
+            "episode":      4,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2381,
+                    "month":     5,
+                    "day":       11,
+                    "source":    "http://en.memory-alpha.org/wiki/Sword_of_Damocles?oldid=1510461"
+                }
+            ]
+        },
+        {
+            "title":        "Stürmische See",
+            "authors":      [ "Christopher L. Bennett" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_titan/band_05/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-titan-5-stuermische-see.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Titan-Stürmische-See/dp/394124891X/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Stuermische-See-Titan-5-Hoerbuch/B006TWQE6C/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/24996304-st-rmische-see",
+            "episode":      5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":      2381,
+                        "month":     2,
+                        "day":       15
+                    },
+                    "end": {
+                        "year":      2381,
+                        "month":     8,
+                        "day":       4
+                    },
+                    "source":    "http://de.memory-alpha.org/wiki/St%C3%BCrmische_See?oldid=524728"
+                }
+            ]
+        },
+        {
+            "title":        "Synthese",
+            "authors":      [ "James Swallow" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_titan/band_06/pic/ST_Titan6_Cvr_web.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-titan-6-synthese.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Titan-6-Synthese/dp/3941248677/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Synthese-Titan-6-Hoerbuch/B007UP6YSA/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/10924783-synthese",
+            "episode":      6,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2381,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Synthesis?oldid=1435185"
+                }
+            ]
+        },
+        {
+            "title":        "Gefallene Götter",
+            "authors":      [ "Michael A. Martin" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_titan/ST_Titan7_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/titan-7.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Titan-Gefallene-Götter/dp/3864254299/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Gefallene-Goetter-Titan-7-Hoerbuch/B00LW8IZ4C/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/24996631-gefallene-g-tter",
+            "episode":      7,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2382,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://de.memory-alpha.org/wiki/Gefallene_G%C3%B6tter?oldid=568486"
+                }
+            ]
         }
     ]
 }
