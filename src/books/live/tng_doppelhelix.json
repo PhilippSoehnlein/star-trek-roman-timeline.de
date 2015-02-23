@@ -15,17 +15,17 @@
             "plotTimes":    [
                 {
                     "type":      "point",
+                    "isPrimary": true,
                     "year":      2364,
                     "month":     3,
                     "day":       18,
-                    "source":    "http://de.memory-alpha.org/wiki/Infektion_%28Roman%29",
-                    "isPrimary": true
+                    "source":    "http://de.memory-alpha.org/wiki/Infektion_%28Roman%29"
                 }
             ]
         },
         {
             "title":        "Überträger",
-            "authors":      [ "Dean Wesley Smith", "Kristine Kathryn Rusch" ],
+            "authors":      [ "Dean Wesley Smith", "John Gregory Betancourt", "Kristine Kathryn Rusch" ],
             "coverUrl":     "http://www.cross-cult.de/system/html/StarTrekTNG_Doppelhelix2_Cvr_web-24aebd24.jpg",
             "publisher":    "Cross Cult",
             "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-the-next-generation-doppelhelix-2.html",
@@ -36,11 +36,94 @@
             "season":       null,
             "plotTimes":    [
                 {
+                    "type":      "point",
+                    "isPrimary": true,
                     "year":      2366,
                     "month":     null,
                     "day":       null,
-                    "source":    "http://en.memory-alpha.org/wiki/Vectors",
-                    "isPrimary": true
+                    "source":    "http://en.memory-alpha.org/wiki/Vectors"
+                }
+            ]
+        },
+        {
+            "title":        "Roter Sektor",
+            "authors":      [ "Diane Carey", "John Gregory Betancourt", "Kristine Kathryn Rusch" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen_doppelhelix/band_03/ST_TNG_DH3_web_cvr.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-the-next-generation-doppelhelix-3-roter-sektor.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Doppelhelix-Sektor/dp/3864250137/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25004496-roter-sektor",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2353,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Red_Sector?oldid=1627101"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2357,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Red_Sector?oldid=1627101"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2369,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Red_Sector?oldid=1627101"
+                }
+            ]
+        },
+        {
+            "title":        "Quarantäne",
+            "authors":      [ "John Vornholt" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen_doppelhelix/band_04/Star%20Trek%20-%20The%20Next%20Generation:%20Doppelhelix%204.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-tng-doppelhelix-4-quarantaene.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Doppelhelix-Quarantäne/dp/3864250145/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25004543-quarant-ne",
+            "episode":      4,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2371,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Quarantine_%28Double_Helix_novel%29?oldid=1628751"
+                }
+            ]
+        },
+        {
+            "title":        "Doppelt oder Nichts",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen_doppelhelix/band_05/Star%20Trek%20-%20The%20Next%20Generation:%20Doppelhelix%205.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-tng-doppelhelix-5-doppelt-oder-nichts.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Doppelhelix-Doppelt/dp/3864250153/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25004651-doppelt-oder-nichts",
+            "episode":      5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2375,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Double_or_Nothing?oldid=1683818"
                 }
             ]
         }
