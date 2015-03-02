@@ -1,0 +1,58 @@
+{
+    "name":  "Destiny",
+    "books": [
+        {
+            "title":        "Götter der Nacht",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_destiny/band_01/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-destiny-1-goetter-der-nacht.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Destiny-Götter-Nacht/dp/3941248839/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Destiny-1-Goetter-der-Nacht-Hoerbuch/B0098X556Y/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/8133801-g-tter-der-nacht",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                    "start": {
+                        "year":  2156,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2157,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Gods_of_Night?oldid=494766"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2168,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Gods_of_Night?oldid=494766"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2373,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Gods_of_Night?oldid=494766"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2381,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Gods_of_Night?oldid=494766"
+                }
+            ]
+        }
+    ]
+}

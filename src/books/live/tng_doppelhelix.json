@@ -126,6 +126,28 @@
                     "source":    "http://en.memory-alpha.org/wiki/Double_or_Nothing?oldid=1683818"
                 }
             ]
+        },
+        {
+            "title":        "Die oberste Tugend",
+            "authors":      [ "Christie Golden", "Michael Jan Friedman" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen_doppelhelix/band_06/Star%20Trek%20-%20The%20Next%20Generation:%20Doppelhelix%206.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-tng-doppelhelix-6-die-oberste-tugend.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Doppelhelix-oberste/dp/3864250161/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25004679-die-oberste-tugend",
+            "episode":      6,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2350,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/The_First_Virtue?oldid=1627650"
+                }
+            ]
         }
     ]
 }
