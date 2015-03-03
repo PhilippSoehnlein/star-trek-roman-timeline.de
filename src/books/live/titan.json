@@ -124,12 +124,20 @@
             "season":       null,
             "plotTimes":    [
                 {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2381,
+                    "month":     2,
+                    "day":       15,
+                    "source":    "The actual book, chapter 'Historische Anmerkung'. This point in time relates to the epilogue."
+                },
+                {
                     "type":      "range",
                     "isPrimary": true,
                     "start": {
                         "year":      2381,
-                        "month":     2,
-                        "day":       15
+                        "month":     7,
+                        "day":       1
                     },
                     "end": {
                         "year":      2381,

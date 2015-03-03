@@ -48,9 +48,9 @@
                     "type":      "point",
                     "isPrimary": true,
                     "year":      2381,
-                    "month":     null,
+                    "month":     2,
                     "day":       null,
-                    "source":    "http://memory-beta.wikia.com/wiki/Gods_of_Night?oldid=494766"
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
                 }
             ]
         }
