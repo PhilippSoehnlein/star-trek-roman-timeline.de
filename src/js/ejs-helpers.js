@@ -107,14 +107,47 @@ function transformDataFilesToBooks( data ) {
     var books = [];
 
     Object.keys( data ).forEach( function( fileName ) {
+        if ( fileName === 'Order' ) {
+            return;
+        }
+
         var series = data[ fileName ];
 
         series.books
-            .map(     function( book ) { book.series = { name: series.name }; return book; } )
+            .map( function( book ) {
+                book.series = { name: series.name };
+                book.id     = transformString(
+                    book.series.name +
+                    ' ' +
+                    ( book.season ? book.season + 'x' + book.episode : book.episode )
+                );
+                return book;
+            } )
             .forEach( function( book ) { books.push( book ); } )
         ;
     } );
 
+    var sortedBooks = [];
+    data.Order.forEach( function( bookId ) {
+        var errorMessage;
+        var booksWithThatId = books.filter( function ( book ) { return book.id === bookId; } );
+        if ( booksWithThatId.length === 0 ) {
+            errorMessage = 'No book with ID "' + bookId + '" found!';
+        }
+        else if ( booksWithThatId.length > 1 ) {
+            errorMessage = booksWithThatId.length + ' books with ID "' + bookId + '" found!';
+        }
+
+        if ( errorMessage ) {
+            console.error( errorMessage );
+            throw errorMessage;
+        }
+        else {
+            sortedBooks.push( booksWithThatId[0] );
+        }
+    } );
+
+    return sortedBooks;
     books.sort( function( a, b ) {
         var aPrimaryTime = a.plotTimes.filter( function( time ) { return time.isPrimary; } )[0];
         var bPrimaryTime = b.plotTimes.filter( function( time ) { return time.isPrimary; } )[0];

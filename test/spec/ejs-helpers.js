@@ -210,6 +210,7 @@ describe( 'transformString()', function() {
 
 describe( 'transformDataFilesToBooks()', function() {
     var testDataFromDataFiles = {
+        Order:          require( '../../src/books/test/_order.json' ),
         deepSpaceNine:  require( '../../src/books/test/deep_space_nine.json' ),
         filmromane:     require( '../../src/books/test/filmromane.json' ),
         tngDoppelhelix: require( '../../src/books/test/tng_doppelhelix.json' ),
@@ -227,63 +228,20 @@ describe( 'transformDataFilesToBooks()', function() {
         expect( typeof books[0].series.name ).toBe( 'string' );
     });
 
-    it( 'should order books of different series according to their date', function() {
-        var testData = {
-            deepSpaceNine: {
-                name: 'Deep Space Nine',
-                books: [
-                    {
-                        name:      'second',
-                        plotTimes: [
-                            {
-                                type:     'point',
-                                year:     2376,
-                                month:    10,
-                                day:      30,
-                                isPrimary: true,
-                            },
-                        ],
-                    }
-                ],
-            },
-            titan: {
-                name: 'Titan',
-                books: [
-                    {
-                        name:      'first',
-                        plotTimes: [
-                            {
-                                type:     'point',
-                                year:     2375,
-                                month:    null,
-                                day:      null,
-                                isPrimary: true
-                            }
-                        ]
-                    },
-                    {
-                        name:      'third',
-                        plotTimes: [
-                            {
-                                type:     'point',
-                                year:     2380,
-                                month:    1,
-                                day:      9,
-                                isPrimary: true
-                            }
-                        ]
-                    }
-                ],
-            }
-        };
-        var books = ejsHelpers.transformDataFilesToBooks( testData );
-        expect( books.length  ).toBe( 3 );
-        expect( books[0].name ).toBe( 'first' );
-        expect( books[1].name ).toBe( 'second' );
-        expect( books[2].name ).toBe( 'third' );
-    });
+    it( 'should consider order array', function() {
+        // create a copy of the test files
+        var changedTestDataFromDataFiles = JSON.parse( JSON.stringify( testDataFromDataFiles ) );
 
-    // TODO: More tests regarding sorting needed (time ranges, sorting books of the same series etc.)
+        // switch first two books
+        var tmp = changedTestDataFromDataFiles.Order[0];
+        changedTestDataFromDataFiles.Order[0] = changedTestDataFromDataFiles.Order[1];
+        changedTestDataFromDataFiles.Order[1] = tmp;
+
+        // run and compare
+        var books = ejsHelpers.transformDataFilesToBooks( changedTestDataFromDataFiles );
+        expect( books[0].id === testDataFromDataFiles[1] );
+        expect( books[1].id === testDataFromDataFiles[0] );
+    } );
 });
 
 describe( 'formatPlotTimes()', function() {
