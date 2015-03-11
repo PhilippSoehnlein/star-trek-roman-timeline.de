@@ -127,6 +127,11 @@ function transformDataFilesToBooks( data ) {
         ;
     } );
 
+    if ( data.Order.length !== books.length ) {
+        throw new Error( 'The amount of books (' + data.Order.length + ') in the order file '+
+                         'doesn\'t match with the number of books in the data files (' + books.length + ')!' );
+    }
+
     var sortedBooks = [];
     data.Order.forEach( function( bookId ) {
         var errorMessage;
@@ -140,7 +145,7 @@ function transformDataFilesToBooks( data ) {
 
         if ( errorMessage ) {
             console.error( errorMessage );
-            throw errorMessage;
+            throw new Error( errorMessage );
         }
         else {
             sortedBooks.push( booksWithThatId[0] );
