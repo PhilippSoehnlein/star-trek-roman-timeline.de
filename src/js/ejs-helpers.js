@@ -202,8 +202,10 @@ function formatPlotTimes( book ) {
 function _formatPrimaryPlotTime( plotTime ) {
     var time = plotTime.type === 'range' ? plotTime.start : plotTime;
 
-    var value    = ( time.month ? _toGermanMonth( time.month, 'abbreviation' ) + ' ' : '' ) + time.year;
-    var html     = ( time.month ? _toGermanMonth( time.month, 'fullHtml'     ) + ' ' : '' ) + time.year;
+    var value    = ( time.month ? _toGermanMonth( time.month, 'abbreviation' ) + ' ' : '' ) +
+                   _toGermanYear( time.year );
+    var html     = ( time.month ? _toGermanMonth( time.month, 'fullHtml'     ) + ' ' : '' ) +
+                   _toGermanYear( time.year, 'fullHtml' );
     var dateTime = time.year + ( time.month ? '-' + sprintf( '%02d', time.month ) : '' );
 
     return {
@@ -247,7 +249,7 @@ function _formatAllPlotTimes( allTimes ) {
                 }
 
                 if ( time.end.day ) {
-                    toStr += sprintf( '%02d. ', time.end.day);
+                    toStr += sprintf( '%02d. ', time.end.day );
                 }
 
                 if ( time.start.month &&
@@ -264,24 +266,25 @@ function _formatAllPlotTimes( allTimes ) {
                 }
 
                 if ( time.start.year !== time.end.year ) {
-                    fromStr += time.start.year + ' ';
+                    fromStr += _toGermanYear( time.start.year ) + ' ';
                 }
 
-                toStr += time.end.year;
+                toStr += _toGermanYear( time.end.year );
 
                 timeStr = fromStr + '- ' + toStr;
             }
             else {
+                var germanYear = _toGermanYear( time.year );
                 if ( time.day && time.month && time.year ) {
                     timeStr = sprintf( '%02d. ', time.day ) +
                               _toGermanMonth( time.month, 'name' ) + ' ' +
-                              time.year;
+                              germanYear;
                 }
                 else if ( time.month ) {
-                    timeStr = _toGermanMonth( time.month, 'name' ) + ' ' + time.year;
+                    timeStr = _toGermanMonth( time.month, 'name' ) + ' ' + germanYear;
                 }
                 else {
-                    timeStr = time.year + ''; // + '' = force string
+                    timeStr = germanYear + ''; // + '' = force string
                 }
             }
 
@@ -330,6 +333,19 @@ function _toGermanMonth( monthNumber, mode ) {
     else {
         return month.name;
     }
+}
+
+function _toGermanYear( year, mode ) {
+    var germanYear;
+    if ( year < 0 ) {
+        germanYear = Math.abs( year ) + ' ' +
+                    ( mode === 'fullHtml' ? '<abbr title="vor Christi Geburt">v. Chr.</abbr>' : 'v. Chr.' );
+    }
+    else {
+        germanYear = year;
+    }
+
+    return germanYear;
 }
 
 function _ucFirst( string ) {

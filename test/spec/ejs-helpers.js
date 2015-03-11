@@ -333,6 +333,24 @@ describe( 'formatPlotTimes()', function() {
             expect( plotTime.primary.html     ).toBe( 'Mai 2100' );
             expect( plotTime.primary.value    ).toBe( 'Mai 2100' );
         });
+
+        it( 'should return correct values for dates before christ', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [
+                    {
+                        type:      'point',
+                        year:      -1234,
+                        month:     null,
+                        day:       null,
+                        isPrimary: true,
+                    },
+                ] }
+            );
+
+            expect( plotTime.primary.dateTime ).toBe( '-1234' );
+            expect( plotTime.primary.html     ).toBe( '1234 <abbr title="vor Christi Geburt">v. Chr.</abbr>' );
+            expect( plotTime.primary.value    ).toBe( '1234 v. Chr.' );
+        });
     });
 
     describe( 'all plot times', function() {
@@ -590,16 +608,66 @@ describe( 'formatPlotTimes()', function() {
                             month: 7,
                             day:   19,
                         }
-                    }
+                    },
+                    {
+                        type:  'point',
+                        year:  -1234,
+                        month: null,
+                        day:   null,
+                    },
                 ] }
             );
 
-            expect( plotTime.all.length ).toBe( 5 );
-            expect( plotTime.all[0].value ).toBe( '2100' );
-            expect( plotTime.all[1].value ).toBe( 'Februar 2100' );
-            expect( plotTime.all[2].value ).toBe( '10. Juni 2101' );
-            expect( plotTime.all[3].value ).toBe( '16. - 19. Juli 2101' );
-            expect( plotTime.all[4].value ).toBe( 'April 2102 (*)' );
+            expect( plotTime.all.length ).toBe( 6 );
+            expect( plotTime.all[0].value ).toBe( '1234 v. Chr.' );
+            expect( plotTime.all[1].value ).toBe( '2100' );
+            expect( plotTime.all[2].value ).toBe( 'Februar 2100' );
+            expect( plotTime.all[3].value ).toBe( '10. Juni 2101' );
+            expect( plotTime.all[4].value ).toBe( '16. - 19. Juli 2101' );
+            expect( plotTime.all[5].value ).toBe( 'April 2102 (*)' );
+        });
+
+        it( 'should return a primary point with correct values for dates before christ', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [
+                    {
+                        type:      'point',
+                        year:      -1234,
+                        month:     null,
+                        day:       null,
+                        isPrimary: true,
+                    },
+                ] }
+            );
+
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type  ).toBe( 'point' );
+            expect( plotTime.all[0].value ).toBe( '1234 v. Chr.' );
+        });
+
+        it( 'should return a range with correct values for dates before christ', function() {
+            var plotTime = ejsHelpers.formatPlotTimes(
+                { plotTimes: [
+                    {
+                        type:      'range',
+                        isPrimary: true,
+                        start: {
+                            year:  -1234,
+                            month: null,
+                            day:   null,
+                        },
+                        end: {
+                            year:  0,
+                            month: null,
+                            day:   null,
+                        },
+                    },
+                ] }
+            );
+
+            expect( plotTime.all.length ).toBe( 1 );
+            expect( plotTime.all[0].type  ).toBe( 'range' );
+            expect( plotTime.all[0].value ).toBe( '1234 v. Chr. - 0' );
         });
     });
 });
