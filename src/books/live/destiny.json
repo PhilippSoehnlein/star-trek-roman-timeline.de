@@ -53,6 +53,111 @@
                     "source":    "The actual book, chapter 'Historische Anmerkung'."
                 }
             ]
+        },
+        {
+            "title":        "Gewöhnliche Sterbliche",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_destiny/band_02/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-destiny-2-gewoehnliche-sterbliche.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Destiny-Gewöhnliche-Sterbliche/dp/3941248847/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Destiny-2-Gewoehnliche-Sterbliche-Hoerbuch/B009PLN0MK/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/8133803-gew-hnliche-sterbliche",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      1519,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Mere_Mortals?oldid=496201"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                    "start": {
+                        "year":  1525,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  1573,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Mere_Mortals?oldid=496201"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                    "start": {
+                        "year":  1574,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2095,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Mere_Mortals?oldid=496201"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                    "start": {
+                        "year":  2168,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2381,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Mere_Mortals?oldid=496201"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2381,
+                    "month":     2,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
+                }
+            ]
+        },
+        {
+            "title":        "Verlorene Seelen",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_destiny/band_03/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-destiny-3-verlorene-seelen.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Destiny-Verlorene-Seelen/dp/3941248855/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Destiny-3-Verlorene-Seelen-Hoerbuch/B00A6UWHGY/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/8133802-verlorene-seelen",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      -4527,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Lost_Souls?oldid=495249"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2381,
+                    "month":     2,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
+                }
+            ]
         }
     ]
 }
