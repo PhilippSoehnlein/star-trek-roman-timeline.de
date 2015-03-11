@@ -148,38 +148,6 @@ function transformDataFilesToBooks( data ) {
     } );
 
     return sortedBooks;
-    books.sort( function( a, b ) {
-        var aPrimaryTime = a.plotTimes.filter( function( time ) { return time.isPrimary; } )[0];
-        var bPrimaryTime = b.plotTimes.filter( function( time ) { return time.isPrimary; } )[0];
-
-        var aPrimaryTimePoint = ( aPrimaryTime.type === 'range' ) ? aPrimaryTime.start : aPrimaryTime;
-        var bPrimaryTimePoint = ( bPrimaryTime.type === 'range' ) ? bPrimaryTime.start : bPrimaryTime;
-
-        var aSortValue, bSortValue;
-        if ( a.series.name === b.series.name ) {
-            aSortValue = ( a.season || 0 ) + '_' + sprintf( '%02d', a.episode || 0 );
-            bSortValue = ( b.season || 0 ) + '_' + sprintf( '%02d', b.episode || 0 );
-        }
-        else {
-            aSortValue = aPrimaryTimePoint.year +
-                            sprintf( '%02d', aPrimaryTimePoint.month || 1 ) +
-                            sprintf( '%02d', aPrimaryTimePoint.day   || 1 );
-            bSortValue = bPrimaryTimePoint.year +
-                            sprintf( '%02d', bPrimaryTimePoint.month || 1 ) +
-                            sprintf( '%02d', bPrimaryTimePoint.day   || 1 );
-        }
-
-        if ( aSortValue < bSortValue ) {
-            return -1;
-        }
-        else if ( aSortValue > bSortValue ) {
-            return 1;
-        }
-
-        return 0;
-    } );
-
-    return books;
 }
 
 function formatPlotTimes( book ) {
