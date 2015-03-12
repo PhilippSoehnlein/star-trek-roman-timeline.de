@@ -1,0 +1,199 @@
+{
+    "name":  "The Next Generation",
+    "books": [
+        {
+            "title":        "Tod im Winter",
+            "authors":      [ "Michael Jan Friedman" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen/band_01/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-next-generation-1-tod-im-winter.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Next-Generation-Winter/dp/3941248618/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/6828187-tod-im-winter",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2348,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Death_in_Winter?oldid=457613#Earth"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2339,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Death_in_Winter?oldid=457613#Arvada_III"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2379,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Death_in_Winter?oldid=457613"
+                }
+            ]
+        },
+        {
+            "title":        "Widerstand",
+            "authors":      [ "J. M. Dillard" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen/band_02/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-next-generation-2-widerstand.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Next-Generation-Widerstand/dp/3941248626/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/6828188-widerstand",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2380,
+                    "month":     4,
+                    "day":       null,
+                    "source":    "http://home.fuse.net/ChristopherLBennett/GTTSAnnot.html"
+                }
+            ]
+        },
+        {
+            "title":        "Quintessenz",
+            "authors":      [ "Keith R. A. DeCandido" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen/band_03/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-next-generation-3-quintessenz.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Next-Generation-Quintessenz/dp/3941248634/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/15831036-quintessenz",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2380,
+                    "month":     5,
+                    "day":       null,
+                    "source":    "http://home.fuse.net/ChristopherLBennett/GTTSAnnot.html"
+                }
+            ]
+        },
+        {
+            "title":        "Heldentod",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen/band_04/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-next-generation-4-heldentod.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Next-Generation-Heldentod/dp/3941248642/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/7486104-heldentod",
+            "episode":      4,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2380,
+                    "month":     6,
+                    "day":       null,
+                    "source":    "http://home.fuse.net/ChristopherLBennett/GTTSAnnot.html"
+                }
+            ]
+        },
+        {
+            "title":        "Mehr als die Summe",
+            "authors":      [ "Christopher L. Bennett" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen/band_05/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-next-generation-5-mehr-als-die-summe.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Next-Generation-Summe/dp/3941248650/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/10406984-mehr-als-die-summe",
+            "episode":      5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":   2380,
+                        "month":  9,
+                        "day":    19,
+                        "source": "http://de.memory-alpha.org/wiki/Mehr_als_die_Summe?oldid=524707"
+                    },
+                    "end": {
+                        "year":   2381,
+                        "month":  1,
+                        "day":    5,
+                        "source": "http://de.memory-alpha.org/wiki/Mehr_als_die_Summe?oldid=524707"
+                    }
+                }
+            ]
+        },
+        {
+            "title":        "Den Frieden verlieren",
+            "authors":      [ "William Leisner" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen/band_06/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-next-generation-6-den-frieden-verlieren.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Frieden-verlieren/dp/3941248669/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/10406969-den-frieden-verlieren",
+            "episode":      6,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":   2381,
+                        "month":  2,
+                        "day":    null,
+                        "source": "The actual book, chapter 'Historische Anmerkung'. It says the story takes place between late february and early march 2381."
+                    },
+                    "end": {
+                        "year":   2381,
+                        "month":  3,
+                        "day":    null,
+                        "source": "The actual book, chapter 'Historische Anmerkung'. It says the story takes place between late february and early march 2381."
+                    }
+                }
+            ]
+        },
+        {
+            "title":        "Von Magie nicht zu unterscheiden",
+            "authors":      [ "David A. McIntee" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_nextgen/band_07/ST_TNG7_Umschlag.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-the-next-generation-7.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Magie-unterscheiden/dp/3864252938/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25130523-von-magie-nicht-zu-unterscheiden",
+            "episode":      7,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2161,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Indistinguishable_from_Magic?oldid=484542#Summary"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2383,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Indistinguishable_from_Magic?oldid=484542#Summary"
+                }
+            ]
+        }
+    ]
+}
