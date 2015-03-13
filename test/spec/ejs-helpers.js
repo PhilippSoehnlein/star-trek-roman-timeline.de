@@ -34,6 +34,12 @@ describe( 'formatSeriesEpisode()', function() {
         expect( ejsHelpers.formatSeriesEpisode( { series: { name: 'Deep Space Nine' }, episode: '1', season: '8' } ) )
             .toBe( 'Deep Space Nine - 8x01' );
     });
+
+    it( 'should print only the series if no episode is given', function() {
+        var seriesName = 'Die Gesetze der Föderation';
+        expect( ejsHelpers.formatSeriesEpisode( { series: { name: seriesName }, episode: null, season: null } ) )
+            .toBe( seriesName );
+    });
 });
 
 describe( 'getBookLinks()', function() {

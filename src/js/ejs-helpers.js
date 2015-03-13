@@ -28,12 +28,15 @@ function formatAuthors( authors ) {
 }
 
 function formatSeriesEpisode( book ) {
+    var seriesEpisode = book.series.name;
     if ( book.season ) {
-        return book.series.name + ' - ' + book.season + 'x' + sprintf( '%02d', book.episode );
+        seriesEpisode += ' - ' + book.season + 'x' + sprintf( '%02d', book.episode );
     }
-    else {
-        return book.series.name + ' #' + book.episode;
+    else if ( book.episode ) {
+        seriesEpisode += ' #' + book.episode;
     }
+
+    return seriesEpisode;
 }
 
 function getBookLinks( book ) {
@@ -115,12 +118,17 @@ function transformDataFilesToBooks( data ) {
 
         series.books
             .map( function( book ) {
+                var bookId = series.name;
+                if ( book.season ) {
+                    bookId += ' ' + book.season + 'x' + book.episode;
+                }
+                else if ( book.episode ) {
+                    bookId += ' ' + book.episode;
+                }
+                bookId = transformString( bookId );
+
                 book.series = { name: series.name };
-                book.id     = transformString(
-                    book.series.name +
-                    ' ' +
-                    ( book.season ? book.season + 'x' + book.episode : book.episode )
-                );
+                book.id     = bookId;
                 return book;
             } )
             .forEach( function( book ) { books.push( book ); } )
