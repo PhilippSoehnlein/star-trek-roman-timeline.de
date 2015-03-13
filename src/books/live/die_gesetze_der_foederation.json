@@ -1,0 +1,67 @@
+{
+    "name":  "Die Gesetze der Föderation",
+    "books": [
+        {
+            "title":        "Die Gesetze der Föderation",
+            "authors":      [ "Keith R. A. DeCandido" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_gesetze/band_01/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-gesetze-der-foed-die-gesetze-der-foederation.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Die-Gesetze-Föderation/dp/3941248502/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/10406980-die-gesetze-der-f-deration",
+            "episode":      null,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2380,
+                    "month":     1,
+                    "day":       null,
+                    "source":    "http://www.sff.net/people/krad/aotfann.htm#january and the actual book, chapter 'Historische Anmerkung'."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2380,
+                    "month":     3,
+                    "day":       null,
+                    "source":    "http://www.sff.net/people/krad/aotfann.htm#march"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2380,
+                    "month":     5,
+                    "day":       null,
+                    "source":    "http://www.sff.net/people/krad/aotfann.htm#may"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2380,
+                    "month":     8,
+                    "day":       null,
+                    "source":    "http://www.sff.net/people/krad/aotfann.htm#august"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2380,
+                    "month":     10,
+                    "day":       null,
+                    "source":    "http://www.sff.net/people/krad/aotfann.htm#october"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2380,
+                    "month":     12,
+                    "day":       null,
+                    "source":    "http://www.sff.net/people/krad/aotfann.htm#december"
+                }
+            ]
+        }
+    ]
+}
