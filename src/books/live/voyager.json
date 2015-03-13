@@ -1,0 +1,159 @@
+{
+    "name":  "Voyager",
+    "books": [
+        {
+            "title":        "Heimkehr",
+            "authors":      [ "Christie Golden" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_voyager/band_01/pic/ST_Voyager1_Cvr.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/voyager-1.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Voyager-1-Heimkehr/dp/3864252873/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/19245690-heimkehr",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2378,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://de.memory-alpha.org/wiki/Heimkehr?oldid=569543#Hintergundinformationen"
+                }
+            ]
+        },
+        {
+            "title":        "Ferne Ufer",
+            "authors":      [ "Christie Golden" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_voyager/band_02/Star%20Trek%20Voyager%202.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/voyager-2.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Voyager-Ferne-Ufer/dp/3864252881/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25137230-ferne-ufer",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2378,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://de.memory-alpha.org/wiki/Ferne_Ufer?oldid=571173#Hintergundinformationen"
+                }
+            ]
+        },
+        {
+            "title":        "Geistreise #1 – Alte Wunden",
+            "authors":      [ "Christie Golden" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_voyager/ST_Voyager3_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/voyager-3.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Voyager-Geistreise-Wunden/dp/3864254205/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/23128985-star-trek-voyager---geistreise-1",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2375,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, see prologue."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2378,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Old_Wounds?oldid=1509549"
+                }
+            ]
+        },
+        {
+            "title":        "Geistreise #2 – Der Feind meines Feindes",
+            "authors":      [ "Christie Golden" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_voyager/ST_Voyager4_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/voyager-4.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Voyager-Geistreise-Feindes/dp/3864254213/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/23129028-star-trek-voyager---geistreise-2",
+            "episode":      4,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2378,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Enemy_of_My_Enemy?oldid=1272258"
+                }
+            ]
+        },
+        {
+            "title":        "Projekt Full Circle",
+            "authors":      [ "Kirsten Beyer" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_voyager/ST_Voyager5_Cvr.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/Voyager_5.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Voyager-Projekt-Circle/dp/3864254221/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25137351-projekt-full-circle",
+            "episode":      5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2378,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2381,
+                        "month": 6,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Full_Circle_%28novel%29?oldid=495865#Timeline"
+                }
+            ]
+        },
+        {
+            "title":        "Unwürdig",
+            "authors":      [ "Kirsten Beyer" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_voyager/StarTrek_Voyager6_Cvr_rgb_neu.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-voyager-6.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Voyager-6-Unwürdig/dp/386425423X/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25137428-unw-rdig",
+            "episode":      6,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2381,
+                        "month": 5,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2381,
+                        "month": 6,
+                        "day":   null
+                    },
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                }
+            ]
+        }
+    ]
+}
