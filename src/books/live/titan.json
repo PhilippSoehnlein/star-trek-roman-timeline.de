@@ -104,10 +104,10 @@
                 {
                     "type":      "point",
                     "isPrimary": true,
-                    "year":      2381,
-                    "month":     5,
-                    "day":       11,
-                    "source":    "http://en.memory-alpha.org/wiki/Sword_of_Damocles?oldid=1510461"
+                    "year":      2380,
+                    "month":     6,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung', it says it takes place about 3 months after 'Die Hunde des Orion'."
                 }
             ]
         },
