@@ -1,0 +1,66 @@
+{
+    "name":  "Einzelschicksale",
+    "books": [
+        {
+            "title":        "Einzelschicksale",
+            "authors":      [ "Keith R. A. DeCandido" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_einzelschicksale/band_01/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-einzelschicksale.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Einzelschicksale-Keith-DeCandido/dp/3941248936/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/10356368-einzelschicksale",
+            "episode":      null,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2339,
+                    "month":     11,
+                    "day":       19,
+                    "source":    "http://memory-beta.wikia.com/wiki/A_Singular_Destiny?oldid=475826#Timeline ('log from the USS Enterprise-C, detailing first contact with the Zaldans on stardate 16883.1')"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2381,
+                    "month":     2,
+                    "day":       22,
+                    "source":    "http://memory-beta.wikia.com/wiki/A_Singular_Destiny?oldid=475826#Timeline ('transcript of Illuminating the City of Light from the 22nd of February 2381')"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2381,
+                    "month":     2,
+                    "day":       28,
+                    "source":    "http://memory-beta.wikia.com/wiki/A_Singular_Destiny?oldid=475826#Timeline ('homily given by Prylar Hon Avid on the 28th of February 2381 ')"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2381,
+                    "month":     3,
+                    "day":       14,
+                    "source":    "http://memory-beta.wikia.com/wiki/A_Singular_Destiny?oldid=475826#Timeline ('log from the USS Malinche prior to engaging the Borg on stardate 58199.3')"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2381,
+                        "month": 4,
+                        "day":   22
+                    },
+                    "end": {
+                        "year":  2381,
+                        "month": 5,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/A_Singular_Destiny?oldid=475826#Timeline"
+                }
+            ]
+        }
+    ]
+}
