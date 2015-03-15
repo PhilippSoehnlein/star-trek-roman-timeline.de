@@ -16,4 +16,6 @@ $tag-grey-darken: 19%;
     border-radius: 0.25em;
     background-color: darken($light-grey, $tag-grey-darken);
     color: lighten($light-grey, 25%);
+
+    /* TODO: Add an "information"-icon here to make clear there's a tooltip. .tag[title] */
 }
