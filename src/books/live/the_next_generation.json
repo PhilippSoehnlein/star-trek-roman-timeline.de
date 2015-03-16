@@ -33,9 +33,9 @@
                     "type":      "point",
                     "isPrimary": true,
                     "year":      2379,
-                    "month":     null,
+                    "month":     11,
                     "day":       null,
-                    "source":    "http://memory-beta.wikia.com/wiki/Death_in_Winter?oldid=457613"
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
                 }
             ]
         },
@@ -189,9 +189,17 @@
                     "type":      "point",
                     "isPrimary": true,
                     "year":      2383,
-                    "month":     null,
+                    "month":     1,
                     "day":       null,
-                    "source":    "http://memory-beta.wikia.com/wiki/Indistinguishable_from_Magic?oldid=484542#Summary"
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2383,
+                    "month":     3,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
                 }
             ]
         }

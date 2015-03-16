@@ -164,9 +164,9 @@
                     "type":      "point",
                     "isPrimary": true,
                     "year":      2381,
-                    "month":     null,
+                    "month":     9,
                     "day":       null,
-                    "source":    "http://en.memory-alpha.org/wiki/Synthesis?oldid=1435185"
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
                 }
             ]
         },
@@ -186,9 +186,9 @@
                     "type":      "point",
                     "isPrimary": true,
                     "year":      2382,
-                    "month":     null,
+                    "month":     11,
                     "day":       null,
-                    "source":    "http://de.memory-alpha.org/wiki/Gefallene_G%C3%B6tter?oldid=568486"
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
                 }
             ]
         }
