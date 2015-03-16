@@ -1,0 +1,330 @@
+{
+    "name":  "Typhon Pact",
+    "books": [
+        {
+            "title":        "Kampf",
+            "authors":      [ "Christopher L. Bennett" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_typhon_pact/Ebook_01/Typhon%20Pact%20Kampf%20E-Book.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-typhon-pact.html",
+            "amazonUrl":    "http://www.amazon.de/exec/obidos/ASIN/B00EU8MKYW/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/18887104-kampf",
+            "episode":      null,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2382,
+                    "month":     11,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                }
+            ]
+        },
+        {
+            "title":        "Nullsummenspiel",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_typhon_pact/band_01/TyphonPact1_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/typhon-pact-1.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Typhon-Pact-Nullsummenspiel/dp/3864252806/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/18337478-nullsummenspiel",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2382,
+                    "month":     4,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2382,
+                    "month":     8,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                }
+            ]
+        },
+        {
+            "title":        "Feuer",
+            "authors":      [ "Michael A. Martin" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_typhon_pact/band_02/TyphonPact2_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/typhon-pact-2.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Typhon-Pact-Feuer/dp/3864252814/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25146360-feuer",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2381,
+                    "month":     2,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start":     {
+                        "year":  2382,
+                        "month": 8,
+                        "day":   23
+                    },
+                    "end":       {
+                        "year":  2382,
+                        "month": 8,
+                        "day":   31
+                    },
+                    "source":    "http://en.memory-alpha.org/wiki/Seize_the_Fire?oldid=1627385"
+                }
+            ]
+        },
+        {
+            "title":        "Bestien",
+            "authors":      [ "David R. George III." ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_typhon_pact/band_03/TyphonPact3_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/typhon-pact-3.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Typhon-Pact-Bestien/dp/3864252822/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25146394-bestien",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2362,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Rough_Beasts_of_Empire?oldid=501255#Chronology"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2375,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Rough_Beasts_of_Empire?oldid=501255#Chronology"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2378,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Rough_Beasts_of_Empire?oldid=501255#Chronology"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2379,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Rough_Beasts_of_Empire?oldid=501255#Chronology"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2380,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Rough_Beasts_of_Empire?oldid=501255#Chronology"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start":     {
+                        "year":  2381,
+                        "month": 3,
+                        "day":   null
+                    },
+                    "end":       {
+                        "year":  2381,
+                        "month": 4,
+                        "day":   null
+                    },
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2381,
+                    "month":     11,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2382,
+                    "month":     2,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                }
+            ]
+        },
+        {
+            "title":        "Zwietracht",
+            "authors":      [ "Dayton Ward" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_typhon_pact/band_04/TyphonPact4_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/typhon-pact-4.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Typhon-Pact-Zwietracht/dp/3864252830/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25156369-zwietracht",
+            "episode":      4,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2382,
+                    "month":     10,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                }
+            ]
+        },
+        {
+            "title":        "Heimsuchung",
+            "authors":      [ "David R. George III." ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_typhon_pact/band_05/ST_TyphonPact5_cvr_web.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/typhon-pact-5.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Typhon-Pact-Heimsuchung/dp/3864252849/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25156414-heimsuchung",
+            "episode":      5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2382,
+                    "month":     4,
+                    "day":       null,
+                    "source":    "The actual book, chapters 1 - 3."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2382,
+                    "month":     6,
+                    "day":       null,
+                    "source":    "The actual book, chapters 4 - 6."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2382,
+                    "month":     8,
+                    "day":       null,
+                    "source":    "The actual book, chapters 7 - 9."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2382,
+                    "month":     10,
+                    "day":       null,
+                    "source":    "The actual book, chapters 10 - 12."
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                    "start": {
+                        "year":  2383,
+                        "month": 2,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2383,
+                        "month": 4,
+                        "day":   null
+                    },
+                    "source":    "The actual book, chapters 13 - 15."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2383,
+                    "month":     6,
+                    "day":       null,
+                    "source":    "The actual book, chapters 16 - 18."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2383,
+                    "month":     8,
+                    "day":       null,
+                    "source":    "The actual book, chapters 19 - 41."
+                }
+            ]
+        },
+        {
+            "title":        "Schatten",
+            "authors":      [ "David R. George III." ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_typhon_pact/band_06/ST_TyphonPact6_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/typhon-pact-6.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Typhon-Pact-Schatten/dp/3864252857/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25156465-schatten",
+            "episode":      6,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2383,
+                    "month":     9,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                },
+                 {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2384,
+                    "month":     9,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                }
+            ]
+        },
+        {
+            "title":        "Risiko",
+            "authors":      [ "Una McCormack" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/NEWS/ROMANE/Typhon%20Pact/int_1.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/typhon-pact-7.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Typhon-Pact-Risiko/dp/3864252865/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25156506-risiko",
+            "episode":      7,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2383,
+                    "month":     11,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Raise_the_Dawn?oldid=495345"
+                }
+            ]
+        }
+    ]
+}
