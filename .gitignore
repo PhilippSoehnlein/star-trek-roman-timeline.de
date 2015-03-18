@@ -25,6 +25,16 @@ Temporary Items
 *.komodoproject
 .komodotools
 
+### WebStorm ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+
+*.iml
+## File-based project format:
+*.ipr
+*.iws
+
+## Directory-based project format:
+.idea/
 
 node_modules
 bower_components
