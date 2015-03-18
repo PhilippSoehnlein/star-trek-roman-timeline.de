@@ -1,0 +1,51 @@
+{
+    "name":  "New Frontier",
+    "books": [
+        {
+            "title":        "Kartenhaus",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_01/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-new-frontier-1-kartenhaus.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-New-Frontier-Kartenhaus/dp/3942649012/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/10406971-kartenhaus",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2353,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/House_of_Cards?oldid=472168#2353"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2363,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/House_of_Cards?oldid=472168#2363"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2371,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/House_of_Cards?oldid=472168#2371"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2373,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung' (\"gegen Ende des Jahres 2373\") and http://memory-beta.wikia.com/wiki/House_of_Cards?oldid=472168  states stardate 50252.1."
+                }
+            ]
+        }
+    ]
+}
