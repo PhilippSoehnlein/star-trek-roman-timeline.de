@@ -46,6 +46,161 @@
                     "source":    "The actual book, chapter 'Historische Anmerkung' (\"gegen Ende des Jahres 2373\") and http://memory-beta.wikia.com/wiki/House_of_Cards?oldid=472168  states stardate 50252.1."
                 }
             ]
+        },
+        {
+            "title":        "Zweifrontenkrieg",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_02/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-new-frontier-2-zweifrontenkrieg.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-New-Frontier-Zweifrontenkrieg/dp/3942649020/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/10406979-zweifrontenkrieg",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2373,
+                        "month": 12,
+                        "day":   4
+                    },
+                    "end": {
+                        "year":  2373,
+                        "month": 12,
+                        "day":   5
+                    },
+                    "source":    "http://de.memory-alpha.org/wiki/Zweifrontenkrieg?oldid=524617"
+                }
+            ]
+        },
+        {
+            "title":        "Märtyrer",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_03/cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-new-frontier-3-maertyrer.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-New-Frontier-Märtyrer/dp/3942649039/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/10406982-star-trek-new-frontier-m-rtyrer",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      1873,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Martyr?oldid=458794#1873"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2354,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Martyr?oldid=458794#2354"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2373,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Martyr?oldid=458794#2373"
+                }
+            ]
+        },
+        {
+            "title":        "Die Waffe",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_04/ST_NewFrontier4_cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-new-frontier-4-die-waffe.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-New-Frontier-Waffe/dp/3942649047/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25190772-die-waffe",
+            "episode":      4,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2374,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://de.memory-alpha.org/wiki/Die_Waffe?oldid=524619"
+                }
+            ]
+        },
+        {
+            "title":        "Ort der Stille",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_05/ST_NewFrontier5_cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-new-frontier-5-ort-der-stille.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-New-Frontier-Stille/dp/3942649055/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25190822-ort-der-stille",
+            "episode":      5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2376,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung' (\"[…]spielt etwa zu Beginn des Jahres 2376 […]. Seit dem letzten Abenteuer (TNG Doppelhelix 5) sind ca. 2 Monate vergangen.\")."
+                }
+            ]
+        },
+        {
+            "title":        "Finstere Verbündete",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_06/ST_NewFrontier6_cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-new-frontier-6-finstere-verb%C3%BCndete.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Frontier-Finstere-Verbündete/dp/3942649063/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25190900-finstere-verb-ndete",
+            "episode":      6,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2376,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung' (\"[…]spielt ein paar Tage nach den Ereignissen von New Frontier #5 etwa zu Beginn des Jahres 2376.\")."
+                }
+            ]
+        },
+        {
+            "title":        "Excalibur: Requiem",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_07/ST_New_Frontier7_%20Cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-new-frontier-7.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Frontier-Excalibur-Requiem/dp/3942649071/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25190918-requiem",
+            "episode":      7,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2376,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Requiem_(New_Frontier_novel)?oldid=1620043"
+                }
+            ]
         }
     ]
 }
