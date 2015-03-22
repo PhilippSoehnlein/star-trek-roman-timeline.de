@@ -201,6 +201,94 @@
                     "source":    "http://en.memory-alpha.org/wiki/Requiem_(New_Frontier_novel)?oldid=1620043"
                 }
             ]
+        },
+        {
+            "title":        "Excalibur: Renaissance",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_08/ST_New_Frontier8_%20Cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-new-frontier-8.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Frontier-Excalibur-Renaissance/dp/3864251796/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/18337791-excalibur",
+            "episode":      8,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2376,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Renaissance?oldid=485064"
+                }
+            ]
+        },
+        {
+            "title":        "Excalibur: Restauration",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_09/ST_New_Frontier8_%20Cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-new-frontier-9.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Frontier-Excalibur-Restauration/dp/386425180X/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25193045-restauration",
+            "episode":      9,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2376,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Restoration?oldid=503532"
+                }
+            ]
+        },
+        {
+            "title":        "Kalte Kriege",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_10/ST_NewFrontier10_web.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-new-frontier-10.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Frontier-Portale-Kriege/dp/3864253136/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25193059-kalte-kriege",
+            "episode":      10,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2376,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Cold_Wars?oldid=446872 & http://en.memory-alpha.org/wiki/Star_Trek:_Gateways?oldid=1689086"
+                }
+            ]
+        },
+        {
+            "title":        "Menschsein",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/StarTrek_NewFrontier11_Cvr.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/New_Frontier_11.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-New-Frontier-Menschsein/dp/3864254418/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25193086-menschsein",
+            "episode":      11,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2376,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Being_Human?oldid=471346"
+                }
+            ]
         }
     ]
 }
