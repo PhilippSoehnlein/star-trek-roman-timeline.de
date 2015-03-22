@@ -137,6 +137,44 @@
             ]
         },
         {
+            "title":        "The Captain's Table - Gebranntes Kind",
+            "authors":      [ "Peter David" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_00/ST_NewFrontierCT_web.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-new-frontier-the-captains-table-gebranntes-kind.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Frontier-Captains-Gebranntes/dp/3942649004/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/11848186-gebranntes-kind",
+            "episode":      4.5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2348,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Once_Burned?oldid=487462"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2369,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Once_Burned?oldid=487462"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2374,
+                    "month":     6,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Once_Burned?oldid=487462"
+                }
+            ]
+        },
+        {
             "title":        "Ort der Stille",
             "authors":      [ "Peter David" ],
             "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_newfrontier/band_05/ST_NewFrontier5_cover.jpg",
