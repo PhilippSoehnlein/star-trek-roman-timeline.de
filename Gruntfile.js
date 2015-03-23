@@ -98,6 +98,23 @@ module.exports = function(grunt) {
             },
         },
 
+        htmlmin: {
+            options: {
+                removeComments:     true,
+                collapseWhitespace: true
+            },
+            index: {
+                files: {
+                    'build/index.html':     'build/index.html',
+                }
+            },
+            imprint: {
+                files: {
+                    'build/impressum.html': 'build/impressum.html',
+                }
+            },
+        },
+
         copy: {
             build: {
                 files: [
@@ -173,8 +190,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-protractor-runner');
     grunt.loadNpmTasks('grunt-jasmine-node');
+
 
     grunt.registerTask('dev', 'Makes a build, starts a local DEV server at localhost:8000 and runs the watch task.', [
         'build',
@@ -187,7 +206,9 @@ module.exports = function(grunt) {
         'clean:beforeBuild',
         'copy:build',
         'render:index',
+        'htmlmin:index',
         'render:imprint',
+        'htmlmin:imprint',
         'sass',
         'uglify',
         'autoprefixer'
@@ -199,6 +220,7 @@ module.exports = function(grunt) {
         'copy:build',
         'render:index-test',
         'render:imprint',
+        'htmlmin:imprint',
         'sass',
         'uglify',
         'autoprefixer'
