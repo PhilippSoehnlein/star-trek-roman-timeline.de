@@ -101,14 +101,16 @@ module.exports = function(grunt) {
         copy: {
             build: {
                 files: [
-                    { src: 'src/docroot/favicon.ico',                      dest: 'build/favicon.ico' },
-                    { src: 'src/docroot/apple-touch-icon-precomposed.png', dest: 'build/apple-touch-icon-precomposed.png' }, // jshint ignore:line
-                    { src: 'src/docroot/robots.txt',                       dest: 'build/robots.txt' },
-                    { src: 'src/docroot/humans.txt',                       dest: 'build/humans.txt' },
-                    { src: 'src/docroot/.htaccess',                        dest: 'build/.htaccess' },
-                    { src: 'src/img/kaemira-nebula640.jpg',                dest: 'build/img/kaemira-nebula640.jpg' },
-                    { src: 'src/img/kaemira-nebula1280.jpg',               dest: 'build/img/kaemira-nebula1280.jpg' },
-                    { src: 'src/img/kaemira-nebula1920.jpg',               dest: 'build/img/kaemira-nebula1920.jpg' }
+                    {              src: 'src/docroot/favicon.ico',                      dest: 'build/favicon.ico' },
+                    {              src: 'src/docroot/apple-touch-icon-precomposed.png', dest: 'build/apple-touch-icon-precomposed.png' }, // jshint ignore:line
+                    {              src: 'src/docroot/robots.txt',                       dest: 'build/robots.txt' },
+                    {              src: 'src/docroot/humans.txt',                       dest: 'build/humans.txt' },
+                    {              src: 'src/docroot/.htaccess',                        dest: 'build/.htaccess' },
+                    {              src: 'src/img/kaemira-nebula640.jpg',                dest: 'build/img/kaemira-nebula640.jpg' }, // jshint ignore:line
+                    {              src: 'src/img/kaemira-nebula1280.jpg',               dest: 'build/img/kaemira-nebula1280.jpg' }, // jshint ignore:line
+                    {              src: 'src/img/kaemira-nebula1920.jpg',               dest: 'build/img/kaemira-nebula1920.jpg' }, // jshint ignore:line
+                    { cwd: 'src/', src: 'img/book-covers/**',                           dest: 'build/', expand: true,  }, // jshint ignore:line
+                    {              src: 'src/img/book-covers/.htaccess',                dest: 'build/img/book-covers/.htaccess' }, // jshint ignore:line
                 ]
             }
         },

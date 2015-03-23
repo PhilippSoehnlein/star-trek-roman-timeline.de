@@ -1,6 +1,9 @@
 /* jshint node:true */
 'use strict';
 
+var sprintf = require( 'sprintf-js' ).sprintf;
+var common  = require( './lib/common.js' );
+
 module.exports = {
     formatAuthors:             formatAuthors,
     formatPlotTimes:           formatPlotTimes,
@@ -8,10 +11,8 @@ module.exports = {
     getBookLinks:              getBookLinks,
     getSeries:                 getSeries,
     transformDataFilesToBooks: transformDataFilesToBooks,
-    transformString:           transformString,
+    transformString:           common.transformString,
 };
-
-var sprintf = require( 'sprintf-js' ).sprintf;
 
 function formatAuthors( authors ) {
     var lastAuthor;
@@ -45,12 +46,13 @@ function getBookLinks( book ) {
     ['publisher', 'amazon', 'audible', 'goodreads'].forEach( function( linkType ) {
         var url = book[ linkType + 'Url' ];
         if ( url ) {
+            var cssClassName = common.transformString( linkType === 'publisher' ? book.publisher : linkType, '' );
             links.push({
                 url:          url,
                 caption:      linkType === 'publisher' ? book.publisher : _ucFirst( linkType ),
                 captionLang:  'en',
                 type:         linkType,
-                cssClassName: 'icon_' + transformString( linkType === 'publisher' ? book.publisher : linkType, '' ),
+                cssClassName: 'icon_' + cssClassName,
                 hrefLang:     linkType === 'goodreads' ? 'en' : 'de',
             });
         }
@@ -86,7 +88,7 @@ function getSeries( books ) {
     });
 
     series = series.map( function( seriesData ) {
-        seriesData.id = transformString( seriesData.name );
+        seriesData.id = common.transformString( seriesData.name );
 
         var booksForThisSeries = books.filter( function( book ) { return book.series.name === seriesData.name; });
         seriesData.count = booksForThisSeries.length;
@@ -97,13 +99,6 @@ function getSeries( books ) {
 
 
     return series;
-}
-
-function transformString( string, whiteSpaceReplacement ) {
-    if ( typeof whiteSpaceReplacement === 'undefined' ) {
-        whiteSpaceReplacement = '-';
-    }
-    return string.replace( /\s+/g, whiteSpaceReplacement ).toLowerCase();
 }
 
 function transformDataFilesToBooks( data ) {
@@ -118,17 +113,8 @@ function transformDataFilesToBooks( data ) {
 
         series.books
             .map( function( book ) {
-                var bookId = series.name;
-                if ( book.season ) {
-                    bookId += ' ' + book.season + 'x' + book.episode;
-                }
-                else if ( book.episode ) {
-                    bookId += ' ' + book.episode;
-                }
-                bookId = transformString( bookId );
-
                 book.series = { name: series.name };
-                book.id     = bookId;
+                book.id     = common.getBookId( book, series );
                 return book;
             } )
             .forEach( function( book ) { books.push( book ); } )
