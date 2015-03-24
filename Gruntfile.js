@@ -50,7 +50,16 @@ module.exports = function(grunt) {
                 options: {
                     port:      8000,
                     base:      'build',
-                    keepalive: false, // don't ever exit the server
+                    keepalive: false,
+                },
+            },
+            serve: {
+                // the DEV server
+                options: {
+                    port:      8000,
+                    base:      'build',
+                    keepalive: true,
+                    debug:     true,
                 },
             },
             'test-e2e': {
@@ -224,6 +233,11 @@ module.exports = function(grunt) {
         'sass',
         'uglify',
         'autoprefixer'
+    ]);
+
+    grunt.registerTask('serve', 'Build the suite and serves it on localhost:8000', [
+        'build',
+        'connect:serve',
     ]);
 
     grunt.registerTask('test-e2e', 'Executes end-to-end tests for all configured browsers.', [
