@@ -28,5 +28,22 @@
 
 <!-- TODO: Move to <head> (therefore we need a onDocumentReady function around the stuff in filter.js) -->
         <script src="main.js" async></script>
+
+        <script type="text/javascript">
+            var _paq = _paq || [];
+            if ( document.location.hostname === 'star-trek-roman-timeline.de' ) {
+                _paq.push(['trackPageView']);
+                _paq.push(['enableLinkTracking']);
+            }
+
+            (function() {
+                var u="//analytics.philipp-soehnlein.de/";
+                _paq.push(['setTrackerUrl', u+'piwik.php']);
+                _paq.push(['setSiteId', 1]);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
+        <noscript><img src="//analytics.philipp-soehnlein.de/piwik.php?idsite=1" style="border:0;" alt="" /></noscript>
     </body>
 </html>
