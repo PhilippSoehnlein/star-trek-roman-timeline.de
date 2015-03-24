@@ -17,7 +17,7 @@ validateOptions( options );
 var tempFolder = createTempFolder();
 
 /* Read data files */
-var books      = getBooks( options[ 'book-data-path' ] );
+var books = getBooks( options[ 'book-data-path' ] );
 //books = [ books[0] ]; // testing only
 //books = [ books[0], books[1] ]; // testing only
 
@@ -211,29 +211,30 @@ function resizeImage( argObj ) {
     var targetWidth      = argObj.targetWidth;
 
     var deferred = Q.defer();
-    lwip.open( sourceFile, function( err, image ) {
-        if ( err ) {
-            deferred.reject( err );
-            return;
-        }
+    var resize   = function( pathToImage, targetWidth, targetFilePath ) {
+        var resizeDeferred = Q.defer();
 
-        var scale          = ( targetWidth / ( image.width() / 100 ) ) / 100 ;
-        var targetFilePath = pathHelper.join( targetPath, targetFilePrefix + '.jpg' );
-        if ( options.dryrun ) {
-            targetFilePath = '/dev/null';
-        }
+        lwip.open( pathToImage, function( err, image ) {
+            if ( err ) {
+                resizeDeferred.reject( err );
+                return;
+            }
 
-        try {
+            var scale = ( targetWidth / ( image.width() / 100 ) ) / 100 ;
+            if ( options.dryrun ) {
+                targetFilePath = '/dev/null';
+            }
+
             image
                 .batch()
                 .scale( scale )
                 .writeFile(
                     targetFilePath,
-                    'jpg', // maybe it's wiser to download PNGs and let grunt create the optimized versions?
+                    'jpg', // maybe it's wiser to generate PNGs and let grunt create the optimized versions?
                     { quality: 60 },
                     function( err ) {
                         if ( err ) {
-                            deferred.reject( err );
+                            resizeDeferred.reject( err );
                         }
                         else {
                             if ( options.verbose > 1 ) {
@@ -243,16 +244,25 @@ function resizeImage( argObj ) {
                                     '.'
                                 );
                             }
-                            deferred.resolve();
+                            resizeDeferred.resolve();
                         }
                     }
                 )
             ;
-        }
-        catch( e ) {
-             deferred.reject( 'Couldn\'t resize image '+ targetFilePath +'. Error message was: ' + e.message );
-        }
-    });
+        } );
+
+        return resizeDeferred.promise;
+    };
+
+    resize( sourceFile, targetWidth, pathHelper.join( targetPath, targetFilePrefix + '.jpg' ) )
+        .then( function() {
+            return resize( sourceFile, targetWidth * 2, pathHelper.join( targetPath, targetFilePrefix + '@2x.jpg' ) );
+        } )
+        .then(
+            function()        { deferred.resolve(); },
+            function( error ) { deferred.reject( error ); }
+        )
+    ;
 
     return deferred.promise;
 }
