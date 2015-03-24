@@ -142,7 +142,7 @@ module.exports = function(grunt) {
                 options: {
                     args: {
                         browser: 'chrome',
-                        specs: ['test/e2e/filter.js'],
+                        specs: [ 'test/e2e/**.js' ],
                     }
                 },
             },
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
                 options: {
                     args: {
                         browser: 'firefox',
-                        specs: ['test/e2e/filter.js'],
+                        specs: [ 'test/e2e/**.js' ],
                     }
                 },
             },
@@ -160,7 +160,7 @@ module.exports = function(grunt) {
                 options: {
                     args: {
                         browser: 'safari',
-                        specs: ['test/e2e/filter.js'],
+                        specs: [ 'test/e2e/**.js' ],
                     }
                 },
             },
@@ -168,7 +168,7 @@ module.exports = function(grunt) {
                 configFile: 'test/e2e/etc/protractor-iphone.js',
                 options: {
                     args: {
-                        specs: ['test/e2e/filter.js'],
+                        specs: [ 'test/e2e/**.js' ],
                     }
                 }
             }
