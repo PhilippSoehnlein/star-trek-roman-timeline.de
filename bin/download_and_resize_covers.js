@@ -36,9 +36,11 @@ Q.allSettled( promises ).done(
         if ( rejectedPromises.length > 0 ) {
             if ( options.verbose ) {
                 console.error(
-                    'There were ' + rejectedPromises.length + ' errors' + ( options.verbose > 1 ? ':' : '.' )
+                    'There ' +
+                    ( rejectedPromises.length === 1 ? 'was 1 error' : 'were ' + rejectedPromises.length + ' errors' ) +
+                    ( options.verbose > 0 ? ':' : '.' )
                 );
-                if ( options.verbose > 1 ) {
+                if ( options.verbose > 0 ) {
                     console.error(
                         rejectedPromises
                             .map( function( result ) { return '\t' + result.reason; } )
