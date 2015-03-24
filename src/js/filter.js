@@ -201,7 +201,7 @@
 
             var chosenSeries = getChosenSeries();
             filterSeriesCountNodes.forEach( function( node ) {
-                // TODO: This is wrong when a series was chosen and then unchosen, because the counter say 4 (=all) instead of 0!
+                // TODO: This is wrong when a series was chosen and then unchosen, because the counter says 4 (=all) instead of 0!
                 node.innerHTML = chosenSeries.length;
             });
 
