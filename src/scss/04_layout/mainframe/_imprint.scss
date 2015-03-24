@@ -1,0 +1,17 @@
+.l-mainframe_imprint--main {
+    @extend .l-mainframe--main;
+
+    max-width: 36rem;
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.l-mainframe_imprint--top-intermediate {
+    @extend .l-mainframe--top-intermediate;
+    @extend .l-filter-box;
+}
+
+.l-mainframe_imprint--top-back-link-wrapper {
+    @extend .l-filter-box--trigger;
+}
