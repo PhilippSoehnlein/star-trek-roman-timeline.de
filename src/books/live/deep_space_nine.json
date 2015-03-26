@@ -15,10 +15,10 @@
             "plotTimes":    [
                 {
                     "type":      "point",
-                    "year":      2367,
+                    "year":      2376,
                     "month":     null,
                     "day":       null,
-                    "source":    "http://en.memory-alpha.org/wiki/A_Stitch_in_Time",
+                    "source":    "http://en.memory-alpha.org/wiki/A_Stitch_in_Time?oldid=1656448",
                     "isPrimary": true
                 }
             ]
