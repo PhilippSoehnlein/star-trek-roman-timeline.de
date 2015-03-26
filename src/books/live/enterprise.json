@@ -1,0 +1,189 @@
+{
+    "name":  "Enterprise",
+    "books": [
+        {
+            "title":        "Das höchste Maß an Hingabe",
+            "authors":      [ "Andy Mangels", "Michael A. Martin" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_enterprise/band_01/pic/ST_Enterprise1_cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-enterprise-1-das-hoechste-mass-an-hingabe.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Enterprise-höchste-Hingabe/dp/3942649411/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/11985639-das-h-chste-ma-an-hingabe",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2153,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung' speaks of 'Summer 2153' between episode 3x01 (June 2153) and 3x02 (stardate unknown)."
+                }
+            ]
+        },
+        {
+            "title":        "Was Menschen Gutes tun",
+            "authors":      [ "Andy Mangels", "Michael A. Martin" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_enterprise/band_02/pic/ST_Enterprise2_cover.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-enterprise-2-was-menschen-gutes-tun.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Enterprise-Menschen-Gutes/dp/394264942X/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/13424594-was-menschen-gutes-tun",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2155,
+                    "month":     1,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung' speaks of January 2155 between episode 4x20 (January 19th, 2155) and 4x21 (Januar 22nd, 2155)."
+                }
+            ]
+        },
+        {
+            "title":        "Kobayashi Maru",
+            "authors":      [ "Andy Mangels", "Michael A. Martin" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_enterprise/band_03/ST_Enterprise3_UmschlagApproval.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-enterprise-3.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Enterprise-Kobayashi-Maru/dp/3864252997/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25225640-kobayashi-maru",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2135,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Kobayashi_Maru_(novel)?oldid=502430"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2155,
+                        "month": 5,
+                        "day":   22
+                    },
+                    "end": {
+                        "year":  2155,
+                        "month": 7,
+                        "day":   25
+                    },
+                    "source":    "http://en.memory-alpha.org/wiki/Kobayashi_Maru_(ENT_novel)?oldid=1572993"
+                }
+            ]
+        },
+        {
+            "title":        "Der Romulanische Krieg - Unter den Schwingen des Raubvogels (1)",
+            "authors":      [ "Michael A. Martin" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_enterprise/band_04/Star%20Trek%20Enterprise%20%204.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-enterprise-4.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Enterprise-Romulanische-Raubvogels/dp/3864253004/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/24015868-der-romulanische-krieg---unter-den-schwingen-des-raubvogels-i",
+            "episode":      4,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2155,
+                        "month": 7,
+                        "day":   22
+                    },
+                    "end": {
+                        "year":  2155,
+                        "month": 12,
+                        "day":   null
+                    },
+                    "source":    "http://de.memory-alpha.org/wiki/Unter_den_Schwingen_des_Raubvogels,_Buch_1?oldid=567927#Hintergrundinformationen"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2156,
+                    "month":     7,
+                    "day":       22,
+                    "source":    "The actual book, chapter 'Heute 2156' (prologue)."
+                }
+            ]
+        },
+        {
+            "title":        "Der Romulanische Krieg - Unter den Schwingen des Raubvogels (2)",
+            "authors":      [ "Michael A. Martin" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_enterprise/band_05/Star%20Trek%20Enterprise%20%205.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-enterprise-5.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Enterprise-Romulanische-Raubvogels/dp/3864253012/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25225780-der-romulanische-krieg---unter-den-schwingen-des-raubvogels-ii",
+            "episode":      5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2156,
+                        "month": 1,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2156,
+                        "month": 6,
+                        "day":   null
+                    },
+                    "source":    "http://de.memory-alpha.org/wiki/Unter_den_Schwingen_des_Raubvogels,_Buch_2?oldid=570381#Hintergrundinformationen"
+                }
+            ]
+        },
+        {
+            "title":        "Der Romulanische Krieg - Die dem Sturm trotzen",
+            "authors":      [ "Michael A. Martin" ],
+            "coverUrl":     "http://www.cross-cult.de/tl_files/projecttheme05_CrossCult/TITEL/03_sci-fi/star_trek_enterprise/StarTrek_Enterprise6_Cvr.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-enterprise-6.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Enterprise-Romulanische-trotzen/dp/3864252954/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25225825-die-dem-sturm-trotzen",
+            "episode":      6,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2156,
+                        "month": 6,
+                        "day":   22
+                    },
+                    "end": {
+                        "year":  2161,
+                        "month": 8,
+                        "day":   12
+                    },
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2186,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Epilogue'."
+                }
+            ]
+        }
+    ]
+}
