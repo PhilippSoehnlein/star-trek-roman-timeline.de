@@ -112,6 +112,9 @@ function transformDataFilesToBooks( data ) {
         var series = data[ fileName ];
 
         series.books
+            .filter( function ( book ) {
+                return Array.isArray( book.plotTimes ) && book.plotTimes.length > 0;
+            } )
             .map( function( book ) {
                 book.series = { name: series.name };
                 book.id     = common.getBookId( book, series );

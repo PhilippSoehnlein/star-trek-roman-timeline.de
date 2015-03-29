@@ -1,0 +1,373 @@
+{
+    "name":  "The Original Series",
+    "books": [
+        {
+            "title":        "Feuertaufe: McCoy – Die Herkunft der Schatten",
+            "authors":      [ "David R. George III." ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-the-original-series-1-feuertaufe-mccoy-die-herkunft-der-schatten-395fbeb4.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-the-original-series-1-feuertaufe-mccoy-die-herku.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Original-Feuertaufe-Herkunft/dp/3942649519/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/24077493-feuertaufe",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                     "start": {
+                        "year":  1930,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  1932,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      1934,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                     "start": {
+                        "year":  1936,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  1937,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      1941,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      1946,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                     "start": {
+                        "year":  1948,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  1949,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775"
+                },{
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      1952,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                     "start": {
+                        "year":  1954,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  1955,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                     "start": {
+                        "year":  2267,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2268,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775 & http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2270,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2273,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2276,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2280,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                     "start": {
+                        "year":  2282,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2286,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775 & http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                     "start": {
+                        "year":  2288,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2290,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775 & http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                     "start": {
+                        "year":  2293,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2294,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Provenance_of_Shadows?oldid=497775 & http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2299,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2364,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2366,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Provenance_of_Shadows?oldid=1627380"
+                }
+            ]
+        },
+        {
+            "title":        "Feuertaufe: Spock – Das Feuer und die Rose",
+            "authors":      [ "David R. George III." ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-the-original-series-2-feuertaufe-spock-das-feuer-und-die-rose-14362ae2.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/roman-star-trek-the-original-series-2-feuertaufe-spock-das-feuer.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Original-Feuertaufe-Spock/dp/3942649527/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/24077622-feuertaufe",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      1930,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/The_Fire_and_the_Rose?oldid=1663818"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2267,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/The_Fire_and_the_Rose?oldid=1663818"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                    "start": {
+                        "year":  2269,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2270,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://en.memory-alpha.org/wiki/The_Fire_and_the_Rose?oldid=1663818"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2285,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/The_Fire_and_the_Rose?oldid=1663818"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                    "start": {
+                        "year":  2293,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2312,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://en.memory-alpha.org/wiki/The_Fire_and_the_Rose?oldid=1663818"
+                }
+            ]
+        },
+        {
+            "title":        "Feuertaufe: Kirk - Der Leitstern des Verirrten",
+            "authors":      [ "David R. George III." ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-the-original-series-3-feuertaufe-kirk-der-leitstern-des-verirrten-f816ea22.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/roman-star-trek-the-original-series-3-feuertaufe-kirk-der-leitst.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Feuertaufe-Leitstern-Verirrten/dp/3942649535/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/24077692-feuertaufe",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    []
+        },
+        {
+            "title":        "Der Friedensstifter",
+            "authors":      [ "Jerry Oltion" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-the-original-series-4-der-friedensstifter-af95f3fb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/roman-star-trek-the-original-series-4-der-friedenstifter.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Original-Series-Friedensstifter/dp/3864251443/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25244313-der-friedensstifter",
+            "episode":      4,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2273,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/The_Flaming_Arrow?oldid=1454423"
+                }
+            ]
+        },
+        {
+            "title":        "Das Ende der Dämmerung",
+            "authors":      [ "Jerry Oltion" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-the-original-series-5-das-ende-der-daemmerung-17ec8b09.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-original-series-5.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Original-Series-Dämmerung/dp/3864253020/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25244378-das-ende-der-d-mmerung",
+            "episode":      5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2267,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/Twilight%27s_End?oldid=1274614"
+                }
+            ]
+        },
+        {
+            "title":        "Die Glücksmaschine",
+            "authors":      [ "James Gunn" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-the-original-series-6-die-gluecksmaschine-ca7104bb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-tos-6.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Original-Series-Glücksmaschine/dp/3864253039/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25244418-die-gl-cksmaschine",
+            "episode":      6,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2267,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.org/wiki/The_Joy_Machine?oldid=1385832"
+                }
+            ]
+        }
+    ]
+}
