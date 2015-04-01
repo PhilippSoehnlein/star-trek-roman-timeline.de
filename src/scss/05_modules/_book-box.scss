@@ -1,3 +1,5 @@
+// TODO: Rename this thing. It's not just a book box anymore.
+
 $book-box-padding: 15px;
 $book-box-border-width: 1px;
 $book-box-arrow-connector-height: 14px; // should be even
@@ -28,6 +30,7 @@ $book-box-circle-connector-border-width: 2px;
     display: table-caption;
     background-color: rgba( $light-grey, 0.7 );
     font-size: 0.8rem;
+    margin: 0;
     padding: floor($book-box-padding / 2);
     padding-left: $book-box-padding; // vertical (left) align with the content in $book-box--main
 
