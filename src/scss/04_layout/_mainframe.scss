@@ -12,6 +12,7 @@ $mainframe-footer-margin: 1.5rem;
 
 .l-mainframe--title {
     padding: 1.8rem 0;
+    margin: 0;
     display: table-cell;
 }
 
@@ -22,6 +23,24 @@ $mainframe-footer-margin: 1.5rem;
 
 .l-mainframe--top-intermediate {
     margin-bottom: 3rem;
+}
+
+@media screen and(min-height: 480px) {
+    .l-mainframe--header,
+    .l-mainframe--title,
+    .l-mainframe--tagline {
+        display: block;
+    }
+
+    .l-mainframe--tagline {
+        margin-bottom: 3rem;
+    }
+
+    .l-mainframe--top-intermediate:after {
+        // without this we would get collapsing margins which would end up with a filter button which vertical middle sits right on the top of the first timeline items.
+        display: table;
+        content: '';
+    }
 }
 
 .l-mainframe--main {
