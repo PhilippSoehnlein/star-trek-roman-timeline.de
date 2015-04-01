@@ -41,6 +41,11 @@ module.exports = function(grunt) {
                 files: {
                     'build/impressum.html': [ 'src/templates/imprint.ejs' ]
                 }
+            },
+            teaser: {
+                files: {
+                    'build/index.html': [ 'src/templates/teaser.ejs' ]
+                }
             }
         },
 
@@ -75,6 +80,11 @@ module.exports = function(grunt) {
             build: {
                 files: {
                     'build/main.css': 'src/scss/main.scss'
+                }
+            },
+            teaser: {
+                files: {
+                    'build/main.css': 'src/scss/teaser.scss'
                 }
             }
         },
@@ -220,6 +230,14 @@ module.exports = function(grunt) {
         'htmlmin:imprint',
         'sass',
         'uglify',
+        'autoprefixer'
+    ]);
+
+    grunt.registerTask('build:teaser', 'Builds teaser site and puts it into the build/ folder.', [
+        'clean:beforeBuild',
+        'copy:build',
+        'render:teaser',
+        'sass:teaser',
         'autoprefixer'
     ]);
 
