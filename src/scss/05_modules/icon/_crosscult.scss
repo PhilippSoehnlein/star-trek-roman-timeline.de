@@ -1,7 +1,7 @@
 .icon_crosscult {
     @extend .icon;
 
-    // TODO: Get better image and save it locally.
-    // TODO: Make media queries for higher pixel densities.
-    background-image: url(http://www.mycomics.de/fileadmin/comicpages/_processed_/csm_Cross_Cult_b788f83a91.png);
+    // No media queries, because I inline the double density image and resize it with background-image.
+    // For small icons like this, inlining two version doesn't make sense.
+    background-image: url(img/cross-cult.svg);
 }

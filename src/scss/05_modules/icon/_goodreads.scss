@@ -1,7 +1,7 @@
 .icon_goodreads {
     @extend .icon;
 
-    // TODO: Get better image and save it locally.
-    // TODO: Make media queries for higher pixel densities.
-    background-image: url(http://www.deepmediaonline.com/goodreads%20icon.png);
+    // No media queries, because I inline the double density image and resize it with background-image.
+    // For small icons like this, inlining two version doesn't make sense.
+    background-image: url(img/goodreads.png);
 }

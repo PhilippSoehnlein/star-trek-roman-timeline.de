@@ -1,7 +1,7 @@
 .icon_audible {
     @extend .icon;
 
-    // TODO: Get better image and save it locally.
-    // TODO: Make media queries for higher pixel densities.
-    background-image: url(http://wscont1.apps.microsoft.com/winstore/1x/6342e64d-7f57-4c4f-84c6-0c118b210a97/Icon.83196.png);
+    // No media queries, because I inline the double density image and resize it with background-image.
+    // For small icons like this, inlining two version doesn't make sense.
+    background-image: url(img/audible.png);
 }

@@ -89,6 +89,16 @@ module.exports = function(grunt) {
             },
         },
 
+        imageEmbed: {
+            build: {
+                src: [ 'build/main.css' ],
+                dest: 'build/main.css',
+                options: {
+                    baseDir: '../src/',
+                }
+            },
+        },
+
         uglify: {
             main: {
                 options: {
@@ -198,6 +208,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-image-embed');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-protractor-runner');
@@ -219,8 +230,9 @@ module.exports = function(grunt) {
         'render:imprint',
         'htmlmin:imprint',
         'sass',
+        'imageEmbed',
+        'autoprefixer',
         'uglify',
-        'autoprefixer'
     ]);
 
     grunt.registerTask('build:test', 'Builds the site with test data and puts it into the build/ folder.', [
@@ -231,8 +243,9 @@ module.exports = function(grunt) {
         'render:imprint',
         'htmlmin:imprint',
         'sass',
-        'uglify',
-        'autoprefixer'
+        'imageEmbed',
+        'autoprefixer',
+        'uglify'
     ]);
 
     grunt.registerTask('serve', 'Build the suite and serves it on localhost:8000', [
