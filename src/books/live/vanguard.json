@@ -1,0 +1,234 @@
+{
+    "name":  "Vanguard",
+    "books": [
+        {
+            "title":        "Der Vorbote",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-vanguard-1-der-vorbote-19a239fe.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/roman-star-trek-vanguard-1-der-vorbote.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Vanguard-David-Mack/dp/3936480915/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Der-Vorbote-Vanguard-1-Hoerbuch/B004ESVICS/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/2738428-der-vorbote",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2263,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2265,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
+                }
+            ]
+        },
+        {
+            "title":        "Rufe den Donner",
+            "authors":      [ "Dayton Ward", "Kevin Dilmore" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-vanguard-2-rufe-den-donner-81e0400b.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/roman-star-trek-vanguard-2-rufe-den-donner.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Vanguard-Donner-Taschenbuch/dp/B00JXQGXTE/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Rufe-den-Donner-Vanguard-2-Hoerbuch/B004FNCM72/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/2738430-rufe-den-donner",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2265,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://de.memory-alpha.org/wiki/Rufe_den_Donner?oldid=524622 ('about a month after Vanguard #1')."
+                }
+            ]
+        },
+        {
+            "title":        "Ernte den Sturm",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-vanguard-3-ernte-den-sturm-72497416.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/roman-star-trek-vanguard-3-ernte-den-sturm.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Vanguard-Ernte-Sturm/dp/3936480931/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Ernte-den-Sturm-Vanguard-3-Hoerbuch/B004KRFZ1S/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/22147778-ernte-den-sturm",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2266,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung' ('about 6 weeks after Vanguard #2')."
+                }
+            ]
+        },
+        {
+            "title":        "Offene Geheimnisse",
+            "authors":      [ "Dayton Ward" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-vanguard-4-offene-geheimnisse-a3fdf6e4.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/roman-star-trek-vanguard-4-offene-geheimnisse.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Vanguard-Offene-Geheimnisse/dp/3941248081/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Offene-Geheimnisse-Vanguard-4-Hoerbuch/B004MYAP9G/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/6644449-offene-geheimnisse",
+            "episode":      4,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2266,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung' ('about 3 weeks after Vanguard #3')."
+                }
+            ]
+        },
+        {
+            "title":        "Vor dem Fall",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-vanguard-5-vor-dem-fall-ea138d81.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/roman-star-trek-vanguard-5-vor-dem-fall.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Vanguard-Vor-Fall/dp/394124809X/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Vor-dem-Fall-Vanguard-5-Hoerbuch/B004R9FEQA/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/9533745-vor-dem-fall",
+            "episode":      5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2267,
+                        "month": 1,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2267,
+                        "month": 12,
+                        "day":   null
+                    },
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
+                }
+            ]
+        },
+        {
+            "title":        "Enthüllungen",
+            "authors":      [ "David Mack", "Dayton Ward", "Kevin Dilmore" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-vanguard-6-enthuellungen-72ba84bd.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/roman-star-trek-vanguard-6-enthuellungen.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Vanguard-6-Enthüllungen/dp/3941248103/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Enthuellungen-Vanguard-6-Hoerbuch/B00C0B4D8C/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/11848184-enth-llungen",
+            "episode":      6,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2265,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung' ('some months before the completion of Starbase 47')."
+                }
+            ]
+        },
+        {
+            "title":        "Das jüngste Gericht",
+            "authors":      [ "Dayton Ward", "Kevin Dilmore" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-vanguard-7-das-juengste-gericht-97a90a7f.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-vanguard-7.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Vanguard-jüngste-Gericht/dp/3864250331/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Das-juengste-Gericht-Vanguard-7-Hoerbuch/B00CH35DI2/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/22149217-das-j-ngste-gericht",
+            "episode":      7,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2268,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/What_Judgments_Come?oldid=483500"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2270,
+                    "month":     4,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/What_Judgments_Come?oldid=483500"
+                }
+            ]
+        },
+        {
+            "title":        "Sturm auf den Himmel",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-vanguard-8-sturm-auf-den-himmel-7a4545c9.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-vanguard-8.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Vanguard-Sturm-Himmel/dp/386425034X/",
+            "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Sturm-auf-den-Himmel-Vanguard-8-Hoerbuch/B00CXMVW78/",
+            "goodreadsUrl": "https://www.goodreads.com/book/show/22149282-sturm-auf-den-himmel",
+            "episode":      8,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2268,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2270,
+                    "month":     4,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
+                }
+            ]
+        },
+        {
+            "title":        "Spuren des Sturms",
+            "authors":      [ "Dayton Ward" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-vanguard-9-spuren-des-sturms-02534e29.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-vanguard-9.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Vanguard-Spuren-Sturms-ebook/dp/B00G5M0XI6/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25271338-spuren-des-sturms",
+            "episode":      9,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2269,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung' ('5 days after Vanguard #8')."
+                }
+            ]
+        }
+    ]
+}
