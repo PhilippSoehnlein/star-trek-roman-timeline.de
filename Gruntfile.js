@@ -128,7 +128,7 @@ module.exports = function(grunt) {
             build: {
                 files: [
                     {              src: 'src/docroot/favicon.ico',                      dest: 'build/favicon.ico' },
-                    {              src: 'src/docroot/apple-touch-icon-precomposed.png', dest: 'build/apple-touch-icon-precomposed.png' }, // jshint ignore:line
+                    //{              src: 'src/docroot/apple-touch-icon-precomposed.png', dest: 'build/apple-touch-icon-precomposed.png' }, // jshint ignore:line
                     {              src: 'src/docroot/robots.txt',                       dest: 'build/robots.txt' },
                     {              src: 'src/docroot/humans.txt',                       dest: 'build/humans.txt' },
                     {              src: 'src/docroot/.htaccess',                        dest: 'build/.htaccess' },
