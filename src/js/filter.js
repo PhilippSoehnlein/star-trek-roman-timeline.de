@@ -1,5 +1,5 @@
 ( function () {
-    /* global Isotope:true, window:true, document:true */
+    /* global Isotope:true, window:true, document:true, docReady:true */
     'use strict';
 
     function Filter() {
@@ -297,6 +297,8 @@
 
     ( function() {
         /* jshint nonew: false */
-        new Filter();
+
+        // docReady is a dependency of Isotope and is therefore in Isotope.pkgd.js
+        docReady( function() { new Filter(); } );
     }() );
 }() );
