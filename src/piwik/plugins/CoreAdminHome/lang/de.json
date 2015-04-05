@@ -4,8 +4,8 @@
         "ArchivingSettings": "Archivierungseinstellungen",
         "BrandingSettings": "Branding Einstellungen",
         "CheckReleaseGetVersion": "Verwende für die Aktualisierung von Piwik",
-        "ClickHereToOptIn": "Klicken Sie hier, um Ihren Besuch wieder erfassen zu lassen.",
-        "ClickHereToOptOut": "Klicken Sie hier, damit Ihr Besuch nicht mehr erfasst wird.",
+        "ClickHereToOptIn": "Klicke hier, um deinen Besuch wieder erfassen zu lassen.",
+        "ClickHereToOptOut": "Klicke hier, damit dein Besuch nicht mehr erfasst wird.",
         "CustomLogoFeedbackInfo": "Wenn Sie das Piwik-Logo anpassen, ist sicher auch das Verstecken des %s-Links in der Navigation von Interesse. Bitte dazu das Feedback Plugin auf der %sManage Plugins%s Seite deaktivieren.",
         "CustomLogoHelpText": "Hier kann das Piwik-Logo angepasst werden, das in der Benutzeroberfläche sowie in E-Mail-Berichten verwendet wird.",
         "DevelopmentProcess": "Auch wenn unser %sEntwicklungsprozess%s tausende an automatisierten Tests beinhaltet, haben Beta-Tester eine Schlüsselrolle um die \"No Bug Policy\" in Piwik zu gewährleisten.",
@@ -57,9 +57,9 @@
         "MenuDiagnostic": "Diagnose",
         "MenuGeneralSettings": "Allgemeine Einstellungen",
         "MenuManage": "Verwalten",
-        "OptOutComplete": "Deaktivierung durchgeführt! Ihre Besuche auf dieser Webseite werden von der Webanalyse nicht mehr erfasst.",
-        "OptOutCompleteBis": "Bitte beachten Sie, dass auch der Piwik-Deaktivierungs-Cookie dieser Webseite gelöscht wird, wenn Sie die in Ihrem Browser abgelegten Cookies entfernen. Außerdem müssen Sie, wenn Sie einen anderen Computer oder einen anderen Webbrowser verwenden, die Deaktivierungsprozedur nochmals absolvieren.",
-        "OptOutDntFound": "Das Tracking ist bei Ihnen derzeit nicht aktiv, denn Ihr Browser hat uns mitgeteilt, dass Sie kein Tracking wünschen. Hierbei handelt es sich um eine Browsereinstellung. Um das Tracking wieder zu aktivieren, müssen Sie die sogenannte \"Do Not Track\"-Einstellung in Ihren Browsereinstellungen deaktivieren.",
+        "OptOutComplete": "Deaktivierung durchgeführt! Deine Besuche auf dieser Webseite werden von der Webanalyse nicht mehr erfasst.",
+        "OptOutCompleteBis": "Bitte beachte, dass auch der Piwik-Deaktivierungs-Cookie dieser Webseite gelöscht wird, wenn du die in deinem Browser abgelegten Cookies entfernst. Außerdem musst du, wenn du einen anderen Computer oder einen anderen Webbrowser verwendest, die Deaktivierungsprozedur nochmals absolvieren.",
+        "OptOutDntFound": "Das Tracking ist bei dir derzeit nicht aktiv, denn dein Browser hat uns mitgeteilt, dass du kein Tracking wünschst. Hierbei handelt es sich um eine Browsereinstellung. Um das Tracking wieder zu aktivieren, musst du die sogenannte \"Do Not Track\"-Einstellung in deinen Browsereinstellungen deaktivieren.",
         "OptOutExplanation": "Piwik ist es wichtig, die Privatsphäre Ihrer Besucher zu wahren. Fügen Sie den folgenden HTML-Code auf einer Seite Ihrer Seiten (z.B der Datenschutz-Seite) ein, um den Besuchern Ihrer Webseite die Möglichkeit zu geben, sich gegen eine Erfassung ihres Besuches durch Piwik zu entscheiden.",
         "OptOutExplanationBis": "Dieser Code wird innerhalb eines Iframes angezeigt und enthält einen Link, über den ein Cookie im Browser Ihrer Besucher abgelegt wird, womit die Erfassung durch Piwik deaktiviert wird. %s Klicken Sie hier%s, um eine Vorschau auf den Text zu bekommen, der den Besuchern in dem Iframe angezeigt wird.",
         "OptOutForYourVisitors": "Piwik-Deaktivierung für Ihre Besucher",
@@ -83,9 +83,9 @@
         "UseCustomLogo": "Eigenes Logo verwenden",
         "ValidPiwikHostname": "Gültiger Piwik Hostname",
         "WithOptionalRevenue": "mit optionalen Einnahmen",
-        "YouAreOptedIn": "Ihr Besuch dieser Webseite wird aktuell von der Piwik Webanalyse erfasst.",
-        "YouAreOptedOut": "Ihr Besuch dieser Webseite wird aktuell von der Piwik Webanalyse nicht erfasst.",
-        "YouMayOptOut": "Sie können sich hier entscheiden, ob in Ihrem Browser ein eindeutiger Webanalyse-Cookie abgelegt werden darf, um dem Betreiber der Webseite die Erfassung und Analyse verschiedener statistischer Daten zu ermöglichen.",
-        "YouMayOptOutBis": "Wenn Sie sich dagegen entscheiden möchten, klicken Sie den folgenden Link, um den Piwik-Deaktivierungs-Cookie in Ihrem Browser abzulegen."
+        "YouAreOptedIn": "Dein Besuch dieser Webseite wird aktuell von der Piwik Webanalyse erfasst.",
+        "YouAreOptedOut": "Dein Besuch dieser Webseite wird aktuell von der Piwik Webanalyse nicht erfasst.",
+        "YouMayOptOut": "Du kannst dich hier entscheiden, ob in deinem Browser ein eindeutiger Webanalyse-Cookie abgelegt werden darf, um dem Betreiber der Webseite die Erfassung und Analyse verschiedener statistischer Daten zu ermöglichen.",
+        "YouMayOptOutBis": "Wenn Du dich dagegen entscheiden möchtest, klicke den folgenden Link, um den Piwik-Deaktivierungs-Cookie in deinem Browser abzulegen."
     }
 }
