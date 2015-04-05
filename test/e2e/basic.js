@@ -8,6 +8,6 @@ describe( 'Basic tests', function() {
     } );
 
     it( 'loads the right page', function() {
-        expect( browser.getTitle() ).toEqual( 'Star Trek Roman Timeline' );
+        expect( browser.getTitle() ).toEqual( 'Star Trek Roman-Timeline' );
     } );
 } );
