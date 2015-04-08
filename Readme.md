@@ -30,6 +30,20 @@ See [Selenium Issue 7933: Since updating to Safari 6.2 or 7.1 unable to establis
 ``sudo node_modules/appium/bin/authorize-ios.js``
 Having a look at https://github.com/appium/appium/blob/master/docs/en/appium-setup/running-on-osx.md doesn't hurt either.
 
+#### IE
+- Set Network Mode to Bridge mode in Virtual Box
+- Install Java on Windows VM
+- Download Selenium Standalone Server on Windows VM http://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar
+- Download IEDriver http://selenium-release.storage.googleapis.com/2.44/IEDriverServer_Win32_2.44.0.zip and move to C:\WINDOWS\SYSTEM32
+- Start IEDriver Server once (this is only needed for unlocking Windows Firewall stuff).
+- Set all the IE- and Registry-options stated here: https://code.google.com/p/selenium/wiki/InternetExplorerDriver#Required_Configuration
+- Start Selenium Grid on OS X: ``java -jar ./node_modules/protractor/selenium/selenium-server-standalone-2.44.0.jar -role hub```
+- Register Selenium Node at the Grid on Windows VM: ``java -jar selenium-server-standalone-2.44.0.jar -role node -hub "http://your-ip.4444/grid/register" -port 4444 -maxSession 1 -browser "maxInstances=1,browserName=internet explorer,version=11"``
+- ``grunt build:test```
+- ``cd /path/to/working/copy/build```
+- ``serve -p 8001``
+- Run tests like this: /path/to/working/copy/node_modules/protractor/bin/protractor /path/to/working/copy/test/e2e/etc/protractor-desktop-browser.js --seleniumAddress http://localhost:4444/wd/hub --specs /path/to/working/copy/test/e2e/filter.js --browser "internet explorer"
+
 #### Code Coverage
 Code coverage reports for all unit tests can be generated like this (no grunt task yet):
 ``node_modules/istanbul/lib/cli.js cover node_modules/grunt-jasmine-node/node_modules/jasmine-node/bin/jasmine-node test/spec/``
