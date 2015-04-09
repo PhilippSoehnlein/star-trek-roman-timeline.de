@@ -4,7 +4,7 @@ exports.config = {
     capabilities: {
         browserName:      'safari',
         platformName:     'iOS',
-        platformVersion:  '8.1',
+        platformVersion:  '8.2',
         deviceName:       'iPhone 4s',
         'appium-version': '1.0',
     },

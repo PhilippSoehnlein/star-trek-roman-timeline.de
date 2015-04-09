@@ -2,7 +2,7 @@
   "author": "Philipp Söhnlein <me@philipp-soehnlein.de>",
   "private": true,
   "devDependencies": {
-    "appium": "^1.3.4",
+    "appium": "^1.3.7",
     "bower": "^1.3.12",
     "grunt-autoprefixer": "^1.0.1",
     "grunt-cli": "^0.1.13",
