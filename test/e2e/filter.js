@@ -268,6 +268,7 @@ describe( 'Filter functionality', function() {
 
         {
             title: 'Opening the filter shouldn\'t alter the scroll position',
+            needsBigScreen: true,
             testFunction: function() {
                 // to make this test work, we need a viewport which has a vertical scrollbar
                 browser.driver.manage().window().setSize( 1024, 300 );
@@ -320,6 +321,7 @@ describe( 'Filter functionality', function() {
 
         {
             title: 'Right column timeline items should be aligned correctly',
+            needsBigScreen: true,
             testFunction: function() {
                 // this test depends heavily on the *height* of the window. It will always work, if the window is
                 // lower then ~600px. See filter.showFilterForm() for more details.
