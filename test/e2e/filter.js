@@ -92,6 +92,7 @@ describe( 'Filter functionality', function() {
             title: 'Going directly to #' + filterId + ' opens filter and inits it',
             page: 'directToOpenedFilter',
             testFunction: function() {
+                // TODO: This fails on iOS! Looks like JS isn't running at all. I should probably set up USB remote debugging to investigate this.
                 browser.driver.sleep( 1500 ); // wait for animation to finish
                 expect( filterForm.isDisplayed() ).toBe( true );
                 expect( filterFormSubmitButton.isDisplayed() ).toBe( false );
