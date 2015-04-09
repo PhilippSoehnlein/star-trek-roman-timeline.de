@@ -11,7 +11,6 @@ describe( 'Filter functionality', function() {
     var tests = [
         {
             title: 'filterForm is not visible initially',
-            skipTest: true,
             testFunction: function() {
                 expect( filterForm.isDisplayed() ).toBe( false );
             },
