@@ -14,10 +14,9 @@ exports.config = {
 
         global.canBrowserResizeWindow = false;
 
-        // set hostname, used for all get requests.
-        // Replacing everything after the first point to get rid of locally assigned domain names (like Mac OS's
-        // computername.local).
-        global.testHost = require( 'os' ).hostname().replace(/\..*$/, '') + ':8001';
+        // Set hostname, used for all get requests.
+        // For the XCode Simulator I'm not cuting the TLD away, because it's needed to connect from the iOS safari to the host.
+        global.testHost = require( 'os' ).hostname() + ':8001';
 
         // from http://angular.github.io/protractor/#/browser-setup#setting-up-protractor-with-appium-ios-safari
         var wd = require('wd'),
