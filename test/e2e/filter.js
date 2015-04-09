@@ -242,24 +242,28 @@ describe( 'Filter functionality', function() {
             title: 'Pressing Escape key closes filter dialog in dialog mode (when opened)',
             needsSmallScreen: true,
             testFunction: function() {
+                expect( filterForm.isDisplayed() ).toBe( false );
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1000 ); // wait for filter animation to finish
+                expect( filterForm.isDisplayed() ).toBe( true );
                 $( 'body' ).sendKeys( protractor.Key.ESCAPE );
                 browser.driver.sleep( 1000 ); // wait for filter animation to finish
                 expect( filterForm.isDisplayed() ).toBe( false );
-            }
+            },
         },
 
         {
             title: 'Filter form closes when using the close button',
             needsSmallScreen: true,
             testFunction: function() {
+                expect( filterForm.isDisplayed() ).toBe( false );
                 filterFormTriggerButton.click();
                 browser.driver.sleep( 1000 ); // wait for filter animation to finish
+                expect( filterForm.isDisplayed() ).toBe( true );
                 element( by.className( '_is_filter_close_button' ) ).click();
                 browser.driver.sleep( 1000 ); // wait for filter animation to finish
                 expect( filterForm.isDisplayed() ).toBe( false );
-            }
+            },
         },
 
         {

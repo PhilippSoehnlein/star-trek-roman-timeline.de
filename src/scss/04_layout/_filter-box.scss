@@ -59,6 +59,7 @@ $filter-box-checkbox-group-margin: 4px;
             transition-timing-function: ease-out;
             transform-origin: top center;
 
+            visibility: hidden;
             display: flex;
             flex-direction: column;
 
@@ -68,6 +69,7 @@ $filter-box-checkbox-group-margin: 4px;
 
         .is-l-filter-box-dialog-visible,
         &--dialog:target {
+            visibility: visible;
             transform: scale(1);
             top: $filter-box-dialog-margin;
         }
