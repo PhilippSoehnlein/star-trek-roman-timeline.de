@@ -156,6 +156,7 @@ module.exports = function(grunt) {
         },
 
         protractor: {
+            // TODO: Find a way to add IE here somehow
             chrome: {
                 configFile: 'test/e2e/etc/protractor-desktop-browser.js',
                 options: {
