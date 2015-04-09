@@ -14,6 +14,11 @@ exports.config = {
 
         global.canBrowserResizeWindow = false;
 
+        // set hostname, used for all get requests.
+        // Replacing everything after the first point to get rid of locally assigned domain names (like Mac OS's
+        // computername.local).
+        global.testHost = require( 'os' ).hostname().replace(/\..*$/, '') + ':8001';
+
         // from http://angular.github.io/protractor/#/browser-setup#setting-up-protractor-with-appium-ios-safari
         var wd = require('wd'),
             protractor = require('protractor'),

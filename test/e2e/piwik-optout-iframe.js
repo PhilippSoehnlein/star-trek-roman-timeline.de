@@ -4,7 +4,7 @@ describe( 'Piwik opt-out iframe', function() {
     'use strict';
 
     beforeEach( function() {
-        browser.get( 'http://localhost:8001/impressum.html' );
+        browser.get( 'http://' + global.testHost + '/impressum.html' );
     } );
 
     it( 'should not address user formally', function () {

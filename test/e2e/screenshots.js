@@ -7,12 +7,19 @@ describe( 'Taking screenshots', function() {
     'use strict';
 
     it( 'should take screenshot from index page', function() {
-        browser.get( 'http://localhost:8001/' );
+        browser.get( 'http://' + global.testHost + '/' );
         screenshot.take();
     } );
 
     it( 'should take screenshot from imprint page', function() {
-        browser.get( 'http://localhost:8001/impressum.html' );
+        browser.get( 'http://' + global.testHost + '/impressum.html' );
+        screenshot.take();
+    } );
+
+    it( 'should take screenshot from filter', function() {
+        browser.get( 'http://' + global.testHost + '/#serienauswahl' );
+        browser.driver.executeScript( 'window.scrollTo( 0, 0 )' );
+        browser.driver.sleep( 1000 ); // wait for animation to finish
         screenshot.take();
     } );
 } );

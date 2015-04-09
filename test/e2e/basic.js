@@ -4,7 +4,7 @@ describe( 'Basic tests', function() {
     'use strict';
 
     beforeEach( function() {
-        browser.get( 'http://localhost:8001/' );
+        browser.get( 'http://' + global.testHost + '/' );
     } );
 
     it( 'loads the right page', function() {

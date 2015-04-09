@@ -419,7 +419,7 @@ describe( 'Filter functionality', function() {
         browser.get( 'about:blank' );
 
         // Set special URL if a test demands it.
-        var url = 'http://localhost:8001/';
+        var url = 'http://' + global.testHost + '/';
 
         if ( test.page === 'directToOpenedFilter' ) {
             url += '#' + filterId;
