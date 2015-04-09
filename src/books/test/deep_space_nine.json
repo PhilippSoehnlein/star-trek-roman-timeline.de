@@ -11,7 +11,7 @@
             "audibleUrl":   "http://www.audible.de/pd/Science-Fiction/Star-Trek-Eine-neue-Aera-Titan-1-Hoerbuch/B004UZKUL0/",
             "goodreadsUrl": "https://www.goodreads.com/book/show/6644450-eine-neue-ra",
             "episode":      1,
-            "season":       null,
+            "season":       8,
             "plotTimes":    [
                 {
                     "type":      "point",
