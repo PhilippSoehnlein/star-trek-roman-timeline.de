@@ -23,6 +23,7 @@ describe( 'Filter functionality', function() {
                 browser.driver.getCurrentUrl()
                     .then( function( url ) { startUrl = url; })
                     .then( function() {
+                        // TODO: This fails in IE11 though everything looks fine… (url misses the hash)
                         filterFormTriggerButton.click();
                         expect( filterForm.isDisplayed() ).toBe( true );
                         browser.driver.getCurrentUrl().then( function( url ) { expect( url ).not.toBe( startUrl ); } );
