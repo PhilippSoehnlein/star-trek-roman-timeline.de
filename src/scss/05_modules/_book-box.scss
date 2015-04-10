@@ -2,6 +2,8 @@
 
 $book-box-padding: 15px;
 $book-box-border-width: 1px;
+$book-box-header-font-size: 0.8rem;
+$book-box-header-line-height: 1.4;
 $book-box-arrow-connector-height: 14px; // should be even
 $book-box-arrow-connector-width: $book-box-arrow-connector-height / 2;
 
@@ -29,10 +31,11 @@ $book-box-circle-connector-border-width: 2px;
 .book-box--header-bar {
     display: table-caption;
     background-color: rgba( $light-grey, 0.7 );
-    font-size: 0.8rem;
+    font-size: $book-box-header-font-size;
     margin: 0;
     padding: floor($book-box-padding / 2);
     padding-left: $book-box-padding; // vertical (left) align with the content in $book-box--main
+    line-height: $book-box-header-line-height;
 
     @include clearfix;
 }
@@ -97,15 +100,13 @@ $book-box-circle-connector-border-width: 2px;
 .is-l-timeline-item-odd .book-box:before,
 .is-l-timeline-item-even .book-box:before {
     position: absolute;
-    top: calc( 50% - #{
-        ($book-box-arrow-connector-height / 2)
-        - (
-            (
-                  $book-box-arrow-connector-height
-                - ($book-box-circle-connector-height + $book-box-circle-connector-border-width * 2)
-            ) / 2
-        )
-    } ); // TODO I probably should put it on top again. Let's see when the timeline layout is ready
+
+    // put vertical middle of circle at vertical middle of book-box--header
+    top: calc(
+        ( ( ( (#{$book-box-header-font-size} * #{$book-box-header-line-height}) + #{$book-box-padding} ) / 2 ) )
+        - ( ( #{$book-box-circle-connector-height} + ( 2 * #{$book-box-circle-connector-border-width} ) ) / 2 )
+    );
+
     width: $book-box-circle-connector-width;
     height: $book-box-circle-connector-height;
     border: $book-box-circle-connector-border-width solid white;
@@ -141,7 +142,13 @@ $book-box-circle-connector-border-width: 2px;
 .is-l-timeline-item-odd .book-box:after,
 .is-l-timeline-item-even .book-box:after {
     position: absolute;
-    top: calc( 50% - #{$book-box-arrow-connector-height / 2} ); // TODO I probably should put it on top again. Let's see when the timeline layout is ready
+
+    // put vertical middle of arrow at vertical middle of book-box--header
+    top: calc(
+        ( ( ( (#{$book-box-header-font-size} * #{$book-box-header-line-height}) + #{$book-box-padding} ) / 2 ) )
+        - ( #{$book-box-arrow-connector-height} / 2 )
+    );
+
     border: $book-box-arrow-connector-width solid transparent;
     content: '';
 
