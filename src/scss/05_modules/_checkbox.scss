@@ -8,6 +8,14 @@ $checkbox-wrapper-active-border-color: desaturate($main-color, 42%);
     text-align: left;
     color: darken($default-font-color, 40%);
 
+    // Fixing subpixel rendering issues in Chrome when checkboxes appear in filter:
+    // (1) The top border of the first item in a new column was sometimes rendered at the bottom of the previous
+    //     column. Not with display: inline-block;
+    // (2) Sometimes the right border wasn't visible, so substracting one pixel is the solution to that.
+    display: inline-block;   // (1)
+    width: calc(100% - 1px); // (2)
+    box-sizing: border-box;  // (2)
+
     &--checkbox {
         position: absolute;
         top: 50%;
