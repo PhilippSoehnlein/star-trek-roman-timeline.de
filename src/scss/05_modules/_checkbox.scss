@@ -27,12 +27,16 @@ $checkbox-wrapper-active-border-color: desaturate($main-color, 42%);
         display: block;
         border: 1px solid darken($light-grey, 15%);
 
-        padding-top: $checkbox-wrapper-vertical-padding;
-        padding-right: $checkbox-wrapper-horizontal-padding;
+        padding-top:    $checkbox-wrapper-vertical-padding;
+        padding-right:  $checkbox-wrapper-horizontal-padding;
         padding-bottom: $checkbox-wrapper-vertical-padding;
-        padding-left: calc(#{$checkbox-wrapper-horizontal-padding} + #{$checkbox-box-width});
+        padding-left:   calc(#{$checkbox-wrapper-horizontal-padding} + #{$checkbox-box-width});
 
-        background: linear-gradient(to right, rgba($light-grey, 0.4) calc(#{$checkbox-box-width} - 1px), rgba(darken($light-grey, 27%), 0.8) $checkbox-box-width);
+        background: linear-gradient(
+            to right,
+            rgba($light-grey, 0.4) calc(#{$checkbox-box-width} - 1px),
+            rgba(darken($light-grey, 27%), 0.8) $checkbox-box-width
+        );
     }
 
     &--checkbox:focus + &--label,
