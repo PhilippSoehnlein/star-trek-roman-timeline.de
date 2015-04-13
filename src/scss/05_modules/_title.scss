@@ -10,8 +10,12 @@
 
 @media screen and (min-width: 480px) {
     .title {
-        font-size: 7vw; // for bigger devices we can shrink the font size, because of the vw unit they are big enough.
+        font-size: 7vw; // for bigger devices we can shrink the font size, because of the vw unit they are big enough anyway.
     }
 }
 
-// TODO: We should probably add another breakpoint for really wide viewport were we go down to 5vw font size or so.
+@media screen and (min-width: 1280px) {
+    .title {
+        font-size: 6.5rem; // at a certain point the font size shouldn't grow anymore, so I set an upper gap.
+    }
+}
