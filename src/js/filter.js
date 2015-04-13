@@ -167,7 +167,13 @@
                 };
                 timelineNode.style.width = timelineNode.offsetWidth + 'px'; // (2)
 
-                isotope = new Isotope( '#' + config.timelineId, { itemSelector: '.' + config.timelineItemClass, });
+                isotope = new Isotope(
+                    '#' + config.timelineId,
+                    {
+                        itemSelector: '.' + config.timelineItemClass,
+                        layoutMode:   'fitRows',
+                    }
+                );
 
                 window.scrollTo( currentScrollPosition.left, currentScrollPosition.top ); // (1)
                 timelineNode.style.width = null; // (2)

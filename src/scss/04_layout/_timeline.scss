@@ -27,8 +27,12 @@ $timeline-two-column-media-query: "min-width: 600px";
     width: 100%; // This will be made position: absolute by Isotope, that's why I have to add 'width: 100%'.
 }
 
-.l-timeline--item:not(.is-l-timeline-item-first) {
+.l-timeline--item {
     padding-top: $timeline-item-margin;
+}
+
+.is-l-timeline-item-first {
+    padding-top: 0;
 }
 
 @media screen and(#{$timeline-two-column-media-query}) {
@@ -52,17 +56,22 @@ $timeline-two-column-media-query: "min-width: 600px";
     }
 
     .l-timeline--item {
+        padding-top: 0;
         width: 50%;
         box-sizing: border-box;
     }
 
     .is-l-timeline-item-odd {
+        clear: both;
         float: left;
         padding-right: $timeline-item-margin;
+        padding-bottom: $timeline-item-margin;
     }
 
     .is-l-timeline-item-even {
         float: right;
+        clear: right;
         padding-left: $timeline-item-margin;
+        padding-top: $timeline-item-margin;
     }
 }
