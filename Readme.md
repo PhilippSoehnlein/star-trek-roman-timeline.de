@@ -32,12 +32,12 @@ Having a look at https://github.com/appium/appium/blob/master/docs/en/appium-set
 
 #### IE
 - Set Network Mode to Bridge mode in Virtual Box
-- Install Java on Windows VM
+- Install Java on Windows VM: https://www.java.com/de/download/
 - Download Selenium Standalone Server on Windows VM http://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar
 - Download IEDriver http://selenium-release.storage.googleapis.com/2.44/IEDriverServer_Win32_2.44.0.zip and move to C:\WINDOWS\SYSTEM32
 - Start IEDriver Server once (this is only needed for unlocking Windows Firewall stuff).
 - Set all the IE- and Registry-options stated here: https://code.google.com/p/selenium/wiki/InternetExplorerDriver#Required_Configuration
-- Start Selenium Grid on OS X: ``java -jar ./node_modules/protractor/selenium/selenium-server-standalone-2.44.0.jar -role hub```
+- Start Selenium Grid on OS X: ``java -jar ./node_modules/protractor/selenium/selenium-server-standalone-2.44.0.jar -role hub``
 - Register Selenium Node at the Grid on Windows VM: ``java -jar selenium-server-standalone-2.44.0.jar -role node -hub "http://your-ip.4444/grid/register" -port 4444 -maxSession 1 -browser "maxInstances=1,browserName=internet explorer,version=11"``
 - ``cd ~/path/to/working/copy && grunt build:test && cd build && serve -p 8001``
 - Run tests like this: ``/path/to/working/copy/node_modules/protractor/bin/protractor /path/to/working/copy/test/e2e/etc/protractor-desktop-browser.js --seleniumAddress http://localhost:4444/wd/hub --specs "/path/to/working/copy/test/e2e/*.js" --browser "internet explorer"``
