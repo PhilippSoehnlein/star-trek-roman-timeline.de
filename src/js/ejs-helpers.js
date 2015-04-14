@@ -45,6 +45,10 @@ function getBookLinks( book ) {
 
     ['publisher', 'amazon', 'audible', 'goodreads'].forEach( function( linkType ) {
         var url = book[ linkType + 'Url' ];
+        if ( url && linkType === 'amazon' ) {
+            url += '?tag=startrekromat-21';
+        }
+
         if ( url ) {
             var cssClassName = common.transformString( linkType === 'publisher' ? book.publisher : linkType, '' );
             links.push({

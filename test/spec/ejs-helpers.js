@@ -43,6 +43,8 @@ describe( 'formatSeriesEpisode()', function() {
 });
 
 describe( 'getBookLinks()', function() {
+    var amazonAffiliateId = 'startrekromat-21';
+
     it( 'empty array for books without links', function() {
         var book = {};
         expect( ejsHelpers.getBookLinks( book ) ).toEqual( [] );
@@ -81,7 +83,7 @@ describe( 'getBookLinks()', function() {
                 hrefLang:     'de',
             },
             {
-                url:          'http://www.amazon.de/',
+                url:          'http://www.amazon.de/?tag=' + amazonAffiliateId,
                 type:         'amazon',
                 cssClassName: 'icon_amazon',
                 caption:      'Amazon',
@@ -108,7 +110,7 @@ describe( 'getBookLinks()', function() {
                 hrefLang:     'de',
             },
             {
-                url:          'http://www.amazon.de/',
+                url:          'http://www.amazon.de/?tag=' + amazonAffiliateId,
                 type:         'amazon',
                 cssClassName: 'icon_amazon',
                 caption:      'Amazon',
@@ -144,7 +146,7 @@ describe( 'getBookLinks()', function() {
                 hrefLang:     'de',
             },
             {
-                url:          'http://www.amazon.de/',
+                url:          'http://www.amazon.de/?tag=' + amazonAffiliateId,
                 type:         'amazon',
                 cssClassName: 'icon_amazon',
                 caption:      'Amazon',
