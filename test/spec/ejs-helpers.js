@@ -214,6 +214,11 @@ describe( 'transformString()', function() {
     it( 'transforms well with custom whitespace replacement', function() {
         expect( ejsHelpers.transformString( 'Deep Space Nine', '+' ) ).toBe( 'deep+space+nine' );
     });
+
+    it( 'transforms well with umlaut replacement', function() {
+        expect( ejsHelpers.transformString( 'Die Gesetze der Föderation', '-', true ) )
+            .toBe( 'die-gesetze-der-foederation' );
+    });
 });
 
 describe( 'transformDataFilesToBooks()', function() {

@@ -100,8 +100,6 @@ function getSeries( books ) {
         return seriesData;
     });
 
-
-
     return series;
 }
 
@@ -120,8 +118,9 @@ function transformDataFilesToBooks( data ) {
                 return Array.isArray( book.plotTimes ) && book.plotTimes.length > 0;
             } )
             .map( function( book ) {
-                book.series = { name: series.name };
-                book.id     = common.getBookId( book, series );
+                book.series            = { name: series.name };
+                book.id                = common.getBookId( book, series );
+                book.coverFileBaseName = common.transformString( book.id, undefined, true );
                 return book;
             } )
             .forEach( function( book ) { books.push( book ); } )
