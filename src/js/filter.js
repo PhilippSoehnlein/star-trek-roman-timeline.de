@@ -16,6 +16,7 @@
         };
 
         var triggerButtons         = [];
+        var filterSummaryNodes     = [];
         var filterCloseButtons     = [];
         var filterForm             = null;
         var filterSubmitButtons    = [];
@@ -29,6 +30,13 @@
             [].forEach.call( document.getElementsByClassName( '_is_filter_trigger' ), function( button ) {
                 triggerButtons.push( button );
             });
+
+            // fill filterSummaryNodes
+            [].forEach.call( document.getElementsByClassName( '_is_filter_summary' ), function( node ) {
+                filterSummaryNodes.push( node );
+            });
+
+            updateFilterSummary();
 
             // assign event to triggerButtons (first one is enough)
             triggerButtons[0].addEventListener( 'click', onFilterTriggerClick, true );
@@ -288,6 +296,29 @@
             filterBookCountNodes.forEach( function( node ) {
                 node.innerHTML = bookCount + ( bookCount === 1 ? ' Buch' : ' Bücher' );
             });
+
+            updateFilterSummary();
+        }
+
+        function updateFilterSummary() {
+            var chosenSeriesCount = getChosenSeries().length;
+
+            if ( chosenSeriesCount === 0 || chosenSeriesCount === filterCheckboxes.length ) {
+                filterSummaryNodes.forEach( function( node ) {
+                    node.style.display = 'none';
+                    node.removeAttribute( 'title' );
+                });
+            }
+            else {
+                filterSummaryNodes.forEach( function( node ) {
+                    node.innerHTML = '(' + chosenSeriesCount + ')';
+                    node.setAttribute(
+                        'title',
+                        chosenSeriesCount + ' ' + ( chosenSeriesCount === 1 ? 'Serie' : 'Serien' ) + ' gewählt.'
+                    );
+                    node.style.display = '';
+                });
+            }
         }
 
         function getFilterDisplayMode() {

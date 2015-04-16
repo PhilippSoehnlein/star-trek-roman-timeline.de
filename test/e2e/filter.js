@@ -139,6 +139,55 @@ describe( 'Filter functionality', function() {
         },
 
         {
+            title: 'Selecting series changes the filter summary',
+            testFunction: function() {
+                filterFormTriggerButton.click();
+                browser.driver.sleep( 1500 ); // wait for animation to finish
+                var checkboxes  = element.all( by.css( '#' + filterId + ' input[type="checkbox"]' ) );
+                var summaryNode = element( by.className( '_is_filter_summary' ) );
+
+                checkboxes.get( 0 ).click();
+                expect( summaryNode.getText() ).toBe( '(1)' );
+                checkboxes.get( 1 ).click();
+                expect( summaryNode.getText() ).toBe( '(2)' );
+            },
+        },
+
+        {
+            title: 'Filter summary is only shown, when a series is chosen',
+            testFunction: function() {
+                filterFormTriggerButton.click();
+                browser.driver.sleep( 1500 ); // wait for animation to finish
+                var checkboxes  = element.all( by.css( '#' + filterId + ' input[type="checkbox"]' ) );
+                var summaryNode = element( by.className( '_is_filter_summary' ) );
+
+                expect( summaryNode.isDisplayed() ).toBe( false );
+                checkboxes.get( 0 ).click();
+                expect( summaryNode.isDisplayed() ).toBe( true );
+                checkboxes.get( 0 ).click();
+                expect( summaryNode.isDisplayed() ).toBe( false );
+            },
+        },
+
+        {
+            title: 'Filter summary is reflected in tooltip',
+            testFunction: function() {
+                filterFormTriggerButton.click();
+                browser.driver.sleep( 1500 ); // wait for animation to finish
+                var checkboxes  = element.all( by.css( '#' + filterId + ' input[type="checkbox"]' ) );
+                var summaryNode = element( by.className( '_is_filter_summary' ) );
+
+                checkboxes.get( 0 ).click();
+                expect( summaryNode.getAttribute( 'title' ) ).toMatch( /^1 / );
+                checkboxes.get( 1 ).click();
+                expect( summaryNode.getAttribute( 'title' ) ).toMatch( /^2 / );
+                checkboxes.get( 0 ).click();
+                checkboxes.get( 1 ).click();
+                expect( summaryNode.getAttribute( 'title' ) ).toBe( '' );
+            },
+        },
+
+        {
             title: 'Selecting a series shows or hides the right books (accordion mode)',
             needsBigScreen: true,
             testFunction: function() {
