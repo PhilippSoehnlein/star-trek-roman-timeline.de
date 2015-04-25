@@ -9,10 +9,11 @@ module.exports = function(grunt) {
             files: [
                 'Gruntfile.js',
                 'src/books.json',
+                'src/books/**/*.json',
                 'src/templates/*.ejs',
                 'src/scss/**/*.scss',
                 'src/js/**.js',
-                'src/books/**/*.json'
+                'src/img/**',
             ],
             tasks: [ 'build' ]
         },
