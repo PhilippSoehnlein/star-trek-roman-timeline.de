@@ -211,7 +211,7 @@
             "plotTimes":    [
                 {
                     "type":      "point",
-                    "isPrimary": true,
+                    "isPrimary": false,
                     "year":      2382,
                     "month":     4,
                     "day":       null,
@@ -266,11 +266,11 @@
                 },
                 {
                     "type":      "point",
-                    "isPrimary": false,
+                    "isPrimary": true,
                     "year":      2383,
                     "month":     8,
                     "day":       null,
-                    "source":    "The actual book, chapters 19 - 41."
+                    "source":    "The actual book, chapters 19 - 41. Primary because of https://www.facebook.com/startrekromane/posts/10152833520898231?comment_id=10152833835048231"
                 }
             ]
         },
