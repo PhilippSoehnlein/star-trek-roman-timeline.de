@@ -2,6 +2,13 @@
 
 A website presenting an overview of german Star Trek novels.
 
+## Sources for plot times
+* Memory Alpha: [german](http://de.memory-alpha.org/wiki/Hauptseite), [english](http://en.memory-alpha.org/wiki/Portal:Main)
+* [Memory Beta](http://memory-beta.wikia.com/wiki/Main_Page)
+* [Star Trek post-Nemesis reading order](http://www.shastrix.com/books/star-trek-reading-order.php)
+* [Post-Nemesis: Year By Year](http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php)
+* The actual books ;-)
+
 ## TODO
 
 - Replace H5BP (fav)icons with real icons.
@@ -25,10 +32,13 @@ This downloads Selenium and the Chrome webdriver. On OSX I was prompted to insta
 #### Install Safari WebDriver Extension manually
 See [Selenium Issue 7933: Since updating to Safari 6.2 or 7.1 unable to establish a connection with the SafariDriver extension (comment 23)](https://code.google.com/p/selenium/issues/detail?id=7933#c23).
 
-#### Initialize environment for Appium
+#### Initialize environment for Appium / iOS
 ``node_modules/appium/bin/appium-doctor.js --ios``
 ``sudo node_modules/appium/bin/authorize-ios.js``
 Having a look at https://github.com/appium/appium/blob/master/docs/en/appium-setup/running-on-osx.md doesn't hurt either.
+
+#### Install environment for Appium / Android
+See http://angular.github.io/protractor/#/mobile-setup#setting-up-protractor-with-appium-android-chrome
 
 #### IE
 - Set Network Mode to Bridge mode in Virtual Box
