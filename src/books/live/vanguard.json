@@ -140,11 +140,43 @@
             "plotTimes":    [
                 {
                     "type":      "point",
-                    "isPrimary": true,
+                    "isPrimary": false,
+                    "year":      2259,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "Audio book (some parts in third story)."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
                     "year":      2265,
                     "month":     null,
                     "day":       null,
-                    "source":    "The actual book, chapter 'Historische Anmerkung' ('some months before the completion of Starbase 47')."
+                    "source":    "First story: The actual book, chapter 'Historische Anmerkung' ('some months before the completion of Starbase 47')."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2266,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "Audio book (start of second story)."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2268,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "Audio book (start of third story)."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2268,
+                    "month":     2,
+                    "day":       null,
+                    "source":    "Audio book (start of fourth story)."
                 }
             ]
         },
