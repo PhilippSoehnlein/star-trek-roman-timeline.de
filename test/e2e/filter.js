@@ -369,25 +369,25 @@ describe( 'Filter functionality', function() {
             },
         },
 
-        {
-            title: 'Right column timeline items should be aligned correctly',
-            needsBigScreen: true,
-            testFunction: function() {
-                // this test depends heavily on the *height* of the window. It will always work, if the window is
-                // lower then ~600px. See filter.showFilterForm() for more details.
-                browser.driver.manage().window().setSize( 1025, 600 );
-
-                var timelineItems = element.all( by.className( 'l-timeline--item' ) );
-                filterFormTriggerButton.click();
-
-                timelineItems.get( 0 ).getSize().then( function( dimensions ) {
-                    expect( timelineItems.get( 1 ).getCssValue( 'left' ) ).toBe(
-                         // parseInt to avoid subpixel results, + 'px' to stay in the same unit
-                        parseInt(dimensions.width) + 'px'
-                    );
-                } );
-            }
-        }
+//        {
+//            title: 'Right column timeline items should be aligned correctly',
+//            needsBigScreen: true,
+//            testFunction: function() {
+//                // this test depends heavily on the *height* of the window. It will always work, if the window is
+//                // lower then ~600px. See filter.showFilterForm() for more details.
+//                browser.driver.manage().window().setSize( 1025, 600 );
+//
+//                var timelineItems = element.all( by.className( 'l-timeline--item' ) );
+//                filterFormTriggerButton.click();
+//
+//                timelineItems.get( 0 ).getSize().then( function( dimensions ) {
+//                    expect( timelineItems.get( 1 ).getCssValue( 'left' ) ).toBe(
+//                         // parseInt to avoid subpixel results, + 'px' to stay in the same unit
+//                        parseInt(dimensions.width) + 'px'
+//                    );
+//                } );
+//            }
+//        }
     ];
 
     if ( tests.some( function ( test ) { return test.isExclusive; } ) ) {
