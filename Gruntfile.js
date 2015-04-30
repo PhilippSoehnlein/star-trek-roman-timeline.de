@@ -300,4 +300,9 @@ module.exports = function(grunt) {
     grunt.registerTask('test:unit', 'Executes unit tests.', [
         'jasmine_node',
     ]);
+
+    grunt.registerTask('test:travis-ci', 'Executes all tests that run on travis-ci.org', [
+        'test:unit',
+        'test-e2e:firefox'
+    ]);
 };

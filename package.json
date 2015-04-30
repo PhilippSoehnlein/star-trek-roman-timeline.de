@@ -29,6 +29,6 @@
   },
   "scripts": {
     "postinstall": "node_modules/bower/bin/bower install && node_modules/protractor/bin/webdriver-manager update",
-    "test": "node_modules/grunt-cli/bin/grunt test:unit"
+    "test": "node_modules/grunt-cli/bin/grunt test:travis-ci"
   }
 }
