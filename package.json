@@ -26,5 +26,8 @@
     "tmp": "0.0.25",
     "wd": "^0.3.11",
     "wd-bridge": "0.0.2"
+  },
+  "scripts": {
+    "test": "node_modules/grunt-cli/bin/grunt test:unit"
   }
 }
