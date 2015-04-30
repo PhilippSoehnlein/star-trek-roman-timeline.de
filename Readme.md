@@ -1,5 +1,7 @@
 # star-trek-roman-timeline.de
 
+[![Build Status](https://travis-ci.org/PhilippSoehnlein/star-trek-roman-timeline.de.svg?branch=master)](https://travis-ci.org/PhilippSoehnlein/star-trek-roman-timeline.de)
+
 A website presenting an overview of german Star Trek novels.
 
 ## Sources for plot times
