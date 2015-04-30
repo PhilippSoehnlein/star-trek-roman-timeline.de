@@ -303,6 +303,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('test:travis-ci', 'Executes all tests that run on travis-ci.org', [
         'test:unit',
-        'test-e2e:firefox'
+        'test-e2e:firefox',
+        'test-e2e:chrome',
     ]);
 };
