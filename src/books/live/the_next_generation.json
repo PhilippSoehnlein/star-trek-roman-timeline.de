@@ -202,6 +202,139 @@
                     "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
                 }
             ]
+        },
+        {
+            "title":        "Kalte Berechnung #1 - Die Beständigkeit der Erinnerung",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/assets/images/5/star_trek_tng_8-8ad27895.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-tng-8.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Berechnung-Best%C3%A4ndigkeit/dp/3864257859/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25767967-die-best-ndigkeit-der-erinnerung",
+            "episode":      8,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": false,
+                    "start": {
+                        "year":  2367,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2369,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2370,
+                    "month":     1,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2370,
+                    "month":     7,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2371,
+                    "month":     8,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2372,
+                    "month":     11,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2374,
+                    "month":     5,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2375,
+                    "month":     8,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2376,
+                    "month":     10,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2378,
+                    "month":     3,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2379,
+                    "month":     11,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2380,
+                    "month":     10,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2381,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2383,
+                    "month":     10,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2384,
+                    "month":     1,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710 & http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                }
+            ]
         }
     ]
 }
