@@ -301,7 +301,96 @@
             "goodreadsUrl": "https://www.goodreads.com/book/show/24077692-feuertaufe",
             "episode":      3,
             "season":       null,
-            "plotTimes":    []
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      1930,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 8)"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2235,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 3)"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2255,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 5)"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2267,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 2 & 4)"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2270,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 7)"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2271,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 3, 5, 6, 7 & 9)"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2276,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 4 & 9)"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2282,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 1, 2 & 6)"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2284,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 12)"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2293,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 11 - 18)"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2371,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "The actual book (Chapter 3 & 18)"
+                }
+            ]
         },
         {
             "title":        "Der Friedensstifter",
