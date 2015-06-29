@@ -4,7 +4,7 @@
         {
             "title":        "Infektion",
             "authors":      [ "John Gregory Betancourt" ],
-            "coverUrl":     "http://www.cross-cult.de/system/html/ST_DH1_Cvr_Entwurf-25cb7021.jpg",
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-tng-doppelhelix-1-infektion-2ba9ff00.jpg",
             "publisher":    "Cross Cult",
             "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-the-next-generation-doppelhelix.html",
             "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Doppelhelix-Infektion/dp/3864250110/",
@@ -15,18 +15,18 @@
             "plotTimes":    [
                 {
                     "type":      "point",
+                    "isPrimary": true,
                     "year":      2364,
                     "month":     3,
                     "day":       18,
-                    "source":    "http://de.memory-alpha.org/wiki/Infektion_%28Roman%29",
-                    "isPrimary": true
+                    "source":    "http://de.memory-alpha.org/wiki/Infektion_%28Roman%29"
                 }
             ]
         },
         {
             "title":        "Überträger",
-            "authors":      [ "Dean Wesley Smith", "Kristine Kathryn Rusch" ],
-            "coverUrl":     "http://www.cross-cult.de/system/html/StarTrekTNG_Doppelhelix2_Cvr_web-24aebd24.jpg",
+            "authors":      [ "Dean Wesley Smith", "John Gregory Betancourt", "Kristine Kathryn Rusch" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-tng-doppelhelix-2-uebertraeger-689d2e89.jpg",
             "publisher":    "Cross Cult",
             "publisherUrl": "http://www.cross-cult.de/titeldetails-343/items/star-trek-the-next-generation-doppelhelix-2.html",
             "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Doppelhelix-Überträger/dp/3864250129/",
@@ -36,11 +36,12 @@
             "season":       null,
             "plotTimes":    [
                 {
+                    "type":      "point",
+                    "isPrimary": true,
                     "year":      2366,
                     "month":     null,
                     "day":       null,
-                    "source":    "http://en.memory-alpha.org/wiki/Vectors",
-                    "isPrimary": true
+                    "source":    "http://en.memory-alpha.org/wiki/Vectors"
                 }
             ]
         }
