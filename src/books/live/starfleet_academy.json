@@ -1,0 +1,63 @@
+{
+    "name":  "Starfleet Academy",
+    "books": [
+        {
+            "title":        "Die Delta-Anomalie",
+            "authors":      [ "Rick Barba" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-starfleet-academy-1-die-delta-anomalie-cb75d0bc.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/roman-star-trek-starfleet-academy-1-die-delta-anomalie.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Starfleet-Academy-Delta-Anomalie/dp/3864250188/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/17998211-die-delta-anomalie",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "start":     {
+                        "year":  2255,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end":       {
+                        "year":  2258,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://en.memory-alpha.wikia.com/wiki/The_Delta_Anomaly?oldid=1732426 and http://memory-beta.wikia.com/wiki/The_Delta_Anomaly?oldid=498282",
+                    "isPrimary": true
+                }
+            ]
+        },
+        {
+            "title":        "Die Grenze",
+            "authors":      [ "Rudy Josephs" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-starfleet-academy-2-die-grenze-55c3e057.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/roman-star-trek-starfleet-academy-2-die-grenze.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Starfleet-Academy-Delta-Anomalie/dp/3864250196/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/19549158-die-grenze",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "start":     {
+                        "year":  2255,
+                        "month": null,
+                        "day":   null
+                    },
+                    "end":       {
+                        "year":  2258,
+                        "month": null,
+                        "day":   null
+                    },
+                    "source":    "http://en.memory-alpha.wikia.com/wiki/The_Edge?oldid=1732427 and http://memory-beta.wikia.com/wiki/The_Edge?oldid=431433",
+                    "isPrimary": true
+                }
+            ]
+        }
+    ]
+}
