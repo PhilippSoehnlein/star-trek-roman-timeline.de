@@ -9,6 +9,7 @@ A website presenting an overview of german Star Trek novels.
 * [Memory Beta](http://memory-beta.wikia.com/wiki/Main_Page)
 * [Star Trek post-Nemesis reading order](http://www.shastrix.com/books/star-trek-reading-order.php)
 * [Post-Nemesis: Year By Year](http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php)
+* [Relaunch novels timeline in Memory Beta](http://memory-beta.wikia.com/wiki/Relaunch_novels_timeline)
 * The actual books ;-)
 
 ## TODO
