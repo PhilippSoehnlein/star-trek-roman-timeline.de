@@ -1,0 +1,79 @@
+{
+    "name":  "Eugenische Kriege",
+    "books": [
+        {
+            "title":        "Der Aufstieg und Fall des Khan Noonien Singh (1)",
+            "authors":      [ "Greg Cox" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-eugenische-kriege-1-der-aufstieg-und-fall-des-khan-noonien-singh-1-201bb64f.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-eugenische-kriege-1.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Eugenischen-Aufstieg-Noonien-ebook/dp/B00O6Z6UIG/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/25755749-der-aufstieg-und-fall-des-khan-noonien-singh",
+            "episode":      1,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "start":     {
+                        "year":  1974,
+                        "month": 3,
+                        "day":   null
+                    },
+                    "end":       {
+                        "year":  1989,
+                        "month": 11,
+                        "day":   null
+                    },
+                    "source":    "http://en.memory-alpha.wikia.com/wiki/The_Rise_and_Fall_of_Khan_Noonien_Singh,_Volume_1?oldid=1727211",
+                    "isPrimary": true
+                },
+                {
+                    "type":      "point",
+                    "year":      2271,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.wikia.com/wiki/The_Rise_and_Fall_of_Khan_Noonien_Singh,_Volume_1?oldid=1727211",
+                    "isPrimary": false
+                }
+            ]
+        },
+        {
+            "title":        "Der Aufstieg und Fall des Khan Noonien Singh (2)",
+            "authors":      [ "Greg Cox" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-eugenische-kriege-2-der-aufstieg-und-fall-des-khan-noonien-singh-2-411f0989.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-eugenische-kriege-2.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Eugenischen-Aufstieg-Noonien/dp/386425440X/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/26010808-der-aufstieg-und-fall-des-khan-noonien-singh",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "start":     {
+                        "year":  1992,
+                        "month": 6,
+                        "day":   null
+                    },
+                    "end":       {
+                        "year":  1996,
+                        "month": 2,
+                        "day":   null
+                    },
+                    "source":    "http://en.memory-alpha.wikia.com/wiki/The_Rise_and_Fall_of_Khan_Noonien_Singh,_Volume_2?oldid=1727205",
+                    "isPrimary": true
+                },
+                {
+                    "type":      "point",
+                    "year":      2271,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://en.memory-alpha.wikia.com/wiki/The_Rise_and_Fall_of_Khan_Noonien_Singh,_Volume_2?oldid=1727205",
+                    "isPrimary": false
+                }
+            ]
+        }
+    ]
+}
