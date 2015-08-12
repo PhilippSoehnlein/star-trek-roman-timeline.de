@@ -335,6 +335,36 @@
                     "source":    "http://memory-beta.wikia.com/wiki/The_Persistence_of_Memory?oldid=495710 & http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
                 }
             ]
+        },
+        {
+            "title":        "Kalte Berechnung #2 - Lautlose Waffen",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star_trek_tng_9.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-tng-9.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Berechnung-Lautlose/dp/3864257867/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/26011090-lautlose-waffen",
+            "episode":      9,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2384,
+                    "month":     3,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2384,
+                    "month":     6,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Silent_Weapons?oldid=512680"
+                }
+            ]
         }
     ]
 }
