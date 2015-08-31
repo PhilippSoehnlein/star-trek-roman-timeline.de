@@ -365,6 +365,36 @@
                     "source":    "http://memory-beta.wikia.com/wiki/Silent_Weapons?oldid=512680"
                 }
             ]
+        },
+        {
+            "title":        "Kalte Berechnung #3 - Diabolus ex machina",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star_trek_tng_10.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-tng-10.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Generation-Berechnung-Diabolus/dp/3864257875/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/26201447-diabolus-ex-machina",
+            "episode":      10,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2366,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Body_Electric?oldid=501003"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2384,
+                    "month":     7,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Body_Electric?oldid=501003"
+                }
+            ]
         }
     ]
 }
