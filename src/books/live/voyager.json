@@ -155,5 +155,35 @@
                 }
             ]
         }
+        ,
+        {
+            "title":        "Kinder des Sturms",
+            "authors":      [ "Kirsten Beyer" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star_trek_voyager_7.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-voyager-7.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Voyager-Kinder-Sturms/dp/3864254248/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/26725145-kinder-des-sturms",
+            "episode":      7,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2381,
+                        "month": 6,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2381,
+                        "month": 7,
+                        "day":   null
+                    },
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                }
+            ]
+        }
     ]
 }
