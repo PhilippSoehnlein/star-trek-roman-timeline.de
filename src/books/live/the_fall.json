@@ -29,6 +29,93 @@
                     "source":    "http://en.memory-alpha.wikia.com/wiki/Revelation_and_Dust?oldid=1727655"
                 }
             ]
+        },
+        {
+            "title":        "Der karminrote Schatten",
+            "authors":      [ "Una McCormack" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/startrek_thefall2_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-the-fall-2-der-karminrote-schatten.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Fall-karminrote-Schatten/dp/3864257794/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/27217842-star-trek---the-fall-2",
+            "episode":      2,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2385,
+                        "month": 8,
+                        "day":   24
+                    },
+                    "end": {
+                        "year":  2385,
+                        "month": 9,
+                        "day":   4
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Crimson_Shadow?oldid=518019"
+                }
+            ]
+        },
+        {
+            "title":        "Auf verlorenem Posten",
+            "authors":      [ "David Mack" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/startrek_thefall3_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-the-fall-3-auf-verlorenem-posten.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Fall-verlorenem-Posten/dp/3864257808/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/28094366-star-trek---the-fall-3",
+            "episode":      3,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2385,
+                        "month": 8,
+                        "day":   31
+                    },
+                    "end": {
+                        "year":  2385,
+                        "month": 9,
+                        "day":   19
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/A_Ceremony_of_Losses?oldid=526125"
+                }
+            ]
+        },
+        {
+            "title":        "Der Giftbecher",
+            "authors":      [ "James Swallow" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/startrek_thefall4_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-the-fall-4-der-giftbecher.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-The-Fall-Giftbecher/dp/3864257816/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/28167876-star-trek---the-fall-4",
+            "episode":      4,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2385,
+                        "month": 9,
+                        "day":   20
+                    },
+                    "end": {
+                        "year":  2385,
+                        "month": 10,
+                        "day":   12
+                    },
+                    "source":    "http://memory-alpha.wikia.com/wiki/The_Poisoned_Chalice?oldid=1727661"
+                }
+            ]
         }
     ]
 }
