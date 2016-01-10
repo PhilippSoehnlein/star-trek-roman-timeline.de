@@ -11,6 +11,7 @@ A website presenting an overview of german Star Trek novels.
 * [Post-Nemesis: Year By Year](http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php)
 * [Relaunch novels timeline in Memory Beta](http://memory-beta.wikia.com/wiki/Relaunch_novels_timeline)
 * [The Almighty Star Trek Lit-verse Reading Order Flow Chart](http://www.thetrekcollective.com/p/trek-lit-reading-order.html)
+* [John Smith](https://www.facebook.com/profile.php?id=100004745084854&sk=photos)
 * The actual books ;-)
 
 ## TODO
