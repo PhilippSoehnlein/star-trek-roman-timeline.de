@@ -116,6 +116,59 @@
                     "source":    "http://memory-alpha.wikia.com/wiki/The_Poisoned_Chalice?oldid=1727661"
                 }
             ]
+        },
+        {
+            "title":        "Königreiche des Friedens",
+            "authors":      [ "Dayton Ward" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/startrek_thefall5_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-the-fall-5-koenigreiche-des-friedens.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Fall-Königreiche-Friedens/dp/3864257824/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/28358725-k-nigreiche-des-friedens",
+            "episode":      5,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2357,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Peaceable_Kingdoms?oldid=519007"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2369,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Peaceable_Kingdoms?oldid=519007"
+                },
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2385,
+                        "month": 10,
+                        "day":   13
+                    },
+                    "end": {
+                        "year":  2385,
+                        "month": 10,
+                        "day":   27
+                    },
+                    "source":    "http://memory-beta.wikia.com/wiki/Peaceable_Kingdoms?oldid=519007"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2385,
+                    "month":     11,
+                    "day":       1,
+                    "source":    "http://memory-beta.wikia.com/wiki/Peaceable_Kingdoms?oldid=519007"
+                }
+            ]
         }
     ]
 }
