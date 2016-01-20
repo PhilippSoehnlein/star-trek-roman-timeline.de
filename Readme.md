@@ -14,6 +14,12 @@ A website presenting an overview of german Star Trek novels.
 * [John Smith](https://www.facebook.com/profile.php?id=100004745084854&sk=photos)
 * The actual books ;-)
 
+## Stardate calculators
+
+Calculating stardates is also often necessary (and confusing).
+* [Trekguide offers some good calculators.](http://trekguide.com/Stardates.htm)
+* [Trekzone](http://www.trekzone.de/sfrs/stardate.php)
+
 ## TODO
 
 - Replace H5BP (fav)icons with real icons.
