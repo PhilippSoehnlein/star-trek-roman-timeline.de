@@ -117,6 +117,23 @@ module.exports = function(grunt) {
                 }
             },
         },
+        
+        replace: {
+            githubComment: {
+                options: {
+                    patterns: [
+                        {
+                            match: /<!DOCTYPE html>/i,
+                            replacement: '<!DOCTYPE html>\n<!-- Hello Stranger, it looks like you are interested in ' +
+                                         'the source of this page. If you\'d like to see the real source (rather ' +
+                                         'than this optimized garbage) have a look at ' +
+                                         'https://github.com/PhilippSoehnlein/star-trek-roman-timeline.de -->\n',
+                        }
+                    ]
+                },
+                files: [ { expand: true, flatten: true, src: ['build/*.html'], dest: 'build/' } ]
+            },
+        },
 
         htmlmin: {
             options: {
@@ -212,6 +229,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-image-embed');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-protractor-runner');
     grunt.loadNpmTasks('grunt-jasmine-node');
@@ -231,6 +249,7 @@ module.exports = function(grunt) {
         'htmlmin:index',
         'render:imprint',
         'htmlmin:imprint',
+        'replace:githubComment',
         'sass',
         'imageEmbed',
         'autoprefixer',

@@ -16,6 +16,7 @@
     "grunt-image-embed": "^0.3.3",
     "grunt-jasmine-node": "^0.2.1",
     "grunt-protractor-runner": "^1.1.4",
+    "grunt-replace": "^0.11.0",
     "grunt-sass": "^0.15.0",
     "istanbul": "^0.3.5",
     "lwip": "0.0.6",
