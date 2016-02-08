@@ -457,6 +457,36 @@
                     "source":    "http://en.memory-alpha.org/wiki/The_Joy_Machine?oldid=1385832"
                 }
             ]
+        },
+        {
+            "title":        "Früher war alles besser",
+            "authors":      [ "Greg Cox" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/startrek_originalseries7_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-the-original-series-7.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Original-Series-Früher/dp/3864258014/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/28963588-fr-her-war-alles-besser",
+            "episode":      7,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2270,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-alpha.wikia.com/wiki/No_Time_Like_the_Past_%28novel%29?oldid=1692276"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2376,
+                    "month":     10,
+                    "day":       null,
+                    "source":    "http://startrekchapterstimeline.jimdo.com/timeline-nach-serien/star-trek-the-original-series/"
+                }
+            ]
         }
     ]
 }
