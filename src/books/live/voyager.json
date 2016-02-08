@@ -154,8 +154,7 @@
                     "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
                 }
             ]
-        }
-        ,
+        },
         {
             "title":        "Kinder des Sturms",
             "authors":      [ "Kirsten Beyer" ],
@@ -179,6 +178,35 @@
                     "end": {
                         "year":  2381,
                         "month": 7,
+                        "day":   null
+                    },
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
+                }
+            ]
+        },
+        {
+            "title":        "Ewige Gezeiten",
+            "authors":      [ "Kirsten Beyer" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/st_voyager8_rgb.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-voyager-8.html",
+            "amazonUrl":    "http://www.amazon.de/Star-Trek-Voyager-Ewige-Gezeiten/dp/3864257751/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/28963465-ewige-gezeiten",
+            "episode":      8,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "range",
+                    "isPrimary": true,
+                    "start": {
+                        "year":  2381,
+                        "month": 8,
+                        "day":   null
+                    },
+                    "end": {
+                        "year":  2381,
+                        "month": 9,
                         "day":   null
                     },
                     "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
