@@ -197,6 +197,22 @@
             "season":       null,
             "plotTimes":    [
                 {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2380,
+                    "month":     6,
+                    "day":       null,
+                    "source":    "https://www.facebook.com/startrekromantimeline/posts/1509354282702999?comment_id=1509372656034495"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2381,
+                    "month":     2,
+                    "day":       null,
+                    "source":    "https://www.facebook.com/startrekromantimeline/posts/1509354282702999?comment_id=1509372656034495"
+                },
+                {
                     "type":      "range",
                     "isPrimary": true,
                     "start": {
