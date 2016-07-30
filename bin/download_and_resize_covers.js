@@ -18,6 +18,7 @@ var tempFolder = createTempFolder();
 
 /* Read data files */
 var books = getBooks( options[ 'book-data-path' ] );
+//books = books.filter( function( b ) { return b.finalImageFileNamePrefix === 'the-next-generation-11'; } );  // testing only
 //books = [ books[0] ]; // testing only
 //books = [ books[0], books[1] ]; // testing only
 
@@ -167,7 +168,8 @@ function downloadCover( book ) {
             );
         }
 
-        var pathToTempFile = pathHelper.join( tempFolder, book.finalImageFileNamePrefix + '.jpg' );
+        var fileExtension  = book.coverUrl.substr( book.coverUrl.length - 3 );
+        var pathToTempFile = pathHelper.join( tempFolder, book.finalImageFileNamePrefix + '.' + fileExtension );
         var tempFile       = fs.createWriteStream( pathToTempFile );
 
         response.pipe( tempFile );
