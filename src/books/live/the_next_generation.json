@@ -395,6 +395,76 @@
                     "source":    "http://memory-beta.wikia.com/wiki/The_Body_Electric?oldid=501003"
                 }
             ]
+        },
+        {
+            "title":        "Das Licht der Fantasie",
+            "authors":      [ "Jeffrey Lang" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/b/bildschirmfoto-2016-06-28-um-165703.png",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-next-generation-11-das-licht-der-fantasie.html",
+            "amazonUrl":    "https://www.amazon.de/Star-Trek-Generation-Licht-Fantasie/dp/3864257883/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/30235568-das-licht-der-fantasie",
+            "episode":      11,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2270,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Light_Fantastic?oldid=532597"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2286,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Light_Fantastic?oldid=532597"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2384,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Light_Fantastic?oldid=532597"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2385,
+                    "month":     9,
+                    "day":       null,
+                    "source":    "http://startrekchapterstimeline.jimdo.com/timeline-nach-reihen/star-trek-the-next-generation/das-licht-der-fantasie/"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2385,
+                    "month":     11,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2385,
+                    "month":     12,
+                    "day":       null,
+                    "source":    "http://startreklitverse.yolasite.com/post-nemesis-month-by-month.php"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2386,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/The_Light_Fantastic?oldid=532597"
+                }
+            ]
         }
     ]
 }
