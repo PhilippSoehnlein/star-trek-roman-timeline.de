@@ -8,7 +8,7 @@ A website presenting an overview of german Star Trek novels.
 * Memory Alpha: [german](http://de.memory-alpha.org/wiki/Hauptseite), [english](http://en.memory-alpha.org/wiki/Portal:Main)
 * [Memory Beta](http://memory-beta.wikia.com/wiki/Main_Page)
 * [Star Trek post-Nemesis reading order](http://www.shastrix.com/books/star-trek-reading-order.php)
-* [Post-Nemesis: Year By Year](http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php)
+* [Post-Nemesis: Month By Month](http://startreklitverse.yolasite.com/post-nemesis-month-by-month.php)
 * [Relaunch novels timeline in Memory Beta](http://memory-beta.wikia.com/wiki/Relaunch_novels_timeline)
 * [The Almighty Star Trek Lit-verse Reading Order Flow Chart](http://www.thetrekcollective.com/p/trek-lit-reading-order.html)
 * [John Smith](http://startrekchapterstimeline.jimdo.com/)
