@@ -191,6 +191,36 @@
                     "source":    "http://startreklitverse.yolasite.com/post-nemesis-year-by-year.php"
                 }
             ]
+        },
+        {
+            "title":        "Abwesende Feinde",
+            "authors":      [ "John Jackson Miller" ],
+            "coverUrl":     "http://www.cross-cult.de/isotope/s/star-trek-titan-absent-enemies-9781476762999_hr.jpg",
+            "publisher":    "Cross Cult",
+            "publisherUrl": "http://www.cross-cult.de/titel/star-trek-titan-abwesende-freunde.html",
+            "amazonUrl":    "https://www.amazon.de/Star-Trek-Titan-Abwesende-Feinde-ebook/dp/B01IP93QHQ/",
+            "audibleUrl":   null,
+            "goodreadsUrl": "https://www.goodreads.com/book/show/31296415-abwesende-feinde",
+            "episode":      8,
+            "season":       null,
+            "plotTimes":    [
+                {
+                    "type":      "point",
+                    "isPrimary": false,
+                    "year":      2368,
+                    "month":     null,
+                    "day":       null,
+                    "source":    "http://memory-beta.wikia.com/wiki/Absent_Enemies?oldid=519310"
+                },
+                {
+                    "type":      "point",
+                    "isPrimary": true,
+                    "year":      2385,
+                    "month":     11,
+                    "day":       null,
+                    "source":    "The actual book, chapter 'Historische Anmerkung'."
+                }
+            ]
         }
     ]
 }
